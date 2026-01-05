@@ -1,0 +1,44 @@
+{
+	"id":"fp_phasedive",
+	"type":"TELEPORTER",
+	"aiType":"PHASE_TELEPORTER_2",
+
+	#"statsScript":"fuzzypack.data.shipsystems.phasedive_stats",
+	
+	#"jitterColor":[100,165,255,150],
+	"jitterColor":[220,100,255,150],
+	"jitterCopies":4,
+	#"jitterRange":25,
+	"jitterRange":50,
+	"jitterRangeRadiusFraction":0,
+	
+	"weaponGlowColor":[100,165,255,0],
+	"weaponTypes":[ENERGY],
+	
+	#"engineGlowColor":[255,100,225,255],
+	#"engineGlowContrailColor":[200,100,200,25],
+	"engineGlowLengthMult":0,
+	"engineGlowWidthMult":0,
+	"engineGlowGlowMult":0,
+	
+	"range":1000,
+	"randomRange":200,
+	"requiresZeroFluxBoost":false,
+	
+	"vulnerableChargeup":true,
+	"vulnerableChargedown":false,
+	"renderCopyDuringTeleport":true,
+	
+	"fadeActivationSoundOnChargedown":false,
+	
+	#"useSound":"system_teleport",
+	"useSound":"system_phase_teleporter",	
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	
+	"aiHints":{
+		"activeSpeedIncrease":0,
+		"burstMovementPotential":400,
+		"averageSpeedIncrease":100,
+	}
+}

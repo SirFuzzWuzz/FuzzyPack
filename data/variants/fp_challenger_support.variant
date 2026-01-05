@@ -1,0 +1,88 @@
+{
+  "variantId": "fp_challenger_support",
+  "hullId": "fp_challenger",
+  "displayName": "Support",
+  "goalVariant": true,
+  "fluxCapacitors": 20,
+  "fluxVents": 35,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "blast_doors",
+    "eccm"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0013": "fp_artillery"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0014": "fp_redstone",
+        "WS0017": "fp_redstone",
+        "WS0018": "fp_redstone",
+        "WS0019": "fp_redstone",
+        "WS0022": "fp_redstone",
+        "WS0023": "fp_redstone"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0015": "heatseeker",
+        "WS0016": "heatseeker",
+        "WS0020": "heatseeker",
+        "WS0021": "heatseeker"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0011": "hveldriver",
+        "WS0012": "hveldriver"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "lightdualac",
+        "WS0008": "lightdualac",
+        "WS0024": "lightdualac",
+        "WS0025": "lightdualac"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "vulcan",
+        "WS0002": "vulcan",
+        "WS0003": "lightmg",
+        "WS0004": "lightmg",
+        "WS0005": "vulcan",
+        "WS0006": "vulcan",
+        "WS0009": "vulcan",
+        "WS0010": "vulcan"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "sarissa_wing",
+    "talon_wing"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "variantId": "fp_reactive_bomber_base",
+  "hullId": "fp_reactive_bomber",
+  "displayName": "",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "no_weapon_flux"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "mininglaser",
+        "WS0002": "mininglaser",
+        "WS0004": "irpulse_fighter"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

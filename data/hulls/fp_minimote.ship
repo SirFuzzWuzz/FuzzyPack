@@ -1,0 +1,108 @@
+{
+  "hullName": "Moter",
+  "hullId": "fp_minimote",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/fp_minimote.png",
+  "style": "HIGH_TECH",
+  "height": 149,
+  "width": 120,
+  "center": [54, 57.5],
+  "collisionRadius": 135.5,
+  "shieldCenter": [17, -5.5],
+  "shieldRadius": 99.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "delicate"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": 0,
+      "locations": [48.5, 13]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 165,
+      "angle": 75.5,
+      "locations": [22.5, 32]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 205,
+      "angle": -67,
+      "locations": [3.5, -51]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 90,
+      "locations": [5.5, 47]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": 180,
+      "locations": [-44.5, -5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-48.5, -37],
+      "length": 66,
+      "width": 29,
+      "angle": 180,
+      "contrailSize": 29,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-42, 34],
+      "length": 57,
+      "width": 23,
+      "angle": 180,
+      "contrailSize": 23,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-46.5, 12],
+      "length": 44.5,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 16,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -54.5, -4.5,
+    -42.5, 8,
+    -30.5, 46.5,
+    22, 44,
+    67.5, 27,
+    87, 14,
+    62.5, -1,
+    43.5, -5.5,
+    36, -15,
+    50, -23.5,
+    45.5, -33.5,
+    16.5, -61,
+    0.5, -61.5,
+    -11, -52.5,
+    -35, -47.5,
+    -37.5, -15
+  ]
+}

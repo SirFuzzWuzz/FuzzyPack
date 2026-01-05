@@ -1,0 +1,37 @@
+{
+
+		"knownShips":{
+		"tags":["knights_of_ludd"],
+		"hulls":[
+			"fp_dictator",
+			"fp_dictator_large",
+			"fp_dauntless_new",
+			],
+	},
+
+	"knownFighters":{
+		"tags":["knights_of_ludd"],
+		"fighters":[
+			"fp_reactive_bomber_wing"
+		],
+	},
+	"knownWeapons":{
+		"tags":["knights_of_ludd"],
+		"weapons":[
+			"fp_artillery",
+			"fp_amflamer",
+			"fp_amflamer_medium",
+			"fp_wyvernfire",
+			"fp_wyvernfire_medium",
+			"fp_macromortar",
+		],
+	},
+
+	"knownHullMods":{
+		"tags":["knights_of_ludd"],
+		"hullMods":[
+			"fp_patherpilots",
+			"fp_reactivearmour_kinetic",
+		],
+	},
+},

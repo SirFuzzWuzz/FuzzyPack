@@ -1,0 +1,108 @@
+{
+  "hullName": "Tube",
+  "hullId": "fp_tube",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/fp_tube.png",
+  "style": "HIGH_TECH",
+  "height": 230,
+  "width": 134,
+  "center": [67, 124],
+  "collisionRadius": 100,
+  "shieldCenter": [-6, -0],
+  "shieldRadius": 145.5,
+  "viewOffset": 0,
+  "builtInWeapons": {
+    "WS0001": "fp_amflamer",
+    "WS0002": "fp_amflamer"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [78, 46]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [78, -46]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 270,
+      "angle": 0,
+      "locations": [46, -0]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 200,
+      "angle": 140,
+      "locations": [-47, 24]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 200,
+      "angle": -140,
+      "locations": [-47, -24]
+    },
+    {
+      "id": "WS0006",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [-13, 0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-100, -0],
+      "length": 50,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    83.5, -3.5,
+    48.5, -28,
+    55.5, -39,
+    79.5, -41,
+    79.5, -51.5,
+    60, -51.5,
+    9, -17,
+    -13.5, -30.5,
+    -48.5, -30.5,
+    -73, -12.5,
+    -100.5, -9.5,
+    -100.5, 9.5,
+    -73, 12.5,
+    -48.5, 30.5,
+    -13.5, 30.5,
+    9, 17,
+    60, 51.5,
+    79.5, 51.5,
+    79.5, 41,
+    55.5, 39,
+    48.5, 28,
+    83.5, 3.5
+  ]
+}

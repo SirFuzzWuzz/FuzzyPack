@@ -1,0 +1,31 @@
+{
+  "hullName": "Shielddrone",
+  "hullId": "fp_shielddrone",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/shielddrone.png",
+  "style": "HIGH_TECH",
+  "height": 23,
+  "width": 22,
+  "center": [11, 10.5],
+  "collisionRadius": 0,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 0,
+  "viewOffset": 0,
+  "builtInMods": [
+    "advancedshieldemitter",
+    "fluxshunt",
+    "vastbulk"
+  ],
+  "weaponSlots": [],
+  "engineSlots": [],
+  "bounds": [
+    -8.5, -8,
+    3, -9,
+    10.5, -4.5,
+    5.5, -2.5,
+    5.5, 2.5,
+    10.5, 4.5,
+    3, 9,
+    -8.5, 8
+  ]
+}

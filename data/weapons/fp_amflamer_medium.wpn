@@ -1,0 +1,44 @@
+{
+  "id": "fp_amflamer_medium",
+  "specClass": "projectile",
+  "projectileSpecId": "fp_amflamer_medium_shot",
+  "type": "ENERGY",
+  "mountTypeOverride": "BALLISTIC",
+  "size": "MEDIUM",
+  "everyFrameEffect": "fuzzypack.data.weapons.fp_amflamer_script",
+  "turretSprite": "graphics/weapons/fp_amflamer_medium_t.png",
+  "hardpointSprite": "graphics/weapons/fp_amflamer_medium_h.png",
+  "turretOffsets": [
+    27,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    29,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "MUZZLE_FLASH",
+  "interruptibleBurst": true,
+  "muzzleFlashSpec": {
+    "length": 25,
+    "spread": 10,
+    "particleSizeMin": 12,
+    "particleSizeRange": 14,
+    "particleDuration": 0.2,
+    "particleCount": 6,
+    "particleColor": [
+      0,
+      60,
+      255,
+      170
+    ]
+  },
+  "fireSoundOne": "flamer_charge_medium",
+  "noImpactSounds":true,
+}

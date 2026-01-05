@@ -1,0 +1,71 @@
+name,id,designation,tech/manufacturer,system id,fleet pts,hitpoints,armor rating,max flux,8/6/5/4%,flux dissipation,ordnance points,fighter bays,max speed,acceleration,deceleration,max turn rate,turn acceleration,mass,shield type,defense id,shield arc,shield upkeep,shield efficiency,phase cost,phase upkeep,min crew,max crew,cargo,fuel,fuel/ly,range,max burn,base value,cr %/day,CR to deploy,peak CR sec,CR loss/sec,supplies/rec,supplies/mo,c/s,c/f,f/s,f/f,crew/s,crew/f,hints,tags,rarity,breakProb,minPieces,maxPieces,travel drive,number
+Stasis Drone,fp_drone_vorer,Support Drone,Remnant,,,200,30,250,,100,,,110,200,200,180,360,6,FRONT,,120,0.4,0.7,,,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,1.5
+Excavator Drone,fp_boringdrone,Heavy Mining Drone,Low Tech,damper,,1600,450,20000,,2000,,,85,100,100,80,150,150,NONE,,0,0,0,,,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,201
+Phase Nugget,fp_phasenugget,Phase Fighter,High Tech,flarelauncher_active,,700,250,1600,,350,,,130,80,80,120,120,100,PHASE,phasecloak,,,,0.05,0.05,0,0,,,,,,,,,,,,,,,,,,,,,,0,,,,200
+Pebble,fp_reactive_bomber,Fighter-Bomber,Low Tech,,,500,200,200,,50,0,,140,150,100,100,200,35,NONE,,0,0,0,,,2,2,,,,,,,,,,,,,,,,,,,,,,0,,,,110
+Cart,fp_redstone_bomber,Bomber,Low Tech,,,500,90,500,,100,0,,160,250,150,80,100,40,FRONT,,60,0,0,,,2,4,,,,,,,,,,,,,,,,,,,,,,0,,,,113
+Shield Drone L,fp_shielddrone,Support Drone,High Tech,,,999999,30,7500,,300,,,110,200,200,180,360,6,FRONT,,60,0,1,,,0,0,,,,,,,,,,,,,,,,,,,HIDE_IN_CODEX,,,0,,,,1.5
+Shield Drone M,fp_shielddroneM,Support Drone,High Tech,,,999999,30,3500,,200,,,110,200,200,180,360,6,FRONT,,60,0,1,,,0,0,,,,,,,,,,,,,,,,,,,HIDE_IN_CODEX,,,0,,,,1.5
+Autoshield Drone,fp_autoshield_drone,Support Drone,High Tech,,,9999,30,3500,,200,,,110,200,200,180,360,6,OMNI,,60,0,1,,,0,0,,,,,,,,,,,,,,,,,,,HIDE_IN_CODEX,,,0,,,,1.5
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Evil Shepherd,fp_evil_shepherd,Drone Constructor,Remnant,flarelauncher_active,5,1600,300,2000,1650,160,30,1,95,130,70,90,180,210,OMNI,,120,0.4,0.7,,,0,0,50,50,1,40,10,15000,8,20,280,0.25,5,5,33,,,,,,"CARRIER, UNBOARDABLE, HIDE_IN_CODEX","remnant, auto_rec",,0.5,2,2,,216
+Mudskipper (TPC),fp_mudskipper_mk3,Weapons Platform,Low Tech,maneuveringjets,4,1000,175,1000,900,90,22,,85,70,50,45,60,200,NONE,,0,0,0,,,5,50,40,40,1,40,9,4500,5,20,220,0.25,4,4,35,70,,,50,100,,"hedgemony, pirates, rare_bp, merc",,0.3,2,2,,218
+Bast,fp_smolboi,Frigate,Low Tech,fp_speedburst,7,2200,300,2200,1750,180,42,,140,120,70,70,80,250,FRONT,,210,0.4,1,,,30,55,30,40,1,25,12,13000,5,10,280,0.25,6,6,,,,,,,,"merc, lowtech_bp, merc",,0.4,2,3,,204
+Bast (P),fp_smolboi_p,Frigate,Low Tech,burndrive,8,2200,300,2200,1750,180,42,,140,120,70,75,80,250,FRONT,,210,0.4,1,,,30,40,30,20,1,25,12,13500,5,10,280,0.25,7,7,,,,,,,,"merc, pirate_bp",,0.4,2,3,,204
+Mercury XL,fp_mercuryXL,Large Shuttle,High Tech,flarelauncher_active,4,2000,160,2000,1875,200,36,,135,70,70,70,75,200,OMNI,,120,0.5,0.8,,,4,60,30,25,0.5,30,9,6500,5,20,240,0.25,3,3,10,40,,,15,60,"CIVILIAN, LINER",base_bp,,0.5,2,2,,203
+,fp_omegakite,Triangle,Unknown,microburn_omega,14,2500,500,4500,5000,420,50,,180,240,200,120,360,220,OMNI,,150,0,0.5,,,0,0,10,20,1,50,13,100000,20,5,,,8,8,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","omega, no_autofit, restricted",,0.5,2,2,,229
+#Catard,fp_catard,Smol Chonker,Midline,plasmajets,5,1500,350,1500,938,200,40,,180,80,50,60,60,1000,FRONT,,90,0.5,0.7,,,20,100,50,40,1,40,12,3000,5,20,240,0.25,2,2,35,70,,,50,100,"CIVILIAN, LINER",base_bp,,0.5,2,2,,218
+#Croissant,fp_croissant,Frigate,Threat,fp_green_emp,9,3000,500,2000,1750,200,48,,80,500,500,60,80,300,PHASE,fp_green_phase,,,,0.1,0.02,0,0,50,20,1,25,11,16000,5,10,400,0.25,8,8,,,,,,,PHASE,threat,,0.4,2,3,,204
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Hemlock,fp_hemlock,Light Destroyer,Mirage Tech,fp_speedburst,14,3200,300,6000,5500,380,75,,140,80,70,38,80,320,FRONT,,220,0.2,1.0,,,20,50,40,50,2,30,13,90000,5,15,320,0.25,15,15,,,,,,,,"merc, rare_bp, independent",0.5,0.7,2,3,,319
+Cup,fp_ewship,EW Destroyer,High Tech,fp_rangereducer,12,4000,350,5600,4167,330,85,,90,65,45,35,65,450,FRONT,,360,0.4,0.7,,,80,250,80,70,2,30,9,60000,5,12,420,0.25,14,14,,,,,,,,"hightech_bp, persean, merc",,0.6,2,4,,300
+Burette II,fp_tube,Militarized Prototype,High Tech,maneuveringjets,9,2800,300,5400,5833,350,80,,85,100,80,30,80,250,OMNI,,150,0.3,0.6,,,20,40,40,60,2,30,10,50000,5,15,320,0.25,11,11,,,,,,,,"tritachyon, merc",,0.7,2,3,,319
+Dinnerbox,fp_tonk,Destroyer,Midline,flarelauncher_active,10,6000,750,4800,4167,260,65,,70,45,30,20,20,525,FRONT,,300,0.4,0.80,,,90,150,130,75,2,30,9,42000,4,13,420,0.25,12,12,,,,,,,,"midline_bp, merc",,0.4,2,3,,300
+Carrion,fp_pcondor,Experiment,Low Tech,fp_phasedive,9,5500,450,3500,2500,200,45,,55,50,25,25,20,400,OMNI,,120,0.4,1.0,0.10,0.05,110,150,80,50,2,15,9,34000,5,14,400,0.25,14,14,,,,,,,,"rare_bp, pirates, pirate_bp, merc",0.75,0.5,2,3,,302
+Scoliosis,fp_phammerhead,Phase Destroyer,Midline,fp_brokenaaf,11,5250,400,4500,4167,320,100,,90,80,50,30,70,450,PHASE,phasecloak,,,,0.08,0.06,60,90,80,40,2,30,9,42000,5,12,330,0.25,11,11,,,,,,,,"rare_bp, pirates, merc",0.5,0.5,2,3,,300
+Sword,fp_dauntless,Destroyer,Midline,fp_fullburn,10,5500,550,6300,4167,350,110,,80,60,30,30,30,450,FRONT,,360,0.3,0.8,,,60,150,100,100,2,30,9,41000,5,12,360,0.25,11,11,,,,,,,,"midline_bp, merc",,0.5,2,3,,300
+Canard,fp_canard,Destroyer,Midline,plasmajets,13,3750,650,6500,3500,420,90,,120,80,80,60,70,360,FRONT,,225,0.3,0.8,,,50,80,60,60,2,30,10,80000,5,15,320,0.25,15,15,,,,,,,,"rare_bp, hist2t, merc, independent",,0.5,2,3,,202
+Voyant,fp_minimote,Destroyer,High Tech,fp_phasedisrupt,12,3300,300,6200,6667,360,65,,110,90,50,40,90,350,FRONT,,360,0.3,0.6,,,30,40,30,20,2,20,9,65000,5,22,340,0.25,13,13,,,,,,,,"rare_bp, hist1t, merc, tritachyon",,0.6,3,4,,309
+Phenom,fp_phenom,Phase Destroyer,High Tech,emp,14,3600,600,4500,10000,500,75,,140,80,60,40,32,300,PHASE,phasecloak,90,,,0.06,0.03,10,30,50,80,2,50,10,125000,5,30,300,0.25,18,18,,,,,,,,"rare_bp, merc, ind, tritachyon",,0.5,2,3,,314
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Budgerigar,fp_bell,Cruiser,Midline,highenergyfocus,15,7000,1100,7500,9000,500,145,1,45,35,30,12,10,1300,OMNI,,120,0.5,0.8,,,150,250,100,80,3,20,7,120000,3,12,420,0.25,23,23,,,,,,,"CARRIER, COMBAT, NO_AUTO_ESCORT","midline_bp, merc",,0.5,2,3,,407
+Prime,fp_prime,Cruiser,Midline,microburn,18,12000,1300,12000,11000,750,175,,55,20,17,15,20,1400,FRONT,,120,0.3,0.8,,,250,400,240,175,4,33,8,230000,4,16,540,0.25,28,28,,,,,,,,"rare_bp, merc",,0.3,4,6,,401
+Moth,fp_phaseminer,Phase Cruiser,High Tech,highenergyfocus,15,8500,1300,8500,18000,800,150,2,65,30,20,14,10,1550,PHASE,phasecloak,,,,0.04,0.07,70,200,400,200,3,50,8,200000,4,20,420,0.25,30,30,,,,,,,,"rare_bp, tritachyon, merc, independent",,0.4,2,3,,406
+Trilolight,fp_trilolight,Terminator Droneship,Remnant,drone_strike,17,9000,900,9000,10000,550,135,2,60,40,25,17,20,1900,OMNI,,180,0.5,0.6,,,0,0,50,60,3,30,9,150000,5,15,540,0.25,28,28,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","remnant, auto_rec",,0.5,4,7,,413
+Buster,fp_buster,Drone,Explorarium,fastmissileracks,9,10000,1500,9000,5625,400,130,,70,30,20,18,10,1800,NONE,,0,0,0,,,0,0,50,50,3,15,8,110000,5,12,600,0.25,12,12,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","derelict, auto_rec",,0.5,2,3,,412
+Severance,fp_severance,Cruiser,Midline,fp_extremeenergyfocus,14,7500,1050,11500,10000,650,135,,60,45,35,13,18,1300,FRONT,,270,0.4,0.8,,,130,220,100,150,3,33,8,105000,4,15,480,0.25,21,21,,,,,,,,"rare_bp, merc, lions_guard",,0.6,3,5,,401
+#Tester,fp_tester,tester,Midline,maneuveringjets,14,8000,1000,11000,12000,600,155,,50,30,20,15,20,1200,FRONT,,270,0.4,0.8,,,150,250,150,100,3,33,8,120000,3,12,480,0.25,22,22,,,,,,,,"rare_bp, merc",,0.5,2,3,,401
+Preacher,fp_dauntless_new,Heavy Cruiser,Low Tech,combat_burn,16,14000,1200,13000,10000,600,200,,50,35,18,12,8,2200,OMNI,,150,0.2,1,,,250,500,400,250,5,30,8,130000,4,12,540,0.25,22,22,,,,,,,SHIP_WITH_MODULES,"LC_bp, luddic_church, knights_of_ludd, merc, hist2t",,0.4,2,5,,404
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Hammerslaught,fp_hammerslaught,Battleship,Low Tech,burndrive,30,17000,1750,17000,15000,750,360,,35,20,13,6,4,4000,FRONT,,270,0.5,0.9,,,750,1500,250,400,15,27,7,350000,3,12,720,0.25,43,43,,,,,,,,"rare_bp, merc, hegemony",,0.4,4,5,,500
+Challenger,fp_challenger,Battlecarrier,Low Tech,burndrive,27,14000,1700,15500,12500,600,270,2,40,25,18,8,10,3300,FRONT,,220,0.4,1,,,600,1300,200,300,15,20,7,350000,3,15,660,0.25,38,38,,,,,,,"CARRIER, COMBAT, NO_AUTO_ESCORT","rare_bp, merc, hegemony, hist2t",,0.4,2,4,,507
+Voidstalker,fp_voidstalker,Battlecruiser,Mirage Tech,fp_speedburst,26,9500,800,16000,25000,1050,260,,75,60,50,18,22,1900,FRONT,,180,0.3,1,,,375,750,300,350,8,56,9,400000,4,20,600,0.25,45,45,,,,,,,,"rare_bp, hist3t, independent, merc",0.3,0.6,2,4,,505
+Pioneer,fp_hauler,Capitalship,Low Tech,highenergyfocus,26,14000,1500,12000,12500,420,215,2,55,20,15,8,7,2700,OMNI,,90,0.4,1,,,500,900,1200,400,13,20,8,180000,3,10,660,0.25,34,30,,,,,,,,"rare_bp, hegemony, independent, merc",,0.4,2,4,,507
+Redentor,fp_condorcap,Battleship,Low Tech,ammofeed,28,17000,1500,16500,11250,600,345,,40,22,15,7,5,3400,OMNI,,120,0.5,1,,,420,750,300,300,11,50,7,250000,3,15,720,0.25,40,40,,,,,,,,"rare_bp, independent, luddic_church, merc",,0.4,3,6,,506.5
+Adjucator,fp_adjucator,Battlecruiser,Midline,fp_sindrianfervor,24,10000,1200,13000,12000,700,250,,60,34,25,16,20,2200,FRONT,,270,0.4,0.8,,,270,450,200,250,8,56,8,280000,4,20,580,0.25,35,35,,,,,,,,"rare_bp, merc, lions_guard, diktat",,0.5,3,4,,505
+Lion,fp_bigboi,Dreadnought,Midline,fp_propagandaemitter,34,26000,1650,24000,12500,1050,450,,35,20,16,6,3,6500,FRONT,,270,0.4,0.7,,,2000,3000,750,800,16,45,7,650000,4,12,920,0.25,60,60,,,,,,,,"rare_bp, lions_guard",,0.5,2,4,,512
+Lamenter,fp_dictator,Battlecarrier,Low Tech,combat_burn,36,30000,1500,26000,12500,900,400,4,25,25,8,7,3,7000,OMNI,,120,0.2,1,,,1800,3200,1200,700,19,45,7,700000,4,12,1080,0.25,60,60,,,,,,,"COMBAT, SHIP_WITH_MODULES","rare_bp, luddic_church, knights_of_ludd, merc, hist3t",,0.4,5,10,,512
+Lamenter (K),fp_dictator_large,Battleship,Low Tech,combat_burn,34,30000,1550,26000,12500,1200,440,,25,25,8,7,3,7000,OMNI,,120,0.2,1,,,1600,3000,1000,700,19,45,7,640000,4,12,1080,0.25,55,55,,,,,,,SHIP_WITH_MODULES,"rare_bp, luddic_church, knights_of_ludd, merc, hist3t",,0.4,5,10,,512
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+#Faction,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Poker,fp_poker,Frigate,Sector-8,microburn,5,1450,300,2000,1750,200,40,,260,140,100,100,130,200,FRONT,,220,0.3,0.8,,,10,30,10,15,1,25,12,10000,5,10,280,0.25,6,6,,,,,,,,"hist1t, merc, sector8_bp",,0.4,2,3,,204
+Cutter,fp_cutter,Destroyer,Sector-8,plasmajets,9,5750,550,5500,3500,420,100,,90,80,35,40,50,450,OMNI,,160,0.3,0.8,,,30,150,60,120,2,30,10,17000,5,12,400,0.25,11,11,,,,,,,,"hist1t, merc, sector8_bp",,0.5,2,3,,202
+Blaster,fp_blaster,Cruiser,Sector-8,fp_energyaaf,12,7500,1150,10000,11000,700,150,,50,25,15,18,12,1400,FRONT,,220,0.3,0.8,,,220,400,250,200,4,33,8,180000,4,16,540,0.25,19,19,,,,,,,,"hist2t, merc, sector8_bp",0.75,0.3,4,6,,401
+Striker,fp_striker,Cruiser,Sector-8,fp_temporalburst,15,8000,850,10500,10000,750,165,,80,40,17,23,17,1250,OMNI,,160,0.3,0.8,,,100,200,120,100,3,33,9,180000,4,18,460,0.25,26,26,,,,,,,,"hist2t, merc, sector8_bp",0.75,0.3,4,6,,401
+Hoarder,fp_hoarder,Heavy Cruiser,Sector-8,microburn,18,9000,1100,10500,6000,350,175,3,45,20,13,13,7,1600,FRONT,,220,0.5,0.8,,,300,450,200,60,4,25,8,230000,3,18,560,0.25,28,28,,,,,,,"CARRIER, COMBAT, NO_AUTO_ESCORT","hist3t, merc, sector8_bp",0.5,0.5,2,3,,407
+Elite,fp_elite,Battlecruiser,Sector-8,plasmajets,25,12000,1350,14000,25000,900,265,2,60,50,24,12,10,2400,OMNI,,160,0.3,0.8,,,300,550,350,300,8,56,8,310000,4,15,660,0.25,42,42,,,,,,,,"hist3t, merc, sector8_bp",0.5,0.3,2,4,,505
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,fp_dictator_module_torpedo,Prow,Low Tech,,,5000,7500,0,0,0,0,,,,,,,10000,NONE,,,,,,,,,,,,,,,,,,,,,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","module_no_status_bar, module_unselectable",,1,2,3,,
+,fp_dictator_module_novacannon,Prow,Low Tech,,,5000,5000,0,0,0,0,,,,,,,4000,NONE,,,,,,,,,,,,,,,,,,,,,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","module_no_status_bar, module_unselectable",,1,2,3,,
+,fp_dauntless_prow,Prow,Low Tech,,,3000,5000,0,0,0,0,,,,,,,4000,NONE,,,,,,,,,,,,,,,,,,,,,,,,,,,"UNBOARDABLE, HIDE_IN_CODEX","module_no_status_bar, module_unselectable",,1,2,3,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+#Tester2,fp_tonk_test,Destroyer,Midline,flarelauncher_active,11,6000,750,4800,4167,260,65,,70,45,30,20,20,525,FRONT,,300,0.4,0.80,,,90,150,130,75,2,30,9,42000,4,13,420,0.25,12,12,,,,,,,,"midline_bp, merc",,0.4,2,3,,300
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+#BIG BOI,fp_modtank,CHUNGUS,Midline,microburn,19,12000,1300,12000,11000,750,175,,30,20,17,15,20,1400,NONE,,120,0.3,0.8,,,250,400,240,175,4,33,8,230000,4,16,540,0.25,28,28,,,,,,,,restricted,,0.3,4,6,,401
+#,fp_modtank_botleft,Cruiser,Midline,damper,19,12000,1300,12000,11000,750,175,,30,20,17,15,20,1400,NONE,,120,0.3,0.8,,,250,400,240,175,4,33,8,230000,4,16,540,0.25,28,28,,,,,,,,restricted,,0.3,4,6,,401
+#,fp_modtank_botright,Cruiser,Midline,damper,19,12000,1300,12000,11000,750,175,,30,20,17,15,20,1400,NONE,,120,0.3,0.8,,,250,400,240,175,4,33,8,230000,4,16,540,0.25,28,28,,,,,,,,restricted,,0.3,4,6,,401
+#,fp_modtank_topleft,Cruiser,Midline,damper,19,12000,1300,12000,11000,750,175,,0,20,17,15,20,1400,NONE,,120,0.3,0.8,,,250,400,240,175,4,33,8,230000,4,16,540,0.25,28,28,,,,,,,,restricted,,0.3,4,6,,401
+#,fp_modtank_topright,Cruiser,Midline,damper,19,12000,1300,12000,11000,750,175,,0,20,17,15,20,1400,NONE,,120,0.3,0.8,,,250,400,240,175,4,33,8,230000,4,16,540,0.25,28,28,,,,,,,,restricted,,0.3,4,6,,401

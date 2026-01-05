@@ -1,0 +1,62 @@
+{
+  "id": "fp_dauntless_torpedoprow",
+  "specClass": "projectile",
+  "projectileSpecId": "dictator_torp",
+  "type": "MISSILE",
+  "size": "MEDIUM",
+  "everyFrameEffect": "fuzzypack.data.weapons.prowtorps",
+  "turretSprite": "graphics/weapons/dauntless_prow.png",
+  "hardpointSprite": "",
+  "turretOffsets": [
+    -4.5,
+    -26.5,
+    -4.5,
+    26.5,
+    10.5,
+    -21.5,
+    10.5,
+    21.5
+  ],
+  "turretAngleOffsets": [
+    -5,
+    5,
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    -15.5,
+    -26.5,
+    -15.5,
+    26.5,
+    -0.5,
+    -21.5,
+    -0.5,
+    21.5
+  ],
+  "hardpointAngleOffsets": [
+    -7,
+    7,
+    0,
+    0
+  ],
+  "barrelMode": "LINKED",
+  "animationType": "SMOKE",
+  "smokeSpec": {
+    "particleSizeMin": 10,
+    "particleSizeRange": 12,
+    "cloudParticleCount": 10,
+    "cloudDuration": 2.5,
+    "cloudRadius": 10,
+    "blowbackParticleCount": 8,
+    "blowbackDuration": 2,
+    "blowbackLength": 18,
+    "blowbackSpread": 10,
+    "particleColor": [
+      200,
+      60,
+      60,
+      100
+    ]
+  },
+  "fireSoundTwo": "reaper_fire"
+}

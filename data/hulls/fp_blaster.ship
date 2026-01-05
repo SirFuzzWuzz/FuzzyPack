@@ -1,0 +1,214 @@
+{
+  "hullName": "Blaster",
+  "hullId": "fp_blaster",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/blaster.png",
+  "style": "HIGH_TECH",
+  "height": 186,
+  "width": 186,
+  "center": [93, 90],
+  "collisionRadius": 182,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 162,
+  "viewOffset": 0,
+  "builtInMods": [
+    "turretgyros",
+    "fp_energyrangebuff"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [89, 45]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [89, -45]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [68, 24]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [68, -24]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [68, 8]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [68, -8]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 0,
+      "locations": [57, 46]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -0,
+      "locations": [57, -46]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 130,
+      "angle": -65,
+      "locations": [20, -56]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 130,
+      "angle": 65,
+      "locations": [20, 56]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": -90,
+      "locations": [-39, -82]
+    },
+    {
+      "id": "WS0012",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": 90,
+      "locations": [-39, 82]
+    },
+    {
+      "id": "WS0013",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 125,
+      "angle": 180,
+      "locations": [-63, 23]
+    },
+    {
+      "id": "WS0014",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 125,
+      "angle": -180,
+      "locations": [-63, -23]
+    },
+    {
+      "id": "WS0015",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 75,
+      "angle": 0,
+      "locations": [43, -0]
+    },
+    {
+      "id": "WS0016",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 220,
+      "angle": 180,
+      "locations": [-27, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-75, 64],
+      "length": 45,
+      "width": 22,
+      "angle": 180,
+      "contrailSize": 22,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-75, -64],
+      "length": 45,
+      "width": 18,
+      "angle": -180,
+      "contrailSize": 18,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-87, -0],
+      "length": 100,
+      "width": 47,
+      "angle": 180,
+      "contrailSize": 47,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    67, -32,
+    90, -39,
+    90, -52,
+    29, -68,
+    -12, -70,
+    -24, -90,
+    -51, -90,
+    -63, -73,
+    -73.5, -70,
+    -73, -56,
+    -84, -14,
+    -84, 14,
+    -73, 56,
+    -73.5, 70,
+    -63, 73,
+    -51, 90,
+    -24, 90,
+    -12, 70,
+    29, 68,
+    90, 52,
+    90, 39,
+    67, 32
+  ]
+}

@@ -1,0 +1,42 @@
+{
+	# ships the faction gets access to when importing S&W out-of-faction
+	"shipsWhenImporting":{
+		"tags":["base_bp", "LP_bp", "luddic_path"],
+		"hulls":[
+		],
+	},
+	"knownShips":{
+		"tags":["base_bp", "LP_bp", "luddic_path"],
+		"hulls":[
+		],
+	},
+
+	"knownFighters":{
+		"tags":["base_bp", "LP_bp", "luddic_path"],
+		"fighters":[
+			"fp_reactive_bomber_wing",
+		],
+	},
+
+	"knownWeapons":{
+		"tags":["base_bp", "lowtech_bp", "midline_bp", "missile_bp", "hightech_bp", "LP_bp", "luddic_path"],
+		"weapons":[
+		],
+	},
+	"knownHullMods":{
+		"tags":["base_bp", "luddic_path"],
+		"hullMods":[
+			"fp_patherpilots",
+			"fp_unsaferoverride",
+			"fp_reactivearmour",
+			"fp_enginedirt",
+		],
+	},
+
+},
+
+
+
+
+
+

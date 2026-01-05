@@ -1,0 +1,59 @@
+{
+  "id": "fp_flashbeam_builtin",
+  "specClass": "beam",
+  "type": "ENERGY",
+  "size": "MEDIUM",
+  "collisionClass": "RAY",
+  "collisionClassByFighter": "RAY_FIGHTER",
+  "beamEffect":"fuzzypack.data.weapons.flashbeam",
+  "turretSprite": "graphics/weapons/flashbeam/flashbeam_builtin.png",
+  "turretGlowSprite": "graphics/weapons/flashbeam/flashbeam_builtin_glow.png",
+  "hardpointSprite": "",
+  "hardpointGlowSprite": "graphics/weapons/flashbeam/flashbeam_builtin_glow.png",
+  "glowColor": [
+    180,
+    100,
+    25,
+    255
+  ],
+  "hitGlowRadius": 0,
+  "turretOffsets": [
+    3.5,
+    0.5
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    20,
+    0.5
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "beamFireOnlyOnFullCharge": true,
+  "fringeColor": [
+    180,
+    100,
+    25,
+    255
+  ],
+  "coreColor": [
+    255,
+    170,
+    50,
+    200
+  ],
+  "width": 20,
+  "textureType": SMOOTH,
+  "textureScrollSpeed": 100,
+  "pixelsPerTexel": 5,
+  "pierceSet": [
+    PROJECTILE_FF,
+    PROJECTILE_NO_FF,
+    PROJECTILE_FIGHTER,
+    MISSILE_FF,
+    MISSILE_NO_FF
+  ],
+  "fireSoundOne": "flashbeam_fire"
+}

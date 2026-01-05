@@ -1,0 +1,37 @@
+{
+	"id":"pulsecannon_shot",
+	"specClass":"projectile",
+	#"spawnType":"BEAM",
+	"spawnType":"BALLISTIC_AS_BEAM",
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	"length":20.0,
+	"width":50.0,
+	"hitGlowRadius":50,
+	"fadeTime":0.50,
+	"fringeColor":[0,0,255,255],
+	"coreColor":[255,255,255,200],
+	#"textureType":"SMOOTH",  # only needed for BEAM spawnType
+	#"textureScrollSpeed":64.0,
+	#"pixelsPerTexel":5.0
+	"textureType":"SMOOTH",  # only needed for BEAM spawnType
+	"textureScrollSpeed":-256.0,
+	"pixelsPerTexel":1.0,
+	"behaviorSpec":{"behavior":"PROXIMITY_FUSE",
+                    "range":5,
+                    #"vsMissileRange":100,
+                    "explosionSpec":{"duration":0.1f,
+                                     "radius":200,
+                                     "coreRadius":100, # full damage within core radius - also equal to proximity fuse range
+                                     "collisionClass":PROJECTILE_FF,
+                                     "collisionClassByFighter":PROJECTILE_FIGHTER,
+                                     "particleSizeMin":3.0,
+                                     "particleSizeRange":3.0,
+                                     "particleDuration":3,
+                                     "particleCount":10,
+                                     "particleColor":[100,100,255,255],
+                                     "sound":"explosion_flak"},
+                    }
+
+}
+}

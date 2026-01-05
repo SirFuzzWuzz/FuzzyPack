@@ -1,0 +1,93 @@
+{
+  "variantId": "fp_condorcap_penitent",
+  "hullId": "fp_condorcap",
+  "displayName": "Penitent",
+  "goalVariant": true,
+  "fluxCapacitors": 17,
+  "fluxVents": 45,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "dedicated_targeting_core",
+    "armoredweapons",
+    "ballistic_rangefinder",
+    "reinforcedhull",
+    "turretgyros"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0027": "fp_dud_hammerrack",
+        "WS0028": "fp_dud_hammerrack"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0007": "breach",
+        "WS0008": "breach",
+        "WS0009": "breach",
+        "WS0010": "breach",
+        "WS0011": "breach",
+        "WS0012": "breach"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "fp_twp2x",
+        "WS0002": "fp_twp2x",
+        "WS0003": "fp_twp2x",
+        "WS0004": "fp_twp2x",
+        "WS0005": "fp_twp2x",
+        "WS0006": "fp_twp2x",
+        "WS0015": "fp_twp2x",
+        "WS0016": "fp_twp2x"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0017": "lightdualac",
+        "WS0018": "lightdualac",
+        "WS0019": "lightdualac",
+        "WS0020": "lightdualac"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0026": "fp_twinthumper"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0023": "shredder",
+        "WS0024": "shredder"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0013": "vulcan",
+        "WS0014": "vulcan",
+        "WS0021": "flak",
+        "WS0022": "flak",
+        "WS0025": "dualflak",
+        "WS0029": "vulcan",
+        "WS0030": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

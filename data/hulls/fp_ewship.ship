@@ -1,0 +1,176 @@
+{
+  "hullName": "EW SHIP",
+  "hullId": "fp_ewship",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/fp_ewship.png",
+  "style": "LOW_TECH",
+  "height": 176,
+  "width": 196,
+  "center": [98, 92.5],
+  "collisionRadius": 101.5,
+  "shieldCenter": [-0.5, -0],
+  "shieldRadius": 149,
+  "viewOffset": 0,
+  "builtInMods": [
+    "ecm",
+    "hiressensors",
+    "delicate"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 85,
+      "angle": 0,
+      "locations": [-0.5, -27]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 180,
+      "locations": [-43.5, -0]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 90,
+      "locations": [-57.5, 67]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "TURRET",
+      "arc": 5,
+      "angle": -90,
+      "locations": [-57.5, -67]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [25, 89]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [25, -89]
+    },
+    {
+      "id": "WS0007",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [32.5, 24]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-88.5, -0],
+      "length": 33,
+      "width": 8,
+      "angle": 180,
+      "contrailSize": 8,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-88.5, 10],
+      "length": 22,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-88.5, -10],
+      "length": 22,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 6,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-79.5, 47.5],
+      "length": 10.086533,
+      "width": 3.747985,
+      "angle": 147.5,
+      "contrailSize": 3.747985,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-79.5, -47.5],
+      "length": 10.086533,
+      "width": 3.747985,
+      "angle": -147.5,
+      "contrailSize": 3.747985,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-83.5, 41.5],
+      "length": 14.113003,
+      "width": 3.360454,
+      "angle": 147.5,
+      "contrailSize": 3.360454,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-83.5, -41.5],
+      "length": 14.113003,
+      "width": 3.360454,
+      "angle": -147.5,
+      "contrailSize": 3.360454,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-76, 53.5],
+      "length": 5.791414,
+      "width": 3.292126,
+      "angle": 147.5,
+      "contrailSize": 3.292126,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-76, -53.5],
+      "length": 5.791414,
+      "width": 3.292126,
+      "angle": -147.5,
+      "contrailSize": 3.292126,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    -11.5, -60.5,
+    19.5, -68.5,
+    26.5, -93.5,
+    -20.5, -90,
+    -71.5, -54.5,
+    -84.5, -37,
+    -84.5, 37,
+    -71.5, 54.5,
+    -20.5, 90,
+    26.5, 93.5,
+    18, 69,
+    -11.5, 60.5,
+    35, 34,
+    35, 16,
+    22.5, -6.5,
+    22, -49
+  ]
+}

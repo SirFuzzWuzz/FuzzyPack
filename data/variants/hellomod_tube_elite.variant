@@ -1,0 +1,49 @@
+{
+  "variantId": "fp_tube_elite",
+  "hullId": "fp_tube",
+  "displayName": "Elite",
+  "goalVariant": true,
+  "fluxCapacitors": 2,
+  "fluxVents": 8,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "magazines",
+    "hardened_subsystems",
+    "safetyoverrides"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "fp_amflamer",
+        "WS0002": "fp_amflamer"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "typhoon"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "pdlaser",
+        "WS0005": "pdlaser"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "pdburst"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

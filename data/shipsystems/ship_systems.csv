@@ -1,0 +1,14 @@
+name,id,flux/second,f/s (base rate),f/s (base cap),flux/use,f/u (base rate),f/u (base cap),cr/u,max uses,regen,charge up,active,down,cooldown,toggle,noDissipation,noHardDissipation,hardFlux,noFiring,noTurning,noStrafing,noAccel,noShield,noVent,isPhaseCloak,tags,icon
+#Mini Mote Attractor,fp_minimotecontrol,,,,,,0,,,,0.1,,0.4,,,,,,,,,,,,,restricted,graphics/icons/hullsys/reserve_deployment.png
+Burst Jets,fp_speedburst,,,,,,0,,2,0.2,,0.7,0.8,,,,,,,,,,,,,,
+Targeting Interference,fp_rangereducer,,,,,,0.2,,,,0.5,8,1,20,,,,,,,,,,,,,graphics/icons/hullsys/entropy_amplifier.png
+Broken AAF,fp_brokenaaf,,,,,,0.1,,,,1,5,1,12,,,,,,,,,,,,,
+Phase Dive,fp_phasedive,,,,,,0.1,,,,1,2,1,12,,,,TRUE,,,,,,,,,graphics/icons/hullsys/displacer.png
+Full Burn,fp_fullburn,,,0.04,,,,,,,1,,1,6,TRUE,,,TRUE,,,TRUE,TRUE,TRUE,TRUE,,,graphics/icons/hullsys/burn_drive.png
+Energy Surge,fp_energyaaf,,,,,,,,,,1,5,1,10,,,,,,,,,,,,,graphics/icons/hullsys/ammo_feeder.png
+Temporal Burst,fp_temporalburst,,,,,,0.2,,3,0.2,0.5,2,1,3,,,,,,,,,,,,,
+Displacer,fp_spotdodge,,,,,,0.05,,5,0.05,,1.5,0.5,,,,,,TRUE,,,,,,,,
+Sindrian Fervor,fp_sindrianfervor,,,,,,0,,,,0.5,8,1,18,,,,,,,,,,,,,
+Extreme Energy Focus,fp_extremeenergyfocus,1,,,,,,,2,0.05,0.5,6,0.25,,,,,,,,,,,,,,graphics/icons/hullsys/high_energy_focus.png
+Propaganda Emitter,fp_propagandaemitter,,,,,,0,,,,0.1,20,2,25,,,,,,,,,,,,,
+Phase Disruptor,fp_phasedisrupt,,,,,,0,,,,1,4,1,12,,,,,,,,,,,,,

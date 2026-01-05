@@ -1,0 +1,54 @@
+{
+  "hullName": "Catard",
+  "hullId": "fp_catard",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/fp_catard.png",
+  "style": "MIDLINE",
+  "height": 109,
+  "width": 82,
+  "center": [41.5, 52],
+  "collisionRadius": 63,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 73,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "STATION_MODULE",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 0,
+      "locations": [-0.5, -0.5]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [50.5, 6]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-43.5, -1.5],
+      "length": 73,
+      "width": 82,
+      "angle": 180,
+      "contrailSize": 82,
+      "style": "OMEGA"
+    }
+  ],
+  "bounds": [
+    46.5, 31.5,
+    -26, 32,
+    -47, 13,
+    -48, -14,
+    -20.5, -38,
+    26.5, -33.5,
+    52, -4,
+    52, 14
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "fp_dictator_novacannon",
+  "specClass": "projectile",
+  "projectileSpecId": "plasma_shot",
+  "type": "ENERGY",
+  "size": "LARGE",
+  "everyFrameEffect": "fuzzypack.data.weapons.prownovacannon",
+  "displayArcRadius": 1000,
+  "turretSprite": "graphics/ships/prow_novacannon.png",
+  "turretGlowSprite": "graphics/weapons/novacannon_glow.png",
+  "hardpointSprite": "graphics/weapons/novacannon.png",
+  "hardpointGlowSprite": "graphics/weapons/novacannon_glow.png",
+  "glowColor": [
+    80,
+    60,
+    255,
+    255
+  ],
+  "turretOffsets": [
+    53,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    69,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "LINKED",
+  "animationType": "GLOW_AND_FLASH",
+  "autocharge": true,
+  "muzzleFlashSpec": {
+    "length": 100,
+    "spread": 90,
+    "particleSizeMin": 15,
+    "particleSizeRange": 25,
+    "particleDuration": 2,
+    "particleCount": 60,
+    "particleColor": [
+      100,
+      100,
+      255,
+      255
+    ]
+  },
+  "fireSoundOne": "novacannon_charge",
+  "fireSoundTwo": "novacannon_fire"
+}

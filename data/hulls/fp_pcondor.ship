@@ -1,0 +1,91 @@
+{
+  "hullName": "Carrion",
+  "hullId": "fp_pcondor",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/phasecondor.png",
+  "style": "LOW_TECH",
+  "height": 197,
+  "width": 107,
+  "center": [56, 86],
+  "collisionRadius": 113,
+  "shieldCenter": [11, -0],
+  "shieldRadius": 143.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "phasefield",
+    "unstable_coils"
+  ],
+  "builtInWeapons": {
+    "WS0004": "fp_phasegun"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "COMPOSITE",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 75.5,
+      "locations": [10, 44]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 240,
+      "angle": 149,
+      "locations": [-60, 28]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 290,
+      "angle": 0,
+      "locations": [94, 21]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [-13, -30]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-83, -18],
+      "length": 55,
+      "width": 19,
+      "angle": 180,
+      "contrailSize": 19,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-82, 18],
+      "length": 72,
+      "width": 20,
+      "angle": 180,
+      "contrailSize": 20,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -46, -43.5,
+    -77.5, -24.5,
+    -77.5, 29.5,
+    -64, 33,
+    -56.5, 45,
+    73, 41,
+    99, 21,
+    70.5, 14,
+    22, -15.5,
+    22, -28,
+    56, -29.5,
+    57, -43.5
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "fp_modtank_gun",
+  "specClass": "projectile",
+  "projectileSpecId": "biggun_shot",
+  "type": "BALLISTIC",
+  "size": "LARGE",
+  "turretSprite": "graphics/weapons/modtank_gun.png",
+  "hardpointSprite": "",
+  "turretOffsets": [
+    149,
+    32,
+    149,
+    0.5,
+    149,
+    -31.5
+  ],
+  "turretAngleOffsets": [
+    0,
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    0,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "NONE"
+}

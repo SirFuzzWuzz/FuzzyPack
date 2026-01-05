@@ -1,0 +1,171 @@
+{
+  "hullName": "Block",
+  "hullId": "fp_hauler",
+  "hullSize": "CAPITAL_SHIP",
+  "spriteName": "graphics/ships/stingerbash.png",
+  "style": "LOW_TECH",
+  "height": 320,
+  "width": 195,
+  "center": [97, 148],
+  "collisionRadius": 168.5,
+  "shieldCenter": [4, -0],
+  "shieldRadius": 219,
+  "viewOffset": 0,
+  "builtInMods": [
+    "surveying_equipment",
+    "civgrade",
+    "repair_gantry"
+  ],
+  "builtInWings": [
+    "fp_boring_wing"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 190,
+      "angle": 90,
+      "locations": [-71, 68]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 190,
+      "angle": -90,
+      "locations": [-71, -68]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 125,
+      "angle": 50,
+      "locations": [40, 28]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 125,
+      "angle": -50,
+      "locations": [40, -28]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 230,
+      "angle": 0,
+      "locations": [90, -0]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 230,
+      "angle": 0,
+      "locations": [56, -0]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 70,
+      "angle": -169,
+      "locations": [-75, -33]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 70,
+      "angle": 169,
+      "locations": [-75, 33]
+    },
+    {
+      "id": "WS0009",
+      "size": "LARGE",
+      "type": "SYNERGY",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [2, -64]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        128, 3,
+        127.5, 17.5,
+        127.5, -16
+      ]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 156,
+      "angle": 70,
+      "locations": [-6, 65]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-146, 68],
+      "length": 80,
+      "width": 40,
+      "angle": 180,
+      "contrailSize": 40,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-146, -68],
+      "length": 80,
+      "width": 40,
+      "angle": -180,
+      "contrailSize": 40,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    148.5, -31.5,
+    127, -47.5,
+    -5, -47,
+    -5, -80.5,
+    -17.5, -88,
+    -86.5, -90.5,
+    -116, -89,
+    -142.5, -74,
+    -142.5, -61,
+    -108, -51.5,
+    -108, -37,
+    -115, -27,
+    -115, 27,
+    -108, 37,
+    -108, 51.5,
+    -142.5, 61,
+    -142.5, 74,
+    -116, 89,
+    -86.5, 90.5,
+    -17.5, 88,
+    7.5, 81,
+    7, 47.5,
+    127, 47.5,
+    148.5, 31.5
+  ]
+}

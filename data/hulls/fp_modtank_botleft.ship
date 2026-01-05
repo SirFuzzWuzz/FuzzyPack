@@ -1,0 +1,54 @@
+{
+  "hullName": "Bot left module",
+  "hullId": "fp_modtank_botleft",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/modulartank/modtank_botleft.png",
+  "style": "LOW_TECH",
+  "height": 225,
+  "width": 161,
+  "center": [80.5, 112.5],
+  "collisionRadius": 141.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 150,
+  "viewOffset": 0,
+  "weaponSlots": [],
+  "engineSlots": [
+    {
+      "location": [-108.5, 51],
+      "length": 128,
+      "width": 23,
+      "angle": 180,
+      "contrailSize": 23,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-108.5, 29],
+      "length": 128,
+      "width": 23,
+      "angle": 180,
+      "contrailSize": 23,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-108.5, -26.5],
+      "length": 162,
+      "width": 68,
+      "angle": 180,
+      "contrailSize": 68,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    108.5, -68.5,
+    101.5, -75.5,
+    -42.5, -78,
+    -108.5, -61,
+    -108, -4.5,
+    -72.5, 12,
+    -108, 21.5,
+    -108.5, 61,
+    -42.5, 78,
+    103.5, 76.5,
+    109, 71.5
+  ]
+}

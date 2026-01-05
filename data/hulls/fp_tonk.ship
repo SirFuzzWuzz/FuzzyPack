@@ -1,0 +1,127 @@
+{
+  "hullName": "Tonk",
+  "hullId": "fp_tonk",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/fp_tonk.png",
+  "style": "MIDLINE",
+  "height": 168,
+  "width": 106,
+  "center": [53, 86.5],
+  "collisionRadius": 95.5,
+  "shieldCenter": [3.5, -0],
+  "shieldRadius": 114,
+  "viewOffset": 0,
+  "builtInWeapons": {
+    "WS0001": "fp_pulsecannon",
+    "WS0006": "fp_deco_tonk"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "LARGE",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [-8.5, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -60,
+      "locations": [15.5, -26]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -60,
+      "locations": [50.5, -26]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [68.5, 26]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [68.5, -26]
+    },
+    {
+      "id": "WS0006",
+      "size": "LARGE",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [-5, -0]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": -90,
+      "locations": [-46.5, -47]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 90,
+      "locations": [-46.5, 47]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-83.5, 9],
+      "length": 48,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 16,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-83.5, -9],
+      "length": 48,
+      "width": 16,
+      "angle": -180,
+      "contrailSize": 16,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    65.5, -9,
+    77, -35.5,
+    60.5, -48,
+    -45, -45.5,
+    -58.5, -31,
+    -72, -41,
+    -84.5, -26.5,
+    -84.5, 26.5,
+    -72, 41,
+    -58.5, 31,
+    -45, 45.5,
+    60.5, 48,
+    77, 35.5,
+    65.5, 9,
+    71.5, -0
+  ]
+}

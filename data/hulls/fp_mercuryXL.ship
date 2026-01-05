@@ -1,0 +1,172 @@
+{
+  "hullName": "Mercury XL",
+  "hullId": "fp_mercuryXL",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/fp_mercuryXL.png",
+  "style": "HIGH_TECH",
+  "height": 116,
+  "width": 58,
+  "center": [29, 58],
+  "collisionRadius": 81,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 79.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "civgrade"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [8, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 30,
+      "locations": [32, 20]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -30,
+      "locations": [32, -20]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 255,
+      "angle": 180,
+      "locations": [-43, -0]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "TURRET",
+      "arc": 5,
+      "angle": 175,
+      "locations": [-21, 23]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "TURRET",
+      "arc": 5,
+      "angle": -175,
+      "locations": [-21, -23]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-56, 12],
+      "length": 28,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-56, -12],
+      "length": 28,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 6,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-56, 6],
+      "length": 28,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-56, -6],
+      "length": 28,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 6,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-53, -21],
+      "length": 19.5,
+      "width": 3,
+      "angle": -180,
+      "contrailSize": 3,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-53, 21],
+      "length": 19.5,
+      "width": 3,
+      "angle": 180,
+      "contrailSize": 3,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-55, -16.5],
+      "length": 20,
+      "width": 3,
+      "angle": -180,
+      "contrailSize": 3,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-55, 16.5],
+      "length": 20,
+      "width": 3,
+      "angle": 180,
+      "contrailSize": 3,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    55.5, -7,
+    48, -15,
+    43, -15,
+    39, -12,
+    39, -21,
+    35, -25,
+    17, -27,
+    -2, -23,
+    -8, -27,
+    -21, -26,
+    -24, -13,
+    -41, -13,
+    -46, -22,
+    -53, -22,
+    -56, -4,
+    -51, -0,
+    -56, 4,
+    -53, 22,
+    -46, 22,
+    -41, 13,
+    -24, 13,
+    -21, 26,
+    -8, 27,
+    -2, 23,
+    17, 27,
+    35, 25,
+    39, 21,
+    39, 12,
+    43, 15,
+    48, 15,
+    55.5, 7
+  ]
+}

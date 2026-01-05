@@ -1,0 +1,94 @@
+{
+  "hullName": "CHUNGUS",
+  "hullId": "fp_modtank",
+  "hullSize": "CAPITAL_SHIP",
+  "spriteName": "graphics/ships/modulartank/modtank_frame.png",
+  "style": "MIDLINE",
+  "height": 303,
+  "width": 266,
+  "center": [133, 151.5],
+  "collisionRadius": 274.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 310,
+  "viewOffset": 0,
+  "builtInMods": [
+    "vastbulk"
+  ],
+  "builtInWeapons": {
+    "WS0005": "fp_modtank_gun"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "STATION_MODULE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [108.5, 79],
+      "renderOrderMod": 2
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "STATION_MODULE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": -0,
+      "locations": [108.5, -79],
+      "renderOrderMod": 2
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "STATION_MODULE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [-108.5, 79],
+      "renderOrderMod": 2
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "STATION_MODULE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": -0,
+      "locations": [-108.5, -79],
+      "renderOrderMod": 2
+    },
+    {
+      "id": "WS0005",
+      "size": "LARGE",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 0,
+      "locations": [5.5, -0]
+    }
+  ],
+  "engineSlots": [],
+  "bounds": [
+    60.5, -9,
+    104.5, -60,
+    149.5, -85,
+    107.5, -129,
+    21, -46.5,
+    -20.5, -46.5,
+    -94.5, -129,
+    -110.5, -129,
+    -149, -88,
+    -61, -9,
+    -61, 9,
+    -149, 88,
+    -110.5, 129,
+    -94.5, 129,
+    -20.5, 46.5,
+    21, 46.5,
+    107.5, 129,
+    149.5, 85,
+    104.5, 60,
+    60.5, 9
+  ]
+}

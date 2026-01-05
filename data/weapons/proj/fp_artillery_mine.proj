@@ -1,0 +1,37 @@
+{
+	"id":"fp_artillery_mine",
+	"specClass":"missile",	
+	"missileType":"ROCKET",
+	"sprite":"",
+	"glowSprite":"graphics/missiles/artilleryshell_indicator.png",
+	"glowColor":[255,100,100,255],
+	"size":[200,200],	
+	"center":[100,100],	
+	"collisionRadius":20,
+	"collisionClass":"MISSILE_FF",
+	"explosionColor":[200,100,100,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":200, # purely visual
+	"explosionSpec":{"duration":0.1f, # not visual
+					 "radius":200,
+					 "coreRadius":20, # full damage within core radius
+					 "collisionClass":HITS_SHIPS_AND_ASTEROIDS,
+					 "collisionClassByFighter":HITS_SHIPS_AND_ASTEROIDS,
+					 "particleSizeMin":5.0,
+					 "particleSizeRange":3.0,
+					 "particleDuration":2,
+					 "particleCount":200,
+					 "particleColor":[255,155,155,255],
+					 "useDetailedExplosion":true,
+					 "sound":"mine_explosion"},
+	"flameoutTime":3, # total time from flameout to full fadeout
+	"armingTime":0,
+	"noEngineGlowTime":0.5, # time spent without the engine glow being rendered
+	"fadeTime":0.5, # fadeout duration					 
+	"engineSpec":{"turnAcc":0,
+				  "turnRate":0,
+				  #"acc":35,
+				  "acc":500,
+				  "dec":0},
+}
+
+

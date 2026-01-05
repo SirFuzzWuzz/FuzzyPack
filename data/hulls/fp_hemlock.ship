@@ -1,0 +1,145 @@
+{
+  "hullName": "Hemlock",
+  "hullId": "fp_hemlock",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/fp_hemlock.png",
+  "style": "MIRAGE_TECH",
+  "height": 251,
+  "width": 218,
+  "center": [109, 92],
+  "collisionRadius": 113.5,
+  "shieldCenter": [6, -0],
+  "shieldRadius": 153,
+  "viewOffset": 0,
+  "builtInMods": [
+    "fp_gofastcore",
+    "fp_weaponbuff"
+  ],
+  "builtInWeapons": {
+    "WS0006": "fp_tesla"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 180,
+      "locations": [-48, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [43, 21]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [43, -21]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [73.5, 9.5]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [73.5, -9.5]
+    },
+    {
+      "id": "WS0006",
+      "size": "LARGE",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [151, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-54, 20],
+      "length": 80,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 16,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-54, -20],
+      "length": 80,
+      "width": 16,
+      "angle": -180,
+      "contrailSize": 16,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    37, -26,
+    22.5, -20.5,
+    13.5, -27,
+    18, -34,
+    13, -39,
+    3.5, -40.5,
+    5, -66,
+    34, -90,
+    -22, -106,
+    -17.5, -88.5,
+    -35, -73,
+    -35, -73,
+    -28.5, -62.5,
+    -29.5, -48.5,
+    -47, -37,
+    -39, -36,
+    -38.5, -24.5,
+    -54.5, -24.5,
+    -54.5, -15.5,
+    -39, -15.5,
+    -37.5, -11,
+    -78, -6.5,
+    -90, -0,
+    -78, 6.5,
+    -37.5, 11,
+    -39, 15.5,
+    -54.5, 15.5,
+    -54.5, 24.5,
+    -38.5, 24.5,
+    -39, 36,
+    -47, 37,
+    -29.5, 48.5,
+    -28.5, 62.5,
+    -35, 73,
+    -35, 73,
+    -17.5, 88.5,
+    -22, 106,
+    34, 90,
+    5, 66,
+    3.5, 40.5,
+    13, 39,
+    18, 34,
+    13.5, 27,
+    22.5, 20.5,
+    37, 26,
+    70, 16.5,
+    105, -0,
+    70, -16.5
+  ]
+}

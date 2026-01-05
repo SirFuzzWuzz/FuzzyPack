@@ -1,0 +1,23 @@
+{
+
+
+	"knownWeapons":{
+		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp", "missile_bp", "remnant"],
+		"weapons":[
+			"fp_overcharger",
+			"fp_shortcircuit",
+			"fp_med_redstone",
+			"fp_prodlauncher",
+			"fp_phasegunM",
+								
+		],
+	},
+	"knownShips":{
+		"tags":["remnant"],
+		"hulls":[
+			"fp_evil_shepherd",
+			"fp_trilolight",
+		],
+	},
+
+},

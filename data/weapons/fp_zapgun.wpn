@@ -1,0 +1,51 @@
+{
+  "id": "fp_zapgun",
+  "specClass": "projectile",
+  "projectileSpecId": "fp_zapshot",
+  "type": "ENERGY",
+  "size": "LARGE",
+  "turretSprite": "graphics/weapons/zapgun/zapgun_t.png",
+  "turretGlowSprite": "graphics/weapons/zapgun/zapgun_t_glow.png",
+  "hardpointSprite": "graphics/weapons/zapgun/zapgun_h.png",
+  "hardpointGlowSprite": "graphics/weapons/zapgun/zapgun_h_glow.png",
+  "glowColor": [
+    230,
+    120,
+    40,
+    200
+  ],
+  "turretOffsets": [
+    32,
+    -0.5
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    30.5,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "LINKED",
+  "animationType": "GLOW_AND_FLASH",
+  "autocharge": true,
+  "muzzleFlashSpec": {
+    "length": 40,
+    "spread": 360,
+    "particleSizeMin": 15,
+    "particleSizeRange": 20,
+    "particleDuration": 0.5,
+    "particleCount": 20,
+    "particleColor": [
+      255,
+      120,
+      40,
+      200
+    ]
+  },
+  "fireSoundOne": "zapgun_charge",
+  "fireSoundTwo": "zapgun_fire",
+  "mountTypeOverride": "HYBRID"
+}

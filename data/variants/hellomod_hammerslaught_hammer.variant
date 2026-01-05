@@ -1,0 +1,84 @@
+{
+  "variantId": "fp_hammerslaught_hammer",
+  "hullId": "fp_hammerslaught",
+  "displayName": "Hammer",
+  "goalVariant": true,
+  "fluxCapacitors": 16,
+  "fluxVents": 50,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "dedicated_targeting_core",
+    "heavyarmor",
+    "additional_berthing"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "mark9"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "hephag",
+        "WS0003": "hephag"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "squall",
+        "WS0007": "squall"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0012": "arbalest",
+        "WS0013": "arbalest"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0024": "tpc",
+        "WS0025": "tpc"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0018": "shredder",
+        "WS0019": "shredder",
+        "WS0020": "shredder",
+        "WS0021": "shredder",
+        "WS0022": "shredder",
+        "WS0023": "shredder"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "flak",
+        "WS0005": "flak",
+        "WS0008": "vulcan",
+        "WS0009": "vulcan",
+        "WS0010": "vulcan",
+        "WS0011": "vulcan",
+        "WS0016": "flak",
+        "WS0017": "flak"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

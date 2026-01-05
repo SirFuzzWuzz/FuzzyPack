@@ -1,0 +1,49 @@
+{
+  "id": "fp_dakkabox",
+  "specClass": "projectile",
+  "projectileSpecId": "dakkabox_dummy",
+  "type": "BALLISTIC",
+  "mountTypeOverride": "UNIVERSAL",
+  "size": "LARGE",
+  "turretSprite": "graphics/weapons/dakkadispenser_t.png",
+  "hardpointSprite": "graphics/weapons/dakkadispenser_h.png",
+  "glowColor": [
+    255,
+    100,
+    100,
+    255
+  ],
+  "turretOffsets": [
+    33,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    38.5,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "LINKED",
+  "animationType": "GLOW_AND_FLASH",
+  "autocharge": true,
+  "muzzleFlashSpec": {
+    "length": 60,
+    "spread": 30,
+    "particleSizeMin": 15,
+    "particleSizeRange": 20,
+    "particleDuration": 1.5,
+    "particleCount": 20,
+    "particleColor": [
+      255,
+      100,
+      100,
+      255
+    ]
+  },
+  "fireSoundTwo": "hellbore_fire",
+  
+}

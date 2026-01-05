@@ -1,0 +1,120 @@
+{
+  "hullName": "Evil Shepherd",
+  "hullId": "fp_evil_shepherd",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/evil_shepherd.png",
+  "style": "HIGH_TECH",
+  "height": 89,
+  "width": 92,
+  "center": [48.5, 39.5],
+  "collisionRadius": 53,
+  "shieldCenter": [5, -0],
+  "shieldRadius": 73.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "automated",
+    "nav_relay",
+    "ecm"
+  ],
+  "builtInWings": [
+    "fp_vorer_wing"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS 007",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": -85,
+      "locations": [-0.5, -23.5]
+    },
+    {
+      "id": "WS 008",
+      "size": "MEDIUM",
+      "type": "UNIVERSAL",
+      "mount": "HARDPOINT",
+      "arc": 20,
+      "angle": 0,
+      "locations": [33.5, -19.5]
+    },
+    {
+      "id": "WS 003",
+      "size": "SMALL",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 0,
+      "locations": [
+        -5, 18.5,
+        3.5, 18.5,
+        12.5, 18.5
+      ]
+    },
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HARDPOINT",
+      "arc": 15,
+      "angle": 45,
+      "locations": [33.5, 29.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-36.5, 27.5],
+      "length": 47,
+      "width": 12,
+      "angle": 180,
+      "contrailSize": 12,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-36.5, -28.5],
+      "length": 47,
+      "width": 12,
+      "angle": -180,
+      "contrailSize": 12,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-35.5, 19.5],
+      "length": 31,
+      "width": 9,
+      "angle": 180,
+      "contrailSize": 9,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-35.5, -20.5],
+      "length": 31,
+      "width": 8,
+      "angle": -180,
+      "contrailSize": 8,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-20.5, -39],
+      "length": 24,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 6,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    41.5, 21.5,
+    33, 28.5,
+    -19.5, 33,
+    -37.5, 33,
+    -25, -1,
+    -37.5, -33,
+    -19.5, -33,
+    -21.5, -41,
+    -9.5, -41,
+    -2.5, -33,
+    36, -32.5,
+    40.5, -25.5
+  ]
+}

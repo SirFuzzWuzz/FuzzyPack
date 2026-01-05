@@ -1,0 +1,7 @@
+id,variant,tags,tier,rarity,fleet pts,op cost,formation,range,attackRunRange,attackPositionOffset,num,role,role desc,refit,base value,,,,,,,,,,,,,number
+fp_vorer_wing,fp_drone_vorer_base,"no_drop, no_sell, remnant, auto_fighter",0,,4,0,BOX,2500,500,,6,SUPPORT,Drone,5,1500,,,,,,,,,,,,,18
+fp_phasenugget_wing,fp_phasenugget_base,"no_drop, no_sell, auto_fighter, high",0,,5,23,V,2500,450,,1,FIGHTER,Phase Support Drone,30,7200,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+fp_boring_wing,fp_boringdrone_base,"support0, luddic_path, pirates, independent, drone, low, auto_fighter, rare_bp, merc",2,,5,20,V,2000,80,,1,FIGHTER,Heavy Mining Drone,25,6500,,,,,,,,,,,,,
+fp_reactive_bomber_wing,fp_reactive_bomber_base,"fighter1, low, merc, low_tech_bp",1,,2,12,BOX,3000,200,,3,FIGHTER,Fighter-Bomber,15,4200,,,,,,,,,,,,,
+fp_redstone_bomber_wing,fp_redstone_bomber_base,"bomber2, low, mid, merc",2,0.8,3,13,BOX,4000,2000,650,2,BOMBER,Bomber,17,6000,,,,,,,,,,,,,

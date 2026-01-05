@@ -1,0 +1,86 @@
+{
+  "hullName": "Stoner",
+  "hullId": "fp_reactive_bomber",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/reactive_bomber.png",
+  "style": "LOW_TECH",
+  "height": 31,
+  "width": 32,
+  "center": [16, 13],
+  "collisionRadius": 18.5,
+  "shieldCenter": [1, -0],
+  "shieldRadius": 21.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "fp_reactivearmour"
+  ],
+  "builtInWeapons": {
+    "WS0001": "mininglaser",
+    "WS0002": "mininglaser",
+    "WS0004": "irpulse"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 180,
+      "angle": 70,
+      "locations": [2.5, 12]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 180,
+      "angle": -70,
+      "locations": [2.5, -12]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 180,
+      "locations": [-8, -0]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 0,
+      "locations": [12, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-11, 7],
+      "length": 14,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-11, -7],
+      "length": 14,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 6,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    16, -2,
+    3.5, -13,
+    -11, -12,
+    -11, 12,
+    3.5, 13,
+    16, 2
+  ]
+}

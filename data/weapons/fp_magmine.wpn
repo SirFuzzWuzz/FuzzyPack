@@ -1,0 +1,45 @@
+{
+  "id": "fp_magmine",
+  "specClass": "projectile",
+  "projectileSpecId": "fp_magmine_proj",
+  "type": "MISSILE",
+  "size": "MEDIUM",
+  "displayArcRadius": 1000,
+  "turretSprite": "graphics/weapons/fp_magmine_t.png",
+  "hardpointSprite": "graphics/weapons/fp_magmine_h.png",
+  "renderHints": [
+    RENDER_LOADED_MISSILES
+  ],
+  "turretOffsets": [
+    16,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    12.5,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "LINKED",
+  "animationType": "MUZZLE_FLASH",
+  "autocharge": true,
+  "muzzleFlashSpec": {
+    "length": 12,
+    "spread": 10,
+    "particleSizeMin": 3,
+    "particleSizeRange": 6,
+    "particleDuration": 0.5,
+    "particleCount": 8,
+    "particleColor": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "fireSoundTwo": "reaper_fire"
+}

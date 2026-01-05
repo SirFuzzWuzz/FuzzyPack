@@ -1,0 +1,34 @@
+{
+	"graphics": {
+		"markers":{
+			"artillery_crosshair": "graphics/crosshair.png",
+			"circle": "graphics/missiles/novacannon_indicator.png",
+			"sindria_emblem": "graphics/diktat_emblem.png",
+		},
+		"projectiles":{
+			"artillery_shell": "graphics/missiles/artilleryshell.png",
+			"artyshell0": "graphics/missiles/artyshell0.png",
+			"artyshell1": "graphics/missiles/artyshell1.png",
+			"artyshell2": "graphics/missiles/artyshell2.png",
+			"artyshell3": "graphics/missiles/artyshell3.png",
+			"artyshell4": "graphics/missiles/artyshell4.png",
+
+			"chainsegment": "graphics/missiles/chainsegment.png",
+			"tether_missile": "graphics/missiles/missile_tether.png",
+			"missile_battery": "graphics/missiles/missile_battery.png",
+
+		},
+		"glow": {
+			"battery_h_glow": "graphics/weapons/fluxbattery_h_glow.png",
+			"battery_t_glow": "graphics/weapons/fluxbattery_t_glow.png",
+			"missile_battery_glow": "graphics/missiles/missile_battery_glow.png",
+			"missile_flash": "graphics/torpedoray32.png",
+			"fire1": "graphics/fx/explosion2.png",
+		},
+		
+	},
+
+}
+
+
+

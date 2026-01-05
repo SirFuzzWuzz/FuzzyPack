@@ -1,0 +1,47 @@
+{
+  "id": "fp_artillery",
+  "specClass": "projectile",
+  "projectileSpecId": "artillery_dummy",
+  "type": "BALLISTIC",
+  "size": "LARGE",
+  "everyFrameEffect": "fuzzypack.data.weapons.artillery",
+  "turretSprite": "graphics/weapons/arty/arty_t.png",
+  "turretGunSprite": "graphics/weapons/arty/arty_t_barrel.png",
+  "hardpointSprite": "graphics/weapons/arty/arty_h.png",
+  "hardpointGunSprite": "graphics/weapons/arty/arty_h_barrel.png",
+  "visualRecoil": 8,
+  "renderHints": [
+    "RENDER_BARREL_BELOW"
+  ],
+  "turretOffsets": [
+    40,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    48,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "MUZZLE_FLASH",
+  "muzzleFlashSpec": {
+    "length": 100,
+    "spread": 20,
+    "particleSizeMin": 10,
+    "particleSizeRange": 35,
+    "particleDuration": 3,
+    "particleCount": 75,
+    "particleColor": [
+      255,
+      80,
+      80,
+      245
+    ]
+  },
+  "fireSoundTwo": "hellbore_fire"
+}

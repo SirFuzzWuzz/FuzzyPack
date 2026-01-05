@@ -1,0 +1,40 @@
+{
+  "variantId": "fp_phenom_standard",
+  "hullId": "fp_phenom",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 8,
+  "fluxVents": 15,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "fp_phaserestoration"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "fp_flashbeam",
+        "WS0002": "fp_flashbeam"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "annihilator"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0004": "fp_overcharger",
+        "WS0005": "fp_overcharger"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

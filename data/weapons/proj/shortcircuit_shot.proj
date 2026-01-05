@@ -1,0 +1,53 @@
+{
+	"id":"shortcircuit_shot",
+	"specClass":"missile",
+	"missileType":"ROCKET",
+	#"missileType":"MISSILE_TWO_STAGE_SECOND_UNGUIDED",
+	"onHitEffect":"fuzzypack.data.weapons.shortcircuit",
+	"sprite":"graphics/missiles/missile_shortcircuit.png",
+	"size":[10,21],	
+	"center":[5,10.5],
+	"collisionRadius":15,
+	"collisionClass":"MISSILE_NO_FF",
+	"explosionColor":[220,155,155,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":250, # purely visual
+	"explosionSpec":{"duration":0.1f, # not visual
+					 "radius":75,
+					 "coreRadius":75, # full damage within core radius
+					 "collisionClass":HITS_SHIPS_AND_ASTEROIDS,
+					 "collisionClassByFighter":HITS_SHIPS_AND_ASTEROIDS,
+					 "particleSizeMin":5.0,
+					 "particleSizeRange":3.0,
+					 "particleDuration":1,
+					 "particleCount":150,
+					 "particleColor":[220,140,140,255]},
+	"slowToMaxSpeed":true,
+	"armingTime":0.1,
+	"noEngineGlowTime":1.5,
+	"engineSpec":{"turnAcc":300,
+				  "turnRate":1,
+				  "acc":600,
+				  "dec":0},
+	"engineSlots":[{"id":"ES1",
+					"loc":[-8, 0],
+				    #"style":"TORPEDO_ATROPOS",
+				    "style":"CUSTOM",
+					"styleSpec":{
+						"mode":"QUAD_STRIP", # PARTICLES or QUAD_STRIP, determines which params are used
+						"engineColor":[255,180,150,255],
+						"glowSizeMult":1.5,
+						"glowAlternateColor":[200,200,200,255],
+						"contrailDuration":0.5,
+						"contrailWidthMult":1.2,
+						"contrailWidthAddedFractionAtEnd":2,  # can be negative. makes trail spread out/narrow at the end
+						"contrailMinSeg":5, # min segment length, in pixels
+						"contrailMaxSpeedMult":.0f,
+						"contrailAngularVelocityMult":0.5f,
+						"contrailSpawnDistMult":.5, # how far away from engine it starts
+						"contrailColor":[155,70,70,75],
+						"type":"GLOW" # GLOW or SMOKE; additive or regular blend mode
+					},
+				    "width":10.0,
+				    "length":20.0,
+				    "angle":180.0}]
+}

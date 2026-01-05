@@ -1,0 +1,19 @@
+{
+	"id":"fp_sindrianfervor",
+	"type":"STAT_MOD",
+	"aiType":"WEAPON_BOOST",
+	
+	"statsScript":"fuzzypack.data.shipsystems.SindrianFervor",
+	
+	"jitterUnderColor":[200,0,160,155],
+	"jitterUnderCopies":25,
+	"jitterUnderMinRange":0,
+	"jitterUnderRange":7,
+	"jitterUnderRangeRadiusFraction":0,
+	
+	"weaponGlowColor":[160,0,150,155],
+	"weaponTypes":[ENERGY, BALLISTIC],
+	
+	"useSound":"rallying_cry",
+	"outOfUsesSound":"gun_out_of_ammo",
+}

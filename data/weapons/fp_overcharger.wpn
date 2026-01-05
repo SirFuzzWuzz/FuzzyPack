@@ -1,0 +1,30 @@
+{
+	"id":"fp_overcharger",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"ENERGY",
+	"size":"MEDIUM",
+	"everyFrameEffect": "fuzzypack.data.weapons.overcharger",
+	"turretSprite":"graphics/weapons/overcharger/overcharger_t.png",
+	"turretGlowSprite":"graphics/weapons/overcharger/overcharger_glow_t.png",
+	"hardpointSprite":"graphics/weapons/overcharger/overcharger_h.png",
+	"hardpointGlowSprite":"graphics/weapons/overcharger/overcharger_glow_h.png",
+	"glowColor":[255,100,255,255],
+	"turretOffsets":[15, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[15, 0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	#"animationType":"GLOW",
+	"animationType":"GLOW_AND_FLASH",
+	"muzzleFlashSpec":{"length":30.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":5.0,
+					   "particleSizeMin":15.0,
+					   "particleSizeRange":20.0,
+					   "particleDuration":0.12,
+					   "particleCount":10,
+					   "particleColor":[255,100,255,255]},
+	"interruptibleBurst": true,
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"projectileSpecId":"overcharger_shot",  # projectile that will be fired
+	"fireSoundTwo":"overcharger_fire",
+}

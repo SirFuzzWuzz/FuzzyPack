@@ -1,0 +1,49 @@
+{
+  "id": "fp_twinthumper",
+  "specClass": "projectile",
+  "projectileSpecId": "shredder_shot",
+  "type": "BALLISTIC",
+  "size": "LARGE",
+  "turretSprite": "graphics/weapons/twinthumper/largethump_twinthumper_t_base00.png",
+  "hardpointSprite": "graphics/weapons/twinthumper/largethump_twinthumper_h_base00.png",
+  "turretOffsets": [
+    25,
+    11,
+    25,
+    -11
+  ],
+  "turretAngleOffsets": [
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    30,
+    11,
+    30,
+    -11
+  ],
+  "hardpointAngleOffsets": [
+    0,
+    0
+  ],
+  "barrelMode": "LINKED",
+  "animationType": "MUZZLE_FLASH",
+  "numFrames": 4,
+  "frameRate": 20,
+  "muzzleFlashSpec": {
+    "length": 35,
+    "spread": 5,
+    "particleSizeMin": 10,
+    "particleSizeRange": 16,
+    "particleDuration": 0.15,
+    "particleCount": 12,
+    "particleColor": [
+      255,
+      140,
+      125,
+      200
+    ]
+  },
+  "fireSoundOne": "thumper_spinup",
+  "fireSoundTwo": "thumper_fire"
+}

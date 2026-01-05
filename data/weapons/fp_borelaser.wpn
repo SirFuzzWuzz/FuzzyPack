@@ -1,0 +1,58 @@
+{
+  "id": "fp_borelaser",
+  "specClass": "beam",
+  "type": "ENERGY",
+  "size": "MEDIUM",
+  "collisionClass": "RAY",
+  "collisionClassByFighter": "RAY_FIGHTER",
+  "turretSprite": "graphics/weapons/borelaser/borelaser.png",
+  "turretGlowSprite": "graphics/weapons/borelaser/borelaser_glow.png",
+  "hardpointSprite": "graphics/weapons/borelaser/borelaser.png",
+  "hardpointGlowSprite": "graphics/weapons/borelaser/borelaser_glow.png",
+  "glowColor": [
+    255,
+    40,
+    40,
+    235
+  ],
+  "hitGlowRadius": 0,
+  "turretOffsets": [
+    3.5,
+    0.5
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    20,
+    0.5
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "beamFireOnlyOnFullCharge": true,
+  "fringeColor": [
+    155,
+    25,
+    25,
+    255
+  ],
+  "coreColor": [
+    255,
+    225,
+    225,
+    255
+  ],
+  "width": 50,
+  "textureType": ROUGH,
+  "textureScrollSpeed": 292,
+  "pixelsPerTexel": 5,
+  "pierceSet": [
+    PROJECTILE_FF,
+    PROJECTILE_NO_FF,
+    PROJECTILE_FIGHTER,
+    MISSILE_FF,
+    MISSILE_NO_FF
+  ],
+  "fireSoundTwo": "high_intensity_laser_loop"
+}

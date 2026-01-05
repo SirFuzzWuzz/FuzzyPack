@@ -1,0 +1,27 @@
+{
+  "id": "fp_deco_phaseminer",
+  "specClass": "beam",
+  "type": "DECORATIVE",
+  "size": "LARGE",
+  "showDamageWhenDecorative":true,
+  "renderBelowAllWeapons":"false",
+  "turretSprite": "graphics/ships/decos/fp_deco_phaseminer.png",
+  "hardpointSprite": "",
+  "turretOffsets": [
+    -59,
+    75.5
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    0,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "textureType":ROUGH,
+  "textureScrollSpeed":1.0,
+  "pixelsPerTexel":1.0,
+}

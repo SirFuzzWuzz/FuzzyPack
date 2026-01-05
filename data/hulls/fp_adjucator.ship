@@ -1,0 +1,234 @@
+{
+  "hullName": "Adjucator",
+  "hullId": "fp_adjucator",
+  "hullSize": "CAPITAL_SHIP",
+  "spriteName": "graphics/ships/fp_adjucator.png",
+  "style": "MIDLINE",
+  "height": 260,
+  "width": 256,
+  "center": [128, 130],
+  "collisionRadius": 168,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 183.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "andrada_mods",
+    "solar_shielding",
+    "coherer"
+  ],
+  "builtInWeapons": {
+    "WS0012": "fp_deco_adjucator_front"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 15,
+      "angle": 0,
+      "locations": [114, 26]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 15,
+      "angle": -0,
+      "locations": [114, -26]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [-18, -64]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [-18, 64]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 165,
+      "angle": 76,
+      "locations": [-60, 64]
+    },
+    {
+      "id": "WS0006",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 165,
+      "angle": -76,
+      "locations": [-60, -64]
+    },
+    {
+      "id": "WS0007",
+      "size": "LARGE",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 15,
+      "angle": 0.5,
+      "locations": [-47, 111]
+    },
+    {
+      "id": "WS0008",
+      "size": "LARGE",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 15,
+      "angle": -0.5,
+      "locations": [-47, -111]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 160,
+      "angle": 55,
+      "locations": [85, 18]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 160,
+      "angle": -55,
+      "locations": [85, -18]
+    },
+    {
+      "id": "WS0011",
+      "size": "LARGE",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 240,
+      "angle": 0,
+      "locations": [18, -0]
+    },
+    {
+      "id": "WS0012",
+      "size": "LARGE",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [101, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-126, 11],
+      "length": 95,
+      "width": 19,
+      "angle": 180,
+      "contrailSize": 19,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-126, -11],
+      "length": 95,
+      "width": 19,
+      "angle": -180,
+      "contrailSize": 19,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-123, 26],
+      "length": 85,
+      "width": 18,
+      "angle": 180,
+      "contrailSize": 18,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-123, -26],
+      "length": 85,
+      "width": 18,
+      "angle": -180,
+      "contrailSize": 18,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-122, 39.5],
+      "length": 71,
+      "width": 17,
+      "angle": 180,
+      "contrailSize": 17,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-122, -39.5],
+      "length": 71,
+      "width": 17,
+      "angle": -180,
+      "contrailSize": 17,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-118, 54.5],
+      "length": 60,
+      "width": 15,
+      "angle": 180,
+      "contrailSize": 15,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-118, -54.5],
+      "length": 60,
+      "width": 15,
+      "angle": -180,
+      "contrailSize": 15,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    126, -6,
+    113.5, -13,
+    104, -39,
+    72.5, -45,
+    54, -34,
+    33.5, -36,
+    25.5, -48.5,
+    1, -44,
+    -45.5, -93,
+    -55.5, -123,
+    -92, -111.5,
+    -80.5, -85.5,
+    -82.5, -65.5,
+    -73, -50,
+    -107.5, -61,
+    -109, -61,
+    -126, -11,
+    -126, 11,
+    -109, 61,
+    -73, 50,
+    -82.5, 65.5,
+    -80.5, 85.5,
+    -92, 111.5,
+    -55.5, 123,
+    -42.5, 123.5,
+    -45.5, 93,
+    1, 44,
+    25.5, 48.5,
+    33.5, 36,
+    54, 34,
+    72.5, 45,
+    104, 39,
+    113.5, 13,
+    126, 6
+  ]
+}

@@ -1,0 +1,19 @@
+{
+	"id":"plasmarail_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC_AS_BEAM",
+	#"onFireEffect": "fuzzypack.data.weapons.plasmarail",
+	"collisionClass":"RAY",
+	"collisionClassByFighter":"RAY_FIGHTER",
+	"length":35.0,
+	"width":26,
+	"fadeTime":0.1,
+	"fringeColor":[120,80,255,255],
+	"coreColor":[200,200,255,255],
+	"textureType":"ROUGH",  # now also used for "BALLISTIC_AS_BEAM", if specified
+	"textureScrollSpeed":-256.0,
+	"pixelsPerTexel":10.0,
+	"passThroughFighters":true,
+	"passThroughFightersOnlyWhenDestroyed":true,
+	#"bulletSprite":"graphics/missiles/rev_shell.png"	
+}

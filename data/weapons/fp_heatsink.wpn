@@ -1,0 +1,44 @@
+{
+  "id": "fp_heatsink",
+  "specClass": "projectile",
+  "projectileSpecId": "heatsink_shot",
+  "type": "SYSTEM",
+  "size": "SMALL",
+  "everyFrameEffect": "fuzzypack.data.weapons.heatsink",
+  "turretSprite": "",
+  "hardpointSprite": "",
+  "turretOffsets": [
+    0,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    0,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "SMOKE",
+  "smokeSpec": {
+    "particleSizeMin": 10,
+    "particleSizeRange": 10,
+    "cloudParticleCount": 3,
+    "cloudDuration": 1,
+    "cloudRadius": 10,
+    "blowbackParticleCount": 0,
+    "blowbackDuration": 2,
+    "blowbackLength": 30,
+    "blowbackSpread": 10,
+    "particleColor": [
+      100,
+      100,
+      100,
+      150
+    ]
+  },
+  "fireSoundTwo": "launch_flare_1"
+}

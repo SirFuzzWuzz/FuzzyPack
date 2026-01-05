@@ -1,0 +1,232 @@
+{
+  "hullName": "Moth",
+  "hullId": "fp_phaseminer",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/phaseminer.png",
+  "style": "HIGH_TECH",
+  "height": 214,
+  "width": 288,
+  "center": [144, 107],
+  "collisionRadius": 147,
+  "shieldCenter": [7, -0],
+  "shieldRadius": 175.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "delicate",
+    "phasefield"
+  ],
+  "builtInWings": [
+    "fp_phasenugget_wing"
+  ],
+  "builtInWeapons": {
+    "WS0013": "fp_deco_phaseminer"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": 140,
+      "locations": [-28, 60]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": -140,
+      "locations": [-28, -60]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": 40,
+      "locations": [50, 60]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 140,
+      "angle": -40,
+      "locations": [50, -60]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [-3, -0]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 90,
+      "locations": [-6, 136]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -90,
+      "locations": [-6, -136]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 90,
+      "locations": [12, 136]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": -90,
+      "locations": [12, -136]
+    },
+    {
+      "id": "WS0010",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [76, 59]
+    },
+    {
+      "id": "WS0011",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [76, -59]
+    },
+    {
+      "id": "WS0012",
+      "size": "LARGE",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 3,
+      "angle": 0,
+      "locations": [68.5, -0.5]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -57, 18,
+        -54, -6,
+        -50, -17.5,
+        -48.5, 5
+      ]
+    },
+    {
+      "id": "WS0013",
+      "size": "LARGE",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [72.5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-59, 76],
+      "length": 55,
+      "width": 14,
+      "angle": 180,
+      "contrailSize": 14,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-59, -76],
+      "length": 55,
+      "width": 14,
+      "angle": -180,
+      "contrailSize": 14,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-59, 95],
+      "length": 55,
+      "width": 14,
+      "angle": 180,
+      "contrailSize": 14,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-59, -95],
+      "length": 55,
+      "width": 14,
+      "angle": -180,
+      "contrailSize": 14,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    57.5, -10.5,
+    102.5, -11,
+    92.5, -27.5,
+    77, -31.5,
+    80.5, -67.5,
+    75, -78.5,
+    38.5, -68,
+    37, -107.5,
+    49.5, -123.5,
+    43.5, -130,
+    29, -118.5,
+    15.5, -129,
+    -10, -129,
+    -15, -121.5,
+    -57.5, -97,
+    -57.5, -75,
+    -37.5, -69,
+    -43.5, -45.5,
+    -78.5, -39,
+    -100.5, 0,
+    -78.5, 39,
+    -43.5, 45.5,
+    -37.5, 69,
+    -57.5, 75,
+    -57.5, 97,
+    -15, 121.5,
+    -10, 129,
+    15.5, 129,
+    29, 118.5,
+    43.5, 130,
+    49.5, 123.5,
+    37, 107.5,
+    38.5, 68,
+    75, 78.5,
+    80.5, 67.5,
+    77, 31.5,
+    92.5, 27.5,
+    102.5, 11,
+    57.5, 10.5
+  ]
+}

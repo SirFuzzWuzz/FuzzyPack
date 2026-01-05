@@ -1,0 +1,27 @@
+{
+	"knownShips":{
+		"tags":["base_bp", "heg_aux_bp", "lowtech_bp", "midline_bp", "XIV_bp", "hegemony"],
+		"hulls":[
+			"fp_hammerslaught",
+			"fp_hauler",
+			"fp_smolboi",
+			"fp_challenger",
+			],
+	},
+
+	"knownFighters":{
+		"tags":["base_bp", "lowtech_bp", "midline_bp", "hegemony"],
+		"fighters":[
+			"fp_reactive_bomber_wing"
+		],
+	},
+
+	"knownHullMods":{
+		"tags":["base_bp", "hegemony"],
+		"hullMods":[
+			"fp_reactivearmour_kinetic"
+		],
+	},
+	
+	
+}

@@ -1,0 +1,25 @@
+{
+
+	"knownShips":{
+		"tags":["sindrian_diktat"],
+		"hulls":[
+			"fp_adjucator",
+		],
+	},
+
+	"knownWeapons":{
+		"tags":["sindrian_diktat"],
+		"weapons":[ 
+			"fp_overcharger",
+			"fp_medatropos",
+			"fp_amflamer",
+		],
+	},
+
+	"knownHullMods":{
+		"tags":["standard", "sindrian_diktat"],
+		"hullMods":[
+		],
+	},
+
+},

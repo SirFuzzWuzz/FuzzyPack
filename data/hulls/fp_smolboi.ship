@@ -1,0 +1,103 @@
+{
+  "hullName": "Bast",
+  "hullId": "fp_smolboi",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/smol_boi.png",
+  "style": "LOW_TECH",
+  "height": 117,
+  "width": 100,
+  "center": [50, 50],
+  "collisionRadius": 90.5,
+  "shieldCenter": [6, -0],
+  "shieldRadius": 79.5,
+  "viewOffset": 0,
+  "builtInWeapons": {
+    "WS0005": "fp_babytpc"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [2, 41]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [2, -41]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [16, 27]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [16, -27]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [-20, -0]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": 180,
+      "locations": [-3, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-47, 22.5],
+      "length": 36,
+      "width": 13,
+      "angle": 180,
+      "contrailSize": 13,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-47, -22.5],
+      "length": 36,
+      "width": 13,
+      "angle": 180,
+      "contrailSize": 13,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    16, -17,
+    -10.5, -47.5,
+    -44, -22.5,
+    -19, -8,
+    -19, 8,
+    -44, 22.5,
+    -10.5, 47.5,
+    16, 17,
+    46, 17,
+    46, -17
+  ]
+}

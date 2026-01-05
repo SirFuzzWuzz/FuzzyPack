@@ -1,0 +1,29 @@
+{
+
+	"knownShips":{
+		"tags":["sindrian_diktat", "lions_guard", "LG_bp"],
+		"hulls":[
+			"fp_severance",
+			"fp_adjucator",
+			"fp_bigboi",
+		],
+	},
+
+	"knownWeapons":{
+		"tags":["sindrian_diktat", "lions_guard"],
+		"weapons":[ 
+			"fp_overcharger",
+			"fp_medatropos",
+			"fp_wyvernfire",
+			"fp_wyvernfire_medium",
+			"fp_amflamer",
+		],
+	},
+
+	"knownHullMods":{
+		"tags":["standard", "sindrian_diktat", "lions_guard"],
+		"hullMods":[
+		],
+	},
+
+},

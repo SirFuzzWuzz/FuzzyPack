@@ -1,0 +1,61 @@
+{
+  "hullName": "Stasis Drone",
+  "hullId": "fp_drone_vorer",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/drone_stasis.png",
+  "style": "HIGH_TECH",
+  "height": 23,
+  "width": 22,
+  "center": [11, 10.5],
+  "collisionRadius": 12.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 16,
+  "viewOffset": 0,
+  "weaponSlots": [
+    {
+      "id": "WS 001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "HIDDEN",
+      "arc": 30,
+      "angle": 0,
+      "locations": [1.5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-7.5, -0],
+      "length": 16,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 5,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-7.5, 7.5],
+      "length": 9.625971,
+      "width": 4.621983,
+      "angle": 148.5,
+      "contrailSize": 4.621983,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-7.5, -7.5],
+      "length": 9.625971,
+      "width": 4.621983,
+      "angle": -148.5,
+      "contrailSize": 4.621983,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    -8.5, -8,
+    3, -9,
+    10.5, -4.5,
+    5.5, -2.5,
+    5.5, 2.5,
+    10.5, 4.5,
+    3, 9,
+    -8.5, 8
+  ]
+}

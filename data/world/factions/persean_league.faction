@@ -1,0 +1,21 @@
+{
+	"knownShips":{
+		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp", "persean"],
+		"hulls":[
+			"fp_tonk",
+			"fp_dauntless",
+		],
+	},
+	"knownFighters":{
+		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp", "persean"],
+
+	},
+
+	"knownWeapons":{
+		"tags":["base_bp", "lowtech_bp", "midline_bp", "missile_bp", "hightech_bp", "persean"],
+		"weapons":[
+			"fp_overcharger",
+		],
+	},
+
+},

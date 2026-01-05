@@ -1,0 +1,18 @@
+{
+	"id":"fp_propagandaemitter",
+	"type":"STAT_MOD",
+	"aiType":"WEAPON_BOOST",
+	
+	"statsScript":"fuzzypack.data.shipsystems.PropagandaEmitterStats",
+	
+	#"jitterUnderColor":[200,0,160,155],
+	#"jitterUnderCopies":10,
+	#"jitterUnderMinRange":0,
+	#"jitterUnderRange":7,
+	#"jitterUnderRangeRadiusFraction":0,
+	
+	
+	"useSound":"system_temporalshell",
+	"loopSound":"lobster_rave_loop",
+	"outOfUsesSound":"gun_out_of_ammo",
+}

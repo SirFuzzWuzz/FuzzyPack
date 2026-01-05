@@ -1,0 +1,46 @@
+{
+	"id":"fp_temporalburst",
+	"type":"STAT_MOD",
+	"aiType":"TEMPORAL_SHELL",
+	
+	"statsScript":"fuzzypack.data.shipsystems.TemporalBurst",
+	
+	# handled in the script instead of here
+	"jitterUnderColor":[200,100,40,180],
+	"jitterUnderCopies":10,
+	"jitterUnderMinRange":3,
+	"jitterUnderRange":20,
+	"jitterUnderRangeRadiusFraction":0,
+	
+	"jitterColor":[230,100,20,60],
+	"jitterCopies":3,
+	"jitterMinRange":0,
+	"jitterRange":0,
+	"jitterRangeRadiusFraction":0.1,
+	
+	#"engineGlowColor":[255,175,125,255],
+	#"engineGlowContrailColor":[100,165,255,25],
+	#"engineGlowLengthMult":0.5,
+	#"engineGlowWidthMult":0.7,
+	#"engineGlowGlowMult":0.5,
+	
+	"soundFilterType":"LOWPASS",
+	"soundFilterGain":0.5,
+	"soundFilterGainHF":0.7,
+
+	"fadeActivationSoundOnChargedown":true,
+	"useSound":"system_temporalshell",
+	"loopSound":"system_temporalshell_loop",
+	"deactivateSound":"system_temporalshell_off",
+	"outOfUsesSound":"gun_out_of_ammo",
+	
+	"aiHints":{
+		"activeSpeedIncrease":100,  # not right since it's ship-dependent, but hopefully close enough
+		"burstMovementPotential":50,
+		"averageSpeedMult":1.46,
+	}
+}
+
+
+
+

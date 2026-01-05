@@ -1,0 +1,24 @@
+{
+  "baseHullId": "fp_phaseminer",
+  "baseValueMult": 0.9,
+  "descriptionId": "base_hull",
+  "engineSlotChanges": {
+    "2": {
+      "angle": 1,
+      "contrailSize": 14,
+      "length": 55,
+      "width": 14,
+      "style": "LOW_TECH"
+    }
+  },
+  "fighterBays": 1,
+  "fpMod": -2,
+  "hullDesignation": "CRUISER",
+  "hullName": "Moth",
+  "builtInMods": ["civgrade"],
+  "manufacturer": "Low Tech",
+  "restoreToBaseHull": false,
+  "skinHullId": "phaseminer_mining",
+  "spriteName": "graphics/ships/phaseminer_yellow.png",
+  "tech": ""
+}

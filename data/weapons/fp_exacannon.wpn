@@ -1,0 +1,55 @@
+{
+  "id": "fp_exacannon",
+  "specClass": "projectile",
+  "projectileSpecId": "fp_exacannon_shot",
+  "type": "ENERGY",
+  "size": "LARGE",
+  "turretSprite": "graphics/weapons/exacannon/fp_exacannon.png",
+  "turretGlowSprite": "graphics/weapons/exacannon/fp_exacannon_glow.png",
+  "hardpointSprite": "",
+  "glowColor": [
+    150,
+    100,
+    255,
+    255
+  ],
+  "turretOffsets": [
+    85,
+    0,
+    76.5,
+    0,
+    67.5,
+    0
+  ],
+  "turretAngleOffsets": [
+    0,
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    0,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "LINKED",
+  "animationType": "GLOW_AND_FLASH",
+  "autocharge": true,
+  "muzzleFlashSpec": {
+    "length": 200,
+    "spread": 25,
+    "particleSizeMin": 20,
+    "particleSizeRange": 20,
+    "particleDuration": 2,
+    "particleCount": 20,
+    "particleColor": [
+      100,
+      100,
+      255,
+      255
+    ]
+  },
+  "fireSoundOne": "exacannon_charge",
+  "fireSoundTwo": "exacannon_fire"
+}

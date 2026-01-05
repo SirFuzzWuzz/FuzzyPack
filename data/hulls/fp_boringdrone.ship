@@ -1,0 +1,65 @@
+{
+  "hullName": "Boring Drone",
+  "hullId": "fp_boringdrone",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/boring_drone.png",
+  "style": "LOW_TECH",
+  "height": 62,
+  "width": 59,
+  "center": [29, 30],
+  "collisionRadius": 40.5,
+  "shieldCenter": [1, -0],
+  "shieldRadius": 44,
+  "viewOffset": 0,
+  "builtInMods": [
+    "no_weapon_flux"
+  ],
+  "builtInWeapons": {
+    "WS0001": "fp_borelaser"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [14, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-27, 7.5],
+      "length": 30,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-27, -7.5],
+      "length": 30,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    28, -14.5,
+    6.5, -16.5,
+    6, -27,
+    -5.5, -27.5,
+    -5.5, -20,
+    -17, -19.5,
+    -25, -11.5,
+    -25, 11.5,
+    -17, 19.5,
+    -5.5, 20,
+    -5.5, 27.5,
+    6, 27,
+    6.5, 16.5,
+    28, 14.5
+  ]
+}

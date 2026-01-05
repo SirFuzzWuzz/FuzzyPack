@@ -1,0 +1,82 @@
+{
+  "variantId": "fp_dauntless_new_knight",
+  "hullId": "fp_dauntless_new",
+  "displayName": "Knight",
+  "goalVariant": true,
+  "fluxCapacitors": 16,
+  "fluxVents": 25,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "armoredweapons",
+    "targetingunit",
+    "heavyarmor"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "fp_macromortar",
+        "WS0003": "fp_macromortar",
+        "WS0004": "fp_macromortar",
+        "WS0005": "fp_macromortar"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0018": "fp_dauntless_torpedoprow"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0006": "arbalest",
+        "WS0007": "arbalest",
+        "WS0008": "arbalest",
+        "WS0009": "arbalest"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "fp_wyvernfire_medium"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0011": "lightmg",
+        "WS0012": "lightmg",
+        "WS0013": "fp_twp2x",
+        "WS0014": "fp_twp2x",
+        "WS0015": "fp_twp2x",
+        "WS0016": "fp_twp2x",
+        "WS0017": "vulcan"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0010": "flak"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "modules": [
+    {
+      "WS0019": "fp_dauntless_prow_variant"
+    }
+  ],
+  "wings": []
+}

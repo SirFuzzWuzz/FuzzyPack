@@ -1,0 +1,29 @@
+{
+  "variantId": "fp_evil_shepherd_beam",
+  "hullId": "fp_evil_shepherd",
+  "displayName": "Beamer",
+  "goalVariant": true,
+  "fluxCapacitors": 7,
+  "fluxVents": 4,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 008": "ionbeam"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 007": "pdburst"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

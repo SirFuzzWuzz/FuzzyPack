@@ -1,0 +1,98 @@
+{
+  "variantId": "fp_dictator_large_standard",
+  "hullId": "fp_dictator_large",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 28,
+  "fluxVents": 41,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "heavyarmor",
+    "fluxbreakers",
+    "ballistic_rangefinder",
+    "dictator_prow_mode_torpedo",
+    "targetingunit"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "mark9"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "fp_macromortar",
+        "WS0004": "fp_macromortar",
+        "WS0005": "fp_macromortar",
+        "WS0006": "fp_macromortar",
+        "WS0007": "fp_macromortar",
+        "WS0008": "fp_macromortar",
+        "WS0009": "fp_macromortar",
+        "WS0010": "fp_macromortar"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0029": "fp_wyvernfire",
+        "WS0030": "fp_wyvernfire",
+        "WS0031": "fp_wyvernfire",
+        "WS0032": "fp_wyvernfire"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "heavyac",
+        "WS0011": "heavyac"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0014": "lightac",
+        "WS0015": "lightac",
+        "WS0020": "lightac",
+        "WS0021": "lightac",
+        "WS0022": "lightac",
+        "WS0023": "lightac"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0012": "fp_twp2x",
+        "WS0013": "fp_twp2x",
+        "WS0016": "fp_twp2x",
+        "WS0017": "fp_twp2x",
+        "WS0018": "fp_twp2x",
+        "WS0019": "fp_twp2x",
+        "WS0024": "fp_twp2x",
+        "WS0025": "fp_twp2x",
+        "WS0027": "dualflak",
+        "WS0033": "fp_twp2x",
+        "WS0034": "fp_twp2x"
+      }
+    }
+  ],
+  "modules": [
+    {
+      "WS0028": "fp_dictator_module_torpedo_base"
+    }
+  ],
+  "wings": []
+}

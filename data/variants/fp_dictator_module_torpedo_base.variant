@@ -1,0 +1,16 @@
+{
+  "variantId": "fp_dictator_module_torpedo_base",
+  "hullId": "fp_dictator_module_torpedo",
+  "displayName": "Torpedo Module",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "ablative_armor"
+  ],
+  "weaponGroups": [],
+  "modules": [],
+  "wings": []
+}

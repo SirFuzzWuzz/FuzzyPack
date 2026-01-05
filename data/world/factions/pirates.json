@@ -1,0 +1,36 @@
+{
+
+	"knownFighters":{
+		"fighters":["fp_boring_wing"],
+	},
+
+
+	"knownWeapons":{
+		"weapons":[
+			"fp_dakkabox",
+			"fp_zapgun"
+		],
+	},
+
+	"knownShips":{
+		"hulls":[
+			"fp_mudskipper_mk3",
+			"fp_phammerhead",
+			"fp_pcondor",
+			"fp_smolboi_p"
+			],
+
+		},
+
+	"knownHullMods":{
+		"tags":["base_bp", "pirates"],
+		"hullMods":[
+			"fp_reactivearmour",
+			"fp_reactivearmour_kinetic",
+			"fp_unsaferoverride",
+			"fp_enginedirt",
+		],
+	},
+
+
+}

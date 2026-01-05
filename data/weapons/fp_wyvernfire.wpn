@@ -1,0 +1,66 @@
+{
+  "id": "fp_wyvernfire",
+  "specClass": "beam",
+  "type": "ENERGY",
+  "size": "LARGE",
+  "collisionClass": "RAY",
+  "collisionClassByFighter": "RAY_FIGHTER",
+  "beamFireOnlyOnFullCharge":true,
+  "turretSprite": "graphics/weapons/fp_beamcannonL_t.png",
+  "turretGlowSprite": "graphics/fx/empty.png",
+  "hardpointSprite": "graphics/weapons/fp_beamcannonL_h.png",
+  "hardpointGlowSprite": "graphics/fx/empty.png",
+  "glowColor": [
+    255,
+    100,
+    100,
+    255
+  ],
+  "hitGlowRadius": 250,
+  "turretOffsets": [
+    32,
+    -7,
+    32,
+    7
+  ],
+  "turretAngleOffsets": [
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    36,
+    -7,
+    36,
+    7
+  ],
+  "hardpointAngleOffsets": [
+    0,
+    0
+  ],
+  "fringeColor": [
+    100,
+    100,
+    255,
+    225
+  ],
+  "coreColor": [
+    230,
+    230,
+    255,
+    255
+  ],
+  "width": 25,
+  "textureType": LASER,
+  "textureScrollSpeed": 64,
+  "pixelsPerTexel": 5,
+  "pierceSet": [
+    PROJECTILE_FF,
+    PROJECTILE_NO_FF,
+    PROJECTILE_FIGHTER,
+    MISSILE_FF,
+    MISSILE_NO_FF,
+    FIGHTER,
+    ASTEROID
+  ],
+  "fireSoundOne": "wyvernfire_fire"
+}

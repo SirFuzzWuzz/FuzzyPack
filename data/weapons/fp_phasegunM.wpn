@@ -1,0 +1,50 @@
+{
+  "id": "fp_phasegunM",
+  "specClass": "projectile",
+  "projectileSpecId": "fp_phasegun_shot",
+  "type": "ENERGY",
+  "size": "LARGE",
+  "turretSprite": "graphics/weapons/phasegunM_t.png",
+  "turretGlowSprite": "graphics/weapons/phasegunM_t_glow.png",
+  "hardpointSprite": "graphics/weapons/phasegunM_h.png",
+  "hardpointGlowSprite": "graphics/weapons/phasegunM_h_glow.png",
+  "glowColor": [
+    255,
+    100,
+    255,
+    255
+  ],
+  "turretOffsets": [
+    48.5,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    56,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "GLOW_AND_FLASH",
+  "autocharge": true,
+  "muzzleFlashSpec": {
+    "length": 70,
+    "spread": 15,
+    "particleSizeMin": 30,
+    "particleSizeRange": 40,
+    "particleDuration": 5,
+    "particleCount": 15,
+    "particleColor": [
+      170,
+      60,
+      200,
+      230
+    ]
+  },
+  "fireSoundOne": "phasegun_charge",
+  "fireSoundTwo": "phasegun_fire"
+}

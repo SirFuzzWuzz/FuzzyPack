@@ -1,0 +1,45 @@
+{
+	"knownShips":{
+		"tags":["base_bp", "lowtech_bp", "luddic_church", "LC_bp"],
+		"hulls":[
+			"fp_condorcap",
+			"fp_hauler",
+			"fp_dictator",
+			"fp_dictator_large",
+			"fp_dauntless_new",
+		],
+	},
+
+	"knownFighters":{
+		"tags":["base_bp", "luddic_church"],
+		"fighters":[
+			"fp_reactive_bomber_wing",
+		],
+	},
+
+	"knownWeapons":{
+		"tags":["base_bp", "lowtech_bp", "midline_bp", "missile_bp", "hightech_bp", "luddic_church"],
+		"weapons":[
+			"fp_artillery",
+			"fp_amflamer",
+			"fp_amflamer_medium",
+			"fp_wyvernfire",
+			"fp_wyvernfire_medium",
+			"fp_macromortar",
+			
+		],
+	},
+
+	"knownHullMods":{
+		"tags":["base_bp", "luddic_church"],
+		"hullMods":[
+			"fp_patherpilots",
+			"fp_reactivearmour",
+			"fp_reactivearmour_kinetic",
+		],
+	},
+
+	
+	
+},
+

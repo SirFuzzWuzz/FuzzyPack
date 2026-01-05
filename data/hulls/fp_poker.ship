@@ -1,0 +1,116 @@
+{
+  "hullName": "Poker",
+  "hullId": "fp_poker",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/frig.png",
+  "style": "HIGH_TECH",
+  "height": 98,
+  "width": 106,
+  "center": [53, 47],
+  "collisionRadius": 79.5,
+  "shieldCenter": [1, -0],
+  "shieldRadius": 71.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "turretgyros"
+  ],
+  "builtInWeapons": {
+    "WS0005": "fp_flashbeam_builtin"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [7, 43]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [7, -43]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [2, 26]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "SYNERGY",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -0,
+      "locations": [2, -26]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [22, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-37, 21.5],
+      "length": 42,
+      "width": 13,
+      "angle": 180,
+      "contrailSize": 13,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-37, -21.5],
+      "length": 42,
+      "width": 13,
+      "angle": -180,
+      "contrailSize": 13,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    42, -3,
+    20, -6,
+    2, -18,
+    -1, -35,
+    7, -40,
+    7, -45,
+    -1.5, -50,
+    -22, -50,
+    -21, -42.5,
+    -30, -26,
+    -37, -25,
+    -37, -18,
+    -30, -18,
+    -30, -10,
+    -44, -0,
+    -30, 10,
+    -30, 18,
+    -37, 18,
+    -37, 25,
+    -30, 26,
+    -21, 42.5,
+    -22, 50,
+    -1.5, 50,
+    7, 45,
+    7, 40,
+    -1, 35,
+    2, 18,
+    20, 6,
+    42, 3
+  ]
+}

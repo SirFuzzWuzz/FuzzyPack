@@ -1,0 +1,87 @@
+{
+  "variantId": "fp_bigboi_prejudice",
+  "hullId": "fp_bigboi",
+  "displayName": "Prejudice",
+  "goalVariant": true,
+  "fluxCapacitors": 22,
+  "fluxVents": 36,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "reinforcedhull",
+    "nav_relay"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0018": "fp_exacannon",
+        "WS0029": "gigacannon",
+        "WS0030": "gigacannon"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0019": "squall",
+        "WS0020": "squall"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0001": "kineticblaster",
+        "WS0002": "kineticblaster",
+        "WS0003": "hveldriver",
+        "WS0004": "hveldriver"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0025": "hil",
+        "WS0026": "hil",
+        "WS0027": "hil",
+        "WS0028": "hil"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0005": "flak",
+        "WS0006": "flak",
+        "WS0007": "flak",
+        "WS0008": "flak",
+        "WS0009": "pdlaser",
+        "WS0010": "pdlaser",
+        "WS0011": "lrpdlaser",
+        "WS0012": "lrpdlaser",
+        "WS0013": "lrpdlaser",
+        "WS0014": "lrpdlaser",
+        "WS0015": "pdlaser",
+        "WS0016": "pdlaser",
+        "WS0017": "pdlaser",
+        "WS0021": "pilum",
+        "WS0022": "pilum"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

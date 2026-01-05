@@ -1,0 +1,88 @@
+{
+  "variantId": "fp_challenger_rocket",
+  "hullId": "fp_challenger",
+  "displayName": "Rocketeer",
+  "goalVariant": true,
+  "fluxCapacitors": 16,
+  "fluxVents": 35,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "targetingunit",
+    "blast_doors",
+    "heavyarmor"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0013": "devastator"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "ALTERNATING",
+      "weapons": {
+        "WS0014": "annihilator",
+        "WS0015": "annihilator",
+        "WS0016": "annihilator",
+        "WS0017": "annihilator",
+        "WS0018": "annihilator",
+        "WS0019": "annihilator",
+        "WS0020": "annihilator",
+        "WS0021": "annihilator",
+        "WS0022": "annihilator",
+        "WS0023": "annihilator"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0011": "arbalest",
+        "WS0012": "arbalest"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "lightag",
+        "WS0004": "lightag"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "lightmortar",
+        "WS0008": "lightmortar",
+        "WS0024": "lightmortar",
+        "WS0025": "lightmortar"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "vulcan",
+        "WS0002": "vulcan",
+        "WS0005": "vulcan",
+        "WS0006": "vulcan",
+        "WS0009": "vulcan",
+        "WS0010": "vulcan"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "broadsword_wing",
+    "broadsword_wing"
+  ]
+}

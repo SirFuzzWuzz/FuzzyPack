@@ -1,0 +1,75 @@
+{
+  "id": "fp_dictator_torpedo",
+  "specClass": "projectile",
+  "projectileSpecId": "dictator_torp",
+  "type": "MISSILE",
+  "size": "LARGE",
+  "everyFrameEffect": "fuzzypack.data.weapons.prowtorps",
+  "displayArcRadius": 1000,
+  "turretSprite": "graphics/weapons/fp_dictator_prowtorps.png",
+  "hardpointSprite": "graphics/weapons/fp_dictator_prowtorps_h.png",
+  "turretOffsets": [
+    -3,
+    -32,
+    -3,
+    33,
+    -15,
+    -36,
+    -15,
+    37,
+    -27,
+    -41,
+    -27,
+    42
+  ],
+  "turretAngleOffsets": [
+    0,
+    0,
+    -5,
+    5,
+    -10,
+    10
+  ],
+  "hardpointOffsets": [
+    14,
+    33,
+    14,
+    -32,
+    2,
+    -36,
+    -10,
+    -41,
+    2,
+    37,
+    -10,
+    42
+  ],
+  "hardpointAngleOffsets": [
+    0,
+    0,
+    -5,
+    -10,
+    5,
+    10
+  ],
+  "barrelMode": "LINKED",
+  "animationType": "SMOKE",
+  "smokeSpec": {
+    "particleSizeMin": 10,
+    "particleSizeRange": 12,
+    "cloudParticleCount": 10,
+    "cloudDuration": 2.5,
+    "cloudRadius": 10,
+    "blowbackParticleCount": 8,
+    "blowbackDuration": 2,
+    "blowbackLength": 18,
+    "blowbackSpread": 10,
+    "particleColor": [
+      200,
+      60,
+      60,
+      100
+    ]
+  },
+  "fireSoundTwo": "reaper_fire"
+}

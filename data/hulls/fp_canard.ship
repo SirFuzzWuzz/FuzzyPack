@@ -1,0 +1,154 @@
+{
+  "hullName": "Canard",
+  "hullId": "fp_canard",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/fp_canard.png",
+  "style": "MIDLINE",
+  "height": 201,
+  "width": 110,
+  "center": [55, 101],
+  "collisionRadius": 113,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 121.5,
+  "viewOffset": 0,
+  "builtInWeapons": {
+    "WS0009": "fp_deco_canard"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [66, -0]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 15,
+      "angle": -0,
+      "locations": [26, 37.5]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "HARDPOINT",
+      "arc": 15,
+      "angle": 0,
+      "locations": [26, -37.5]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 90,
+      "locations": [-76, 15]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -90,
+      "locations": [-76, -15]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 220,
+      "angle": 0,
+      "locations": [40, -0]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -90,
+      "locations": [2, -43]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 90,
+      "locations": [2, 43]
+    },
+    {
+      "id": "WS0009",
+      "size": "LARGE",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [-0.5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-80, -0],
+      "length": 97,
+      "width": 23,
+      "angle": 180,
+      "contrailSize": 23,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-29.5, 48.5],
+      "length": 42.779961,
+      "width": 12.020815,
+      "angle": 135,
+      "contrailSize": 12.020815,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-29.5, -48.5],
+      "length": 42.779961,
+      "width": 12.020815,
+      "angle": -135,
+      "contrailSize": 12.020815,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    73, -7,
+    96, -7.5,
+    91, -12,
+    37, -26,
+    31.5, -45,
+    -18, -45,
+    -27, -52,
+    -33, -47,
+    -28, -41,
+    -79, -28,
+    -91, -22,
+    -98, -8,
+    -80, -6,
+    -80, 6,
+    -98, 8,
+    -91, 22,
+    -79, 28,
+    -28, 41,
+    -33, 47,
+    -27, 52,
+    -18, 45,
+    31.5, 45,
+    37, 26,
+    91, 12,
+    96, 7.5,
+    73, 7
+  ]
+}

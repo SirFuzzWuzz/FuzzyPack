@@ -1,0 +1,13 @@
+{
+	"id":"fp_energyaaf",
+	"type":"STAT_MOD",
+	"aiType":"WEAPON_BOOST",
+	
+	"statsScript":"fuzzypack.data.shipsystems.EnergyaafStats",
+	
+	"weaponGlowColor":[255,0,200,155],
+	"weaponTypes":[ENERGY],
+	
+	"useSound":"system_ammo_feeder",
+	"outOfUsesSound":"gun_out_of_ammo",
+}

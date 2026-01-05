@@ -1,0 +1,80 @@
+{
+  "variantId": "fp_dauntless_new_standard",
+  "hullId": "fp_dauntless_new",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 16,
+  "fluxVents": 25,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "dedicated_targeting_core",
+    "reinforcedhull",
+    "armoredweapons"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "fp_macromortar",
+        "WS0003": "fp_macromortar",
+        "WS0004": "fp_macromortar",
+        "WS0005": "fp_macromortar",
+        "WS0006": "fp_macromortar",
+        "WS0007": "fp_macromortar",
+        "WS0008": "fp_macromortar",
+        "WS0009": "fp_macromortar"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0018": "fp_dauntless_torpedoprow"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "heavyac",
+        "WS0010": "heavyac"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0011": "fp_twp2x",
+        "WS0012": "fp_twp2x",
+        "WS0013": "fp_twp2x",
+        "WS0014": "fp_twp2x",
+        "WS0015": "fp_twp2x",
+        "WS0016": "fp_twp2x",
+        "WS0017": "fp_twp2x"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "modules": [
+    {
+      "WS0019": "fp_dauntless_prow_variant"
+    }
+  ],
+  "wings": []
+}

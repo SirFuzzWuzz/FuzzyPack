@@ -1,0 +1,21 @@
+{
+	
+	"knownShips":{
+		"tags":["derelict"],
+		"hulls":[
+		"fp_buster",
+		],
+	},
+	"knownWeapons":{
+		"tags":["derelict"],
+		"weapons":[
+		],
+	},
+	
+	"knownHullMods":{
+		"tags":["base_bp", "derelict"],
+		"hullMods":[
+		],
+	},
+	
+},

@@ -1,0 +1,29 @@
+{
+
+"knownHullMods":{
+		"tags":["base_bp", "tritachyon"],
+		"hullMods":[
+			"fp_phaserestoration"					
+		],
+	},
+
+"knownShips":{
+		"tags":["base_bp", "midline_bp", "hightech_bp", "tritachyon"],
+		"hulls":[
+			"fp_phaseminer",
+			#"fp_tube",
+			"fp_minimote",
+			],
+
+		},
+	"knownWeapons":{
+		"tags":["base_bp", "lowtech_bp", "midline_bp", "missile_bp", "hightech_bp", "tritachyon"],
+		"weapons":[
+			"fp_overcharger",
+			"fp_battery",
+			"fp_phasegunM",
+			"fp_shieldgenM",
+			"fp_shieldgen",
+		],
+	},
+}

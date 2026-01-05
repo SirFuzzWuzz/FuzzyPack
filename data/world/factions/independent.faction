@@ -1,0 +1,27 @@
+{
+
+	
+	"knownFighters":{
+		"fighters":["fp_boring_wing", "fp_reactive_bomber_wing"],
+	},
+
+	"knownShips":{
+		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp", "independent", sector8_bp],
+		"hulls":[
+			"fp_mudskipper_mk3",
+			"fp_condorcap",
+			"fp_hauler",
+			"fp_hemlock",
+			"fp_canard",
+			],
+
+	},
+	"knownWeapons":{
+		"tags":["base_bp", "lowtech_bp", "midline_bp", "missile_bp", "hightech_bp", "independent"],
+	},
+
+	"knownHullMods":{
+		"tags":["base_bp", "independent"],
+	},
+
+}

@@ -1,0 +1,32 @@
+{
+  "hullName": "Prow",
+  "hullId": "fp_dauntless_prow",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/dauntless_prow.png",
+  "style": "LOW_TECH",
+  "height": 175,
+  "width": 130,
+  "center": [65, 87.5],
+  "collisionRadius": 85.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 83,
+  "viewOffset": 0,
+  "builtInMods": [
+    "ablative_armor",
+    "always_detaches",
+    "reduced_explosion"
+  ],
+  "weaponSlots": [],
+  "engineSlots": [],
+  "bounds": [
+    15.5, -26,
+    18.5, -38,
+    28, -41,
+    64.5, -23,
+    76.5, -0,
+    64.5, 23,
+    28, 41,
+    18.5, 38,
+    15.5, 26
+  ]
+}

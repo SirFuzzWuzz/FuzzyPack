@@ -1,0 +1,68 @@
+{
+  "hullName": "Red Cart",
+  "hullId": "fp_redstone_bomber",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/redstone_bomber.png",
+  "style": "LOW_TECH",
+  "height": 34,
+  "width": 27,
+  "center": [13.5, 17],
+  "collisionRadius": 26,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 25.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "no_weapon_flux",
+    "fluxbreakers"
+  ],
+  "builtInWeapons": {
+    "WS0001": "fp_redstone_fighter"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 0,
+      "angle": 0,
+      "locations": [2, 3.5]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-15, 7],
+      "length": 23,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "LOW_TECH_FIGHTER"
+    },
+    {
+      "location": [-15, -0],
+      "length": 23,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "LOW_TECH_FIGHTER"
+    },
+    {
+      "location": [-15, -7],
+      "length": 23,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "LOW_TECH_FIGHTER"
+    }
+  ],
+  "bounds": [
+    14.5, -8,
+    5, -11.5,
+    -7, -11.5,
+    -14, -10.5,
+    -14, 10.5,
+    -7.5, 11,
+    4, 11,
+    14.5, 8
+  ]
+}

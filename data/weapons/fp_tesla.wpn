@@ -1,0 +1,28 @@
+{
+  "id": "fp_tesla",
+  "specClass": "projectile",
+  "projectileSpecId": "fp_teslashot",
+  "type": "ENERGY",
+  "size": "LARGE",
+  "turretSprite": "",
+  "hardpointSprite": "",
+  "turretOffsets": [
+    8,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    8,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "LINKED",
+  "animationType": "NONE",
+  "autocharge": true,
+
+  "fireSoundTwo": "shock_repeater_fire"
+}

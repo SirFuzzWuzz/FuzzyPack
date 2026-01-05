@@ -1,0 +1,125 @@
+{
+  "hullName": "Phenom",
+  "hullId": "fp_phenom",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/fp_phenom.png",
+  "style": "HIGH_TECH",
+  "height": 123,
+  "width": 128,
+  "center": [64, 61.5],
+  "collisionRadius": 111.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 110,
+  "viewOffset": 0,
+  "builtInMods": [
+    "phasefield"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": 90,
+      "locations": [-0.5, 17]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": -90,
+      "locations": [-0.5, -17]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 0,
+      "locations": [37.5, -0]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [28.5, 49]
+    },
+    {
+      "id": "WS0005",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [28.5, -49]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "SYSTEM",
+      "mount": "HARDPOINT",
+      "arc": 360,
+      "angle": 0,
+      "locations": [17.5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-59.5, 8.5],
+      "length": 59,
+      "width": 15,
+      "angle": 180,
+      "contrailSize": 15,
+      "style": "HIGH_TECH"
+    },
+    {
+      "location": [-59.5, -8.5],
+      "length": 59,
+      "width": 15,
+      "angle": -180,
+      "contrailSize": 15,
+      "style": "HIGH_TECH"
+    }
+  ],
+  "bounds": [
+    54.5, -10.5,
+    44, -13.5,
+    45.5, -24,
+    40.5, -32,
+    34, -32.5,
+    20.5, -54.5,
+    10.5, -60,
+    5.5, -47.5,
+    18, -26.5,
+    6, -22.5,
+    -2, -24.5,
+    -9, -17,
+    -28.5, -29,
+    -58.5, -12,
+    -58.5, -5,
+    -55.5, -0,
+    -58.5, 5,
+    -58.5, 12,
+    -28.5, 29,
+    -9, 17,
+    -2, 24.5,
+    6, 22.5,
+    18, 26.5,
+    5.5, 47.5,
+    10.5, 60,
+    20.5, 54.5,
+    34, 32.5,
+    40.5, 32,
+    45.5, 24,
+    44, 13.5,
+    54.5, 11,
+    59.5, -0
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "variantId": "fp_dictator_large_purifier",
+  "hullId": "fp_dictator_large",
+  "displayName": "Purifier",
+  "goalVariant": true,
+  "fluxCapacitors": 20,
+  "fluxVents": 38,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "heavyarmor",
+    "reinforcedhull",
+    "dictator_prow_mode_torpedo",
+    "targetingunit",
+    "unstable_injector"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0029": "fp_amflamer",
+        "WS0030": "fp_amflamer",
+        "WS0031": "fp_amflamer",
+        "WS0032": "fp_amflamer"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "arbalest",
+        "WS0004": "arbalest",
+        "WS0005": "arbalest",
+        "WS0006": "arbalest",
+        "WS0007": "arbalest",
+        "WS0008": "arbalest",
+        "WS0009": "arbalest",
+        "WS0010": "arbalest"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "fp_wyvernfire_medium"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "fp_twinthumper",
+        "WS0011": "shredder"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0012": "fp_twp2x",
+        "WS0013": "fp_twp2x",
+        "WS0014": "fp_twp2x",
+        "WS0015": "fp_twp2x",
+        "WS0016": "fp_twp2x",
+        "WS0017": "fp_twp2x",
+        "WS0018": "fp_twp2x",
+        "WS0019": "fp_twp2x",
+        "WS0020": "fp_twp2x",
+        "WS0021": "fp_twp2x",
+        "WS0022": "fp_twp2x",
+        "WS0023": "fp_twp2x",
+        "WS0024": "fp_twp2x",
+        "WS0025": "fp_twp2x",
+        "WS0027": "dualflak",
+        "WS0033": "fp_twp2x",
+        "WS0034": "fp_twp2x"
+      }
+    }
+  ],
+  "modules": [
+    {
+      "WS0028": "fp_dictator_module_torpedo_base"
+    }
+  ],
+  "wings": []
+}

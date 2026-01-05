@@ -1,0 +1,90 @@
+{
+  "variantId": "fp_condorcap_brawler",
+  "hullId": "fp_condorcap",
+  "displayName": "Brawler",
+  "goalVariant": true,
+  "fluxCapacitors": 11,
+  "fluxVents": 45,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "heavyarmor",
+    "dedicated_targeting_core",
+    "armoredweapons",
+    "ballistic_rangefinder"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0027": "hammerrack",
+        "WS0028": "hammerrack"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0007": "swarmer_fighter",
+        "WS0008": "swarmer_fighter",
+        "WS0009": "swarmer_fighter",
+        "WS0010": "swarmer_fighter",
+        "WS0011": "swarmer_fighter",
+        "WS0012": "swarmer_fighter"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "lightac",
+        "WS0002": "lightac",
+        "WS0003": "lightac",
+        "WS0004": "lightac",
+        "WS0005": "lightac",
+        "WS0006": "lightac"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0026": "hephag"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0023": "heavymortar",
+        "WS0024": "heavymortar"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0017": "lightag",
+        "WS0018": "lightag"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0013": "vulcan",
+        "WS0014": "vulcan",
+        "WS0015": "vulcan",
+        "WS0016": "vulcan",
+        "WS0021": "heavymg",
+        "WS0022": "heavymg",
+        "WS0025": "flak",
+        "WS0029": "vulcan",
+        "WS0030": "vulcan"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

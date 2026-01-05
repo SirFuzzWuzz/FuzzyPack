@@ -1,0 +1,43 @@
+{
+
+	"overcharger_fire":[{"file":"sounds/weapons/overcharger_fire.ogg","pitch":1.2,"volume":0.4}],
+
+	"phasegun_fire":[{"file":"sounds/weapons/phasegun_fire.ogg","pitch":1.0,"volume":0.8}],
+	"phasegun_charge":[{"file":"sounds/weapons/phasegun_charge.ogg","pitch":1.0,"volume":1.0}],
+	
+	"flashbeam_fire":[{"file":"sounds/weapons/flashbeam_fire.ogg","pitch":1.0,"volume":1.3}],
+
+	"zapgun_fire":[{"file":"sounds/weapons/zapgun_fire.ogg","pitch":1.0,"volume":1.0}],
+	"zapgun_charge":[{"file":"sounds/weapons/zapgun_charge.ogg","pitch":1.0,"volume":1.0}],
+	
+	"flamer_loop":[{"file":"sounds/weapons/heavy_flamer_loop.ogg","pitch":1.0,"volume":0.8}],
+	"flamer_charge":[{"file":"sounds/weapons/heavy_flamer_charge.ogg","pitch":0.9,"volume":0.7}],
+	"flamer_charge_medium":[{"file":"sounds/weapons/heavy_flamer_charge.ogg","pitch":1.3,"volume":0.65}],
+
+	"wyvernfire_fire":[{"file":"sounds/sfx_wpn_missiles/dragonfire_dem_payload_01.ogg","pitch":1.4,"volume":0.4},],
+
+	"novacannon_charge":[{"file":"sounds/weapons/novacannon_charge.ogg","pitch":1.0,"volume":1.8},],
+	"novacannon_fire":[{"file":"sounds/weapons/novacannon_fire.ogg","pitch":0.8,"volume":1.0},],
+		
+	"shieldgen_fire":[{"file":"sounds/weapons/shieldgen_fire.ogg","pitch":0.5,"volume":0.3}],
+
+	"twp2x_fire":[{"file":"sounds/sfx_wpn_guns/mauler_fire_01_loud.ogg","pitch":2,"volume":0.4}],
+
+	"tracker_fire":[{"file":"sounds/weapons/tracker_fire.ogg","pitch":1.1,"volume":0.8}],
+
+	"macromortar_fire":[{"file":"sounds/weapons/macromortar_fire.ogg","pitch":0.3,"volume":0.75}],
+	"macromortar_explosion":[{"file":"sounds/weapons/macromortar_explosion.ogg","pitch":0.3,"volume":0.6}],
+
+	"plasmarail_fire":[{"file":"sounds/sfx_wpn_guns/mjolnir_fire_01.ogg","pitch":2.0,"volume":0.6}],
+
+	"exacannon_fire":[{"file":"sounds/weapons/exacannon_fire.ogg","pitch":0.8,"volume":0.8}],
+	"exacannon_charge":[{"file":"sounds/weapons/exacannon_charge.ogg","pitch":0.9,"volume":0.9}],
+	"exacannon_exp":[{"file":"sounds/weapons/exacannon_exp.ogg","pitch":1.0,"volume":0.9}],
+
+
+	"lobster_rave_loop":[{"file":"sounds/systems/militant_lobster_rave_sys.ogg","pitch":1.0,"volume":0.8}],
+	"rallying_cry":[{"file":"sounds/systems/rallying_cry_sys.ogg","pitch":1.1,"volume":0.5}],
+}
+
+
+

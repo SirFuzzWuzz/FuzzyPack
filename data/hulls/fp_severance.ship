@@ -1,0 +1,197 @@
+{
+  "hullName": "Severance",
+  "hullId": "fp_severance",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/severance.png",
+  "style": "MIDLINE",
+  "height": 221,
+  "width": 128,
+  "center": [64, 110.5],
+  "collisionRadius": 158.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 151.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "solar_shielding",
+    "andrada_mods",
+    "coherer"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 15,
+      "angle": 0,
+      "locations": [98.5, 22]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 15,
+      "angle": -0,
+      "locations": [98.5, -22]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [26.5, 53]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": -0,
+      "locations": [26.5, -53]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 200,
+      "angle": 115,
+      "locations": [-67.5, 25]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 200,
+      "angle": -115,
+      "locations": [-67.5, -25]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 30,
+      "locations": [5.5, 23]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -30,
+      "locations": [5.5, -23]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 155,
+      "angle": 65,
+      "locations": [31.5, 29]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 155,
+      "angle": -65,
+      "locations": [31.5, -29]
+    },
+    {
+      "id": "WS0011",
+      "size": "LARGE",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [45, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-104.5, 32],
+      "length": 60,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 16,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-104.5, -32],
+      "length": 60,
+      "width": 16,
+      "angle": -180,
+      "contrailSize": 16,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-107.5, 18],
+      "length": 60,
+      "width": 16,
+      "angle": 180,
+      "contrailSize": 16,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-107.5, -18],
+      "length": 60,
+      "width": 16,
+      "angle": -180,
+      "contrailSize": 16,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-100.5, 43],
+      "length": 45,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "MIDLINE"
+    },
+    {
+      "location": [-100.5, -43],
+      "length": 45,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 10,
+      "style": "MIDLINE"
+    }
+  ],
+  "bounds": [
+    54.5, -13.5,
+    105.5, -12,
+    101, -28,
+    31.5, -45,
+    21, -60,
+    12.5, -60.5,
+    -5, -25.5,
+    -34.5, -23.5,
+    -46, -45.5,
+    -80, -52,
+    -98.5, -46,
+    -106.5, -15,
+    -96.5, -0,
+    -106.5, 15,
+    -98.5, 46,
+    -80, 52,
+    -46, 45.5,
+    -34.5, 23.5,
+    -5, 25.5,
+    12.5, 60.5,
+    21, 60,
+    31.5, 45,
+    101, 28,
+    105.5, 12,
+    54.5, 13.5
+  ]
+}

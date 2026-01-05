@@ -1,0 +1,97 @@
+{
+  "variantId": "fp_dictator_standard",
+  "hullId": "fp_dictator",
+  "displayName": "Standard",
+  "goalVariant": true,
+  "fluxCapacitors": 25,
+  "fluxVents": 39,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [
+    "dedicated_targeting_core",
+    "fp_patherpilots",
+    "heavyarmor",
+    "dictator_prow_mode_novacannon"
+  ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0003": "heavymauler",
+        "WS0004": "heavymauler",
+        "WS0005": "heavymauler",
+        "WS0006": "heavymauler",
+        "WS0007": "heavymauler",
+        "WS0008": "heavymauler",
+        "WS0009": "heavymauler",
+        "WS0010": "heavymauler"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0002": "mark9"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "fp_wyvernfire_medium",
+        "WS0011": "fp_wyvernfire_medium"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0027": "dualflak"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0012": "fp_twp2x",
+        "WS0013": "fp_twp2x",
+        "WS0014": "fp_twp2x",
+        "WS0015": "fp_twp2x",
+        "WS0016": "fp_twp2x",
+        "WS0017": "fp_twp2x",
+        "WS0018": "fp_twp2x",
+        "WS0019": "fp_twp2x",
+        "WS0020": "fp_twp2x",
+        "WS0021": "fp_twp2x",
+        "WS0022": "fp_twp2x",
+        "WS0023": "fp_twp2x",
+        "WS0024": "fp_twp2x",
+        "WS0025": "fp_twp2x",
+        "WS0029": "fp_twp2x",
+        "WS0030": "fp_twp2x"
+      }
+    },
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {}
+    }
+  ],
+  "modules": [
+    {
+      "WS0028": "fp_dictator_module_novacannon_base"
+    }
+  ],
+  "wings": [
+    "broadsword_wing",
+    "broadsword_wing",
+    "hoplon_wing",
+    "talon_wing"
+  ]
+}

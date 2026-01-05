@@ -1,0 +1,37 @@
+{
+  "id": "fp_battery",
+  "specClass": "projectile",
+  "projectileSpecId": "battery_proj",
+  "type": "MISSILE",
+  "size": "MEDIUM",
+  "everyFrameEffect": "fuzzypack.data.weapons.fluxbattery",
+  #"displayArcRadius": 1000,
+  "turretSprite": "graphics/weapons/fluxbattery_t.png",
+  "turretGlowSprite": "graphics/weapons/fluxbattery_t_glow.png",
+  "hardpointSprite": "graphics/weapons/fluxbattery_h.png",
+  "hardpointGlowSprite": "graphics/weapons/fluxbattery_h_glow.png",
+  "glowColor": [
+    150,
+    50,
+    255,
+    255
+  ],
+  "turretOffsets": [
+    12,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    18,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "LINKED",
+  "animationType": "GLOW",
+
+  "fireSoundTwo": "mine_windup"
+}

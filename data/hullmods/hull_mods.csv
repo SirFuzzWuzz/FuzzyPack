@@ -1,0 +1,39 @@
+name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hiddenEverywhere,cost_frigate,cost_dest,cost_cruiser,cost_capital,script,desc,short,sprite
+#Built ins,,,,,,,,,,,,,,,,,,
+Armament Overdrive,fp_weaponbuff,,,,,,69,,TRUE,,0,0,0,0,fuzzypack.data.hullmods.weaponbuff,The ballistic and energy weapons of this ship have been put into overdrive to be able to put out respectable firepower despite a lack of mounts. However weapon range past 600 units is significantly reduced.,,graphics/hullmods/assault_package.png
+Mirage Shielding,fp_gofastcore,,,,shields,,69,,TRUE,,0,0,0,0,fuzzypack.data.hullmods.gofastcore,"The shields of this ship are modified to reflect light making targeting more difficult the faster the ship moves, become near untargetable when using built-in movement systems. The downside however is that the shields are incredibly inefficient when moving slowly.",Shield arc and efficiency changes based on current speed.,graphics/hullmods/degraded_shields.png
+Small Hangar Bays,fp_smol_Bay,,,,,Fighters,69,,TRUE,,0,0,0,0,fuzzypack.data.hullmods.smol_Bay,This ship has a cramped hangar bays that leaves little room for bomber munition.,,graphics/hullmods/converted_hangar.png
+Errant Phase Coils,fp_rngtime,,,,phase,,69,,TRUE,,0,0,0,0,fuzzypack.data.hullmods.rngtime,"This ship has non-standard phase coil implementation causing timeflow to change at random even when not in phase space. 
+Every %s seconds the timeflow of the ship will change randomly between %s.",Timeflow changes randomly.,graphics/hullmods/rngtime.png
+Dynamic Targeting Computer,fp_dynamictargeting,,,,,,69,,TRUE,,0,0,0,0,fuzzypack.data.hullmods.rangelimiter,"A targeting computer made for accurate target acquisition on the move, improving weapon turn rate by 50%% but limits their long range potential above 900 units.",,
+Energy Stabiliser,fp_energyrangebuff,,,,,,69,,TRUE,,0,0,0,0,fuzzypack.data.hullmods.energyrangebuff,"Makes bolts of energy last longer before dispersing, increasing energy projectile range by 200 units.",Energy projectile range buff.,graphics/hullmods/energybolt.png
+#Necrodermis,fp_necroarmour,,,,defensive,Defenses,69,,TRUE,,0,0,0,0,fuzzypack.data.hullmods.necroarmour,,,
+,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,
+Dictator Weapon Swapper,fp_dictator_weapon_swapper,,,,,,,,TRUE,TRUE,0,0,0,0,fuzzypack.data.hullmods.dictator_wpn_swapper,Swap prow,,
+Torpedo Prow,dictator_prow_mode_torpedo,,,,no_build_in,,,,TRUE,,0,0,0,0,fuzzypack.data.hullmods.dummyForSwapper,"The standard extremly armoured prow with built in torpedo tubes. Useful for soaking damage, delivering vital torpedo barrages and ramming.",Torpedo Prow,graphics/hullmods/torpedobarrage_icon.png
+Nova Cannon Prow,dictator_prow_mode_novacannon,,,,no_build_in,,,,TRUE,,0,0,0,0,fuzzypack.data.hullmods.dummyForSwapper,A lower armour prow configuration with a built in Nova Cannon. Useful for longer range engagements and supporting fire against slower ships.,Nova Cannon Prow,graphics/hullmods/novacannon_icon.png
+,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,
+#Modular,,,,,,,,,,,,,,,,,,
+Safety Removal,fp_unsaferoverride,,2,,"pirates, merc, luddic_path, no_build_in, offensive",Special,2400,,FALSE,,5,10,15,20,fuzzypack.data.hullmods.unsaferoverride,"Completely removes safety features from the flux grid allowing even more performance than by mere override.
+
+Increases rate of fire by %s, flux capacity by %s and 0-flux boost by %s but weapon spread by %s. Instead of overloading an explosion occurs dealing up to %s hull damage and sets current flux level to half.
+Random malfunctions can occur on high flux levels.","Better rate of fire, flux capacity and speed but dangerous overloading.",graphics/hullmods/safety_removal.png
+Homebrew Fuel Injector,fp_enginedirt,,1,,"pirate_bp, pirates, puddic_path, merc, engines",Engines,1800,,FALSE,,6,8,14,22,fuzzypack.data.hullmods.enginedirt,A special fuel mixture that increases 0-flux boost by 50/40/30/20%% depending on hullsize and causes flares to eject from the engines but they take %s more damage.,Eject flares from fragile engines and faster 0-flux boost.,graphics/hullmods/enginedirt.png
+Reactive Armour (HE),fp_reactivearmour,,2,,"pirates, independent, luddic_path, merc, derelict, defensive",Defenses,3200,,FALSE,,5,8,12,15,fuzzypack.data.hullmods.reactivearmour_alt,"Explosive charges inside the armour plating fire projectiles outward when an armour cell gets bellow %s integrity.
+
+This version fires High Explosive projectiles and gives a 15%% High Explosive resistance until triggered.",Damaged armour fires high explosive shrapnel.,graphics/hullmods/reactiverarmour.png
+Reactive Armour (Kinetic),fp_reactivearmour_kinetic,,2,,"pirates, independent, hegemony, merc, derelict, defensive",Defenses,3400,,FALSE,,5,8,12,15,fuzzypack.data.hullmods.reactivearmour_alt,"Explosive charges inside the armour plating fire projectiles outward when an armour cell gets bellow %s integrity.
+
+This version fires Kinetic projectiles and gives a 25%% EMP resistance until triggered.",Damaged armour fires kinetic shrapnel.,graphics/hullmods/reactiverarmour_ke.png
+#Reactive Armour (Frag),fp_reactivearmour_frag,,1,,"pirates, independent, luddic_church, merc, derelict, offensive",Defenses,3400,,FALSE,,5,8,12,15,fuzzypack.data.hullmods.reactivearmour_alt,"Explosive charges inside the armour plating fire projectiles outward when an armour cell gets bellow %s integrity.
+
+This version fires Fragmentation projectiles with proximity triggers and gives a 10%% Armor damage resistance before fired.",Damaged armour fires frag shrapnel.,graphics/hullmods/reactiverarmour_ke.png
+Martyr Pilots,fp_patherpilots,,2,,"pirates, luddic_path, luddic_church, knights_of_ludd, special",Fighters,2600,,FALSE,,8,10,15,25,fuzzypack.data.hullmods.patherpilots,"Fighters launched from this ship are exclusively piloted by fanatics who will attempt to crash into their target once they have taken heavy damage.
+
+Once a fighter is bellow %s hull it turns into a missile dealing High Explosive damage equal to %s times its maximum hull. Fighters without crew are not effected.",Fighters will ram the enemy once they suffered enough damage.,graphics/hullmods/pp2.png
+#Emergency Launch Protocol,fp_advancedbays,,,,,Fighters,3100,,FALSE,,6,10,15,25,fuzzypack.data.hullmods.advancedbays,Less health = more fighter,,
+Regenerative Phase Coils,fp_phaserestoration,,2,,"phase, tritachyon, merc, remnant, defensive",Phase,6000,,FALSE,,3,10,15,25,fuzzypack.data.hullmods.phaserestoration,Brings the ship deeper into phase space where the ship is continually restored to a previous version of itself restoring armour. Crew and fragile instruments suffer from increased p-space exposure reducing CR while phased. Also slightly increases while phased performance.,While phased armour is restored but CR diminishes.,graphics/hullmods/phase_coils_regen.png
+#Deep Dive Coils,fp_deepdive,,2,,"phase, tritachyon, merc, remnant",Phase,6000,,FALSE,,3,10,15,25,fuzzypack.data.hullmods.deepdive,We went too deep,,graphics/hullmods/ass_deepbluephase.png
+#Emergency Recall Beacons,fp_fightertele,,,,"defensive, tritachyon, special",Fighters,4000,,FALSE,,5,8,14,22,fuzzypack.data.hullmods.fighterTeleBeacon,Recall beacons on the fighters teleport them to the carrier whenever their hull reaches %s but their engagement range is only %s of the normal range.,Recalls critically damaged fighters to the carrier.,

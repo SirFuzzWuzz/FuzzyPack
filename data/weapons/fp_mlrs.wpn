@@ -1,0 +1,49 @@
+{
+  "id": "fp_mlrs",
+  "specClass": "projectile",
+  "projectileSpecId": "fp_mlrs_missile",
+  "type": "MISSILE",
+  "size": "LARGE",
+  "everyFrameEffect": "fuzzypack.data.weapons.mlrs",
+  "displayArcRadius": 1000,
+  "turretSprite": "graphics/weapons/big_gun.png",
+  "hardpointSprite": "graphics/weapons/big_gun.png",
+  "renderHints": [
+    RENDER_LOADED_MISSILES
+  ],
+  "turretOffsets": [
+    32,
+    1
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    49.5,
+    1
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "LINKED",
+  "animationType": "SMOKE",
+  "autocharge": true,
+  "smokeSpec": {
+    "particleSizeMin": 10,
+    "particleSizeRange": 12,
+    "cloudParticleCount": 10,
+    "cloudDuration": 2.5,
+    "cloudRadius": 10,
+    "blowbackParticleCount": 8,
+    "blowbackDuration": 2,
+    "blowbackLength": 18,
+    "blowbackSpread": 10,
+    "particleColor": [
+      80,
+      200,
+      60,
+      120
+    ]
+  },
+  "fireSoundTwo": "reaper_fire"
+}
