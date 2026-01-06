@@ -22,6 +22,7 @@ Nova Cannon,fp_dictator_novacannon,0,,69,2000,,7000,,1000,7,0,6,,,ENERGY,2000,,4
 The ship slows down and can not move during the charge up sequence. If the prow is destroyed the weapon is disabled.",50% | 100,,,,
 #nova cannon mine,fp_novacannon_spawn,0,,69,2000,,4000,1000,1000,5,0,,,,ENERGY,0,,3,25,1,,0,0,0,0,,0,,,,,,"STRIKE, SYSTEM","no_drop, no_drop_salvage",,,,Dummy,,,,,,,,,,38.5
 Quad Torpedoes,fp_dauntless_torpedoprow,0,,69,5000,,3000,300,100,0,0,20,,,HIGH_EXPLOSIVE,0,,0,20,1,,0,0,0,,,350,50,20,650,,,"STRIKE, SYSTEM","no_drop, no_drop_salvage",,,,Torpedo,,,,,Fires in a spread pattern of %s degrees. If the prow is destroyed the weapon is disabled.,0/5,,,TRUE,
+Sleigh Launch System,fp_missile_sleigh_fighter,0,,69,1000,,100,,40,2,69,1,,,ENERGY,0,,0,0.5,1,,0,0,0,0,,1000,500,10,100,,,"GUIDED_POOR,SYSTEM","no_drop, no_drop_salvage",,,,Torpedo,Fast,Good,,,,,,,TRUE,9.5
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 #Co-op Laser,fp_cooplaser,1,,200,400,75,,,0,100,4,,,,ENERGY,,40,0,0.25,,,,,,,2400,,,,,,,PD,"pd8, beam8, hightech_bp, merc",,,,Point Defense,,,,,,,,,,17
 Heavy Flamer,fp_amflamer,2,,4500,600,,100,,5,8,22,250,8,250,FRAGMENTATION,40,,0.05,0.1,999999999,0.05,1,2,1,2,,500,,,,,,"FIRE_WHEN_INEFFICIENT, DO_NOT_CONSERVE","he8, energy7, luddic_church, pirates, rare_bp, knights_of_ludd",,,,Purging,,,,,"Deals %s damage. Hits on hull burn %s armour or hull over %s seconds. 

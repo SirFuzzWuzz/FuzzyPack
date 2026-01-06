@@ -69,12 +69,13 @@ public class PhaseBuildUp implements AdvanceableListener {
                 ship.setAlphaMult(1f);
                 ship.setPhased(false);
                 isPhased = false;
+                ship.setJitterUnder(ship, phaseColor, 1, 5, 20f);
                 Global.getSoundPlayer().playSound("gate_explosion", 0.2f, 0.8f, ship.getLocation(), new Vector2f());
                 Global.getCombatEngine().addSwirlyNebulaParticle(
                         ship.getLocation(),
                         new Vector2f(),
                         (ship.getCollisionRadius() * 2f)/10f,
-                        1.5f,
+                        10f,
                         0.5f,
                         1f,
                         1.5f,

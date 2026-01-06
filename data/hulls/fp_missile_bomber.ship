@@ -1,0 +1,66 @@
+{
+  "hullName": "Mailman",
+  "hullId": "fp_missile_bomber",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/missile_bomber.png",
+  "style": "MIDLINE",
+  "height": 25,
+  "width": 32,
+  "center": [16, 11.5],
+  "collisionRadius": 16,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 20.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "no_weapon_flux",
+    "fp_missilepicker"
+  ],
+  "builtInWeapons": {
+    "WS0001": "fp_missile_sleigh_fighter"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 0,
+      "angle": 0,
+      "locations": [2.5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-9.5, 9.5],
+      "length": 23,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "LOW_TECH_FIGHTER"
+    },
+    {
+      "location": [-9.5, 2.5],
+      "length": 23,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "LOW_TECH_FIGHTER"
+    },
+    {
+      "location": [-9.5, -4.5],
+      "length": 23,
+      "width": 7,
+      "angle": 180,
+      "contrailSize": 7,
+      "style": "LOW_TECH_FIGHTER"
+    }
+  ],
+  "bounds": [
+    -3.5, -14,
+    10.5, -6,
+    10.5, 6,
+    -3.5, 14,
+    -9, 8.5,
+    -9, -8.5
+  ]
+}

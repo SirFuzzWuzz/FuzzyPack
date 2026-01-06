@@ -2,7 +2,6 @@
 	"id":"artillery_dummy",
 	"specClass":"projectile",
 	"spawnType":"BALLISTIC",
-	#"onHitEffect":"data.scripts.artillery_a",
 	"collisionClass":"PROJECTILE_NO_FF",
 	"collisionClassByFighter":"NONE",
 	"length":60.0,
