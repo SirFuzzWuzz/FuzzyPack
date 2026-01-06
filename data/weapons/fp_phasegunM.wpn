@@ -1,9 +1,11 @@
 {
   "id": "fp_phasegunM",
-  "specClass": "projectile",
-  "projectileSpecId": "fp_phasegun_shot",
+  "specClass": "beam",
   "type": "ENERGY",
   "size": "LARGE",
+  "beamEffect": "fuzzypack.data.weapons.phasebeam",
+  "collisionClass": "RAY",
+  "collisionClassByFighter": "RAY_FIGHTER",
   "turretSprite": "graphics/weapons/phasegunM_t.png",
   "turretGlowSprite": "graphics/weapons/phasegunM_t_glow.png",
   "hardpointSprite": "graphics/weapons/phasegunM_h.png",
@@ -14,37 +16,45 @@
     255,
     255
   ],
+  "hitGlowRadius": 0,
   "turretOffsets": [
-    48.5,
+    45.5,
     0
   ],
   "turretAngleOffsets": [
     0
   ],
   "hardpointOffsets": [
-    56,
+    50.5,
     0
   ],
   "hardpointAngleOffsets": [
     0
   ],
-  "barrelMode": "ALTERNATING",
-  "animationType": "GLOW_AND_FLASH",
-  "autocharge": true,
-  "muzzleFlashSpec": {
-    "length": 70,
-    "spread": 15,
-    "particleSizeMin": 30,
-    "particleSizeRange": 40,
-    "particleDuration": 5,
-    "particleCount": 15,
-    "particleColor": [
-      170,
-      60,
-      200,
-      230
-    ]
-  },
+  "beamFireOnlyOnFullCharge": true,
+  "fringeColor": [
+    250,
+    20,
+    250,
+    255
+  ],
+  "coreColor": [
+    255,
+    100,
+    255,
+    255
+  ],
+  "width": 40,
+  "textureType": ROUGH,
+  "textureScrollSpeed": 200,
+  "pixelsPerTexel": 5,
+  "pierceSet": [
+    PROJECTILE_FF,
+    PROJECTILE_NO_FF,
+    PROJECTILE_FIGHTER,
+    MISSILE_FF,
+    MISSILE_NO_FF
+  ],
   "fireSoundOne": "phasegun_charge",
-  "fireSoundTwo": "phasegun_fire"
+  "fireSoundTwo": "ion_beam_loop"
 }

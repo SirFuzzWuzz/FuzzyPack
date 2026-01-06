@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.List;
 import com.fs.starfarer.api.combat.*;
-import fuzzypack.data.weapons.ShieldOverheat;
+import fuzzypack.data.weapons.effects.ShieldOverheat;
 import org.lwjgl.opengl.GL14;
 import org.lwjgl.util.vector.Vector2f;
 import com.fs.starfarer.api.Global;

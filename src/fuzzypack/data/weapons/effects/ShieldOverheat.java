@@ -1,6 +1,5 @@
-package fuzzypack.data.weapons;
+package fuzzypack.data.weapons.effects;
 
-import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.listeners.AdvanceableListener;
 
