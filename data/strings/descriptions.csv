@@ -91,6 +91,7 @@ fp_dictator,SHIP,The Lamenter is an antiquated battleship brought back to life b
 fp_dictator_large,SHIP,"The Lamenter is an antiquated battleship brought back to life by the Luddic Church in their need to keep up with the arms race in the sector without compromising their teachings. With its highly armoured prow in can close the distance in order to deliver overwhelming broadside firepower.
 The Knight variant fields even more firepower instead of fighter bays.",,,,
 fp_dauntless_new,SHIP,Using the same style of combat as its larger counterpart the Preacher uses its armoured prow to close the distance in order to deliver broadside firepower. Whether or not it can compete with contemporary cruisers is up for debate but for those with little choice they will find it a formidable ship.,,,,
+fp_missile_bomber,SHIP,A flexible bomber that uses missiles from the carrier as ammunition. Its attack runs are shorter range than other specialized bombers.,,,,
 ,,,,,,
 ,,,,,,
 fp_rangereducer,SHIP_SYSTEM,"Disrupts the targeting and sensors of targeted ship. As the marketing blurb says: ""If they can't see you they can't hurt you""",,,,

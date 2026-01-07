@@ -12,8 +12,7 @@
   "shieldRadius": 20.5,
   "viewOffset": 0,
   "builtInMods": [
-    "no_weapon_flux",
-    "fp_missilepicker"
+    "no_weapon_flux"
   ],
   "builtInWeapons": {
     "WS0001": "fp_missile_sleigh_fighter"
@@ -31,28 +30,20 @@
   ],
   "engineSlots": [
     {
-      "location": [-9.5, 9.5],
-      "length": 23,
-      "width": 7,
+      "location": [-9.5, 3.5],
+      "length": 22,
+      "width": 6,
       "angle": 180,
-      "contrailSize": 7,
-      "style": "LOW_TECH_FIGHTER"
+      "contrailSize": 6,
+      "style": "LOW_TECH"
     },
     {
-      "location": [-9.5, 2.5],
-      "length": 23,
-      "width": 7,
-      "angle": 180,
-      "contrailSize": 7,
-      "style": "LOW_TECH_FIGHTER"
-    },
-    {
-      "location": [-9.5, -4.5],
-      "length": 23,
-      "width": 7,
-      "angle": 180,
-      "contrailSize": 7,
-      "style": "LOW_TECH_FIGHTER"
+      "location": [-9.5, -3.5],
+      "length": 22,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 6,
+      "style": "LOW_TECH"
     }
   ],
   "bounds": [

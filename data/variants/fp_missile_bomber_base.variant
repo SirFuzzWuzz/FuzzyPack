@@ -1,0 +1,22 @@
+{
+  "variantId": "fp_missile_bomber_base",
+  "hullId": "fp_missile_bomber",
+  "displayName": "",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "WS0001": "fp_missile_sleigh_fighter"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}
