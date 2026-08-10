@@ -17,6 +17,7 @@ public class missile_sleigh_onfire implements OnFireEffectPlugin {
         for (WeaponAPI wpn : wpnList) {
             if (wpn.getType() == WeaponAPI.WeaponType.MISSILE) {
                 if (wpn.getAmmo() > 0) foundWpns.add(wpn);
+                wpn.setAmmo(wpn.getAmmo() - 1);
             }
         }
         if (foundWpns.isEmpty()) {
