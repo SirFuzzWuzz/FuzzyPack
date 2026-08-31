@@ -2,11 +2,13 @@
   "id": "fp_missile_sleigh_fighter",
   "specClass": "projectile",
   "projectileSpecId": "missile_sleigh_dummy",
-  "type": "BALLISTIC",
+  "type": "MISSILE",
   "size": "SMALL",
+  "everyFrameEffect": "fuzzypack.data.weapons.missile_sleigh",
   "turretSprite": "",
   "hardpointSprite": "",
   "renderHints": [
+    RENDER_LOADED_MISSILES
   ],
   "turretOffsets": [
     8,

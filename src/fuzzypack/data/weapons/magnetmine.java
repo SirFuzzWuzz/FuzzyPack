@@ -1,14 +1,11 @@
 package fuzzypack.data.weapons;
 
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.combat.CombatEngineAPI;
-import com.fs.starfarer.api.combat.DamageType;
-import com.fs.starfarer.api.combat.DamagingProjectileAPI;
-import com.fs.starfarer.api.combat.OnFireEffectPlugin;
-import com.fs.starfarer.api.combat.ShipAPI;
-import com.fs.starfarer.api.combat.WeaponAPI;
+import com.fs.starfarer.api.combat.*;
 import com.fs.starfarer.api.combat.listeners.AdvanceableListener;
 import java.awt.Color;
+
+import com.fs.starfarer.api.util.IntervalUtil;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.VectorUtils;
 import org.lazywizard.lazylib.combat.AIUtils;
@@ -18,9 +15,10 @@ import org.magiclib.util.MagicFakeBeam;
 
 
 public class magnetmine implements OnFireEffectPlugin {
-    
-    private final float maxDist = 650f;
-    private final float acc = 1.6f;
+
+    private static final float ARMING_TIME = 3f;
+    private static final float MAX_DIST = 650f;
+    private static final float ACC = 80f;
 
 
     @Override
@@ -32,55 +30,53 @@ public class magnetmine implements OnFireEffectPlugin {
     class listener implements AdvanceableListener {
         
         CombatEngineAPI engine = Global.getCombatEngine();
-        DamagingProjectileAPI proj;
+        DamagingProjectileAPI mine;
+        private final IntervalUtil beamInterval = new IntervalUtil(0.07f, 0.07f);
         
         public listener(DamagingProjectileAPI proj) {
-            this.proj = proj;
+            this.mine = proj;
         }
         
         @Override
         public void advance(float amount) {
-            if (proj.isExpired() || proj.didDamage() || !engine.isEntityInPlay(proj)) {
-                return; 
-            }
-            
-            ShipAPI trgt = AIUtils.getNearestEnemy(proj);
+            if (mine == null || mine.didDamage() || mine.isFading() || !engine.isEntityInPlay(mine)) return;
+            if (mine.getElapsed() <= ARMING_TIME) return;
 
-            if (trgt != null && trgt.getHullSize() != ShipAPI.HullSize.FIGHTER && proj.getElapsed() > 5f) {
-                float dist = MathUtils.getDistance(proj.getLocation(), trgt.getLocation());
-                if (dist < maxDist) {
-                    Vector2f trgtVec = trgt.getLocation();
-                    Vector2f projVec = proj.getLocation();
+            ShipAPI trgt = AIUtils.getNearestEnemy(mine);
+            if (trgt == null || !trgt.isAlive()) return;
+            if (trgt.getHullSize() == ShipAPI.HullSize.FIGHTER) return;
 
-                    float deltaX = trgtVec.x - projVec.x;
-                    float deltaY = trgtVec.y - projVec.y;
+            float dist = MathUtils.getDistance(mine, trgt);
+            if (dist <= 1f || dist > MAX_DIST) return;
 
-                    float accX = (deltaX/dist) * acc;
-                    float accY = (deltaY/dist) * acc;
+            Vector2f loc = mine.getLocation();
+            Vector2f tLoc = trgt.getLocation();
+            float inv = 1f / dist;
+            float dx = (tLoc.x - loc.x) * inv;
+            float dy = (tLoc.y - loc.y) * inv;
 
-                    proj.getVelocity().set(proj.getVelocity().x + accX, proj.getVelocity().y + accY);
-                    
-                    MagicFakeBeam.spawnFakeBeam(Global.getCombatEngine(),
-                                        proj.getLocation(),        //could reserve an offset                          
-                                        MathUtils.getDistance(proj.getLocation(), trgt.getLocation()),                                  
-                                        VectorUtils.getAngle(proj.getLocation(), trgt.getLocation()),                                  
-                                        5,         //width                 
-                                        0.03f,         //full                         
-                                        0.1f,       //fading                           
-                                        5,          //impact size                        
-                                        Color.BLACK, //core color                                 
-                                        new Color(255,50,50,70),   //fringe color                               
-                                        0,              //damage                                
-                                        DamageType.ENERGY, //damage type                                 
-                                        0,                 //emp                         
-                                        proj.getSource()); //source
-                    
-                }
-            }
-            
-            
-        } //advance
-        
+            Vector2f vel = mine.getVelocity();
+            vel.set(vel.x + dx * ACC * amount, vel.y + dy * ACC * amount);
+
+            beamInterval.advance(amount);
+            if (!beamInterval.intervalElapsed()) return;
+
+            MagicFakeBeam.spawnFakeBeam(
+                    Global.getCombatEngine(),
+                    loc,
+                    dist,
+                    VectorUtils.getAngle(loc, tLoc),
+                    5f,
+                    0.03f,
+                    0.1f,
+                    5f,
+                    Color.BLACK,
+                    new Color(255, 50, 50, 70),
+                    0f,
+                    DamageType.ENERGY,
+                    0f,
+                    mine.getSource()
+            );
+        }
     }
-
 }

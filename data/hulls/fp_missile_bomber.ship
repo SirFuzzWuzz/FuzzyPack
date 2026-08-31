@@ -4,12 +4,12 @@
   "hullSize": "FIGHTER",
   "spriteName": "graphics/ships/missile_bomber.png",
   "style": "MIDLINE",
-  "height": 25,
-  "width": 32,
-  "center": [16, 11.5],
-  "collisionRadius": 16,
-  "shieldCenter": [0, -0],
-  "shieldRadius": 20.5,
+  "height": 42,
+  "width": 34,
+  "center": [17, 20],
+  "collisionRadius": 22,
+  "shieldCenter": [3, -0],
+  "shieldRadius": 23.5,
   "viewOffset": 0,
   "builtInMods": [
     "no_weapon_flux"
@@ -25,33 +25,53 @@
       "mount": "HIDDEN",
       "arc": 0,
       "angle": 0,
-      "locations": [2.5, -0]
+      "locations": [8, -0]
     }
   ],
   "engineSlots": [
     {
-      "location": [-9.5, 3.5],
+      "location": [-17, 9.5],
       "length": 22,
-      "width": 6,
+      "width": 5,
       "angle": 180,
-      "contrailSize": 6,
+      "contrailSize": 5,
       "style": "LOW_TECH"
     },
     {
-      "location": [-9.5, -3.5],
+      "location": [-17, -9.5],
       "length": 22,
-      "width": 6,
+      "width": 5,
       "angle": -180,
-      "contrailSize": 6,
+      "contrailSize": 5,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-15, 13.5],
+      "length": 17,
+      "width": 4,
+      "angle": 180,
+      "contrailSize": 4,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-15, -13.5],
+      "length": 17,
+      "width": 4,
+      "angle": -180,
+      "contrailSize": 4,
       "style": "LOW_TECH"
     }
   ],
   "bounds": [
-    -3.5, -14,
-    10.5, -6,
-    10.5, 6,
-    -3.5, 14,
-    -9, 8.5,
-    -9, -8.5
+    4, -13.5,
+    -15.5, -14.5,
+    -15.5, 14.5,
+    4, 13.5,
+    8, 9,
+    18, 7.5,
+    8, 3,
+    8, -3,
+    18, -7.5,
+    8, -9
   ]
 }

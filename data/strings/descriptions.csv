@@ -45,6 +45,7 @@ fp_dictator_torpedo,WEAPON,6 Torpedo tubes built into the prow firing in a sprea
 fp_dictator_novacannon,WEAPON,This fearsome weapon projects plasma explosions over vast distances ignoring any obstacles. The lengthy firing sequence requires the ship to remain stationary making it difficult to use against smaller vessels and runs the risk of being outflanked but the range and power more than makes up for it against larger foes. The energy signature of the weapon does reveals where the explosion will occur giving targets a small respite.,,,,
 fp_macromortar,WEAPON,Based on the ubiquitous mortar weapons found all over the sector the Macro Mortar fires not only larger but also more advanced shells with a higher yield and a better flight trajectory. The weapon may have a lower overall damage output compared to its cheaper counterpart but in actual combat the improvements should outweigh the downsides.,,,,
 fp_plasmarail,WEAPON,In an attempt at firing cheap munition at a higher velocity they melted while firing. Fortunately a lump of hot plasma is still dangerous to most vessels.,,,,
+fp_missile_sleigh_fighter,WEAPON,A set of clamps and magnets designed to carry any kind of munition. Missiles from the carrier is used instead of its own ordinance if available.,,,,
 ,,,,,,
 ,,,,,,
 fp_drone_vorer,SHIP,A small autonomous drone believed to originally have been designed for construction using miniature stasis beams to hold parts in place.,,,,
@@ -91,7 +92,7 @@ fp_dictator,SHIP,The Lamenter is an antiquated battleship brought back to life b
 fp_dictator_large,SHIP,"The Lamenter is an antiquated battleship brought back to life by the Luddic Church in their need to keep up with the arms race in the sector without compromising their teachings. With its highly armoured prow in can close the distance in order to deliver overwhelming broadside firepower.
 The Knight variant fields even more firepower instead of fighter bays.",,,,
 fp_dauntless_new,SHIP,Using the same style of combat as its larger counterpart the Preacher uses its armoured prow to close the distance in order to deliver broadside firepower. Whether or not it can compete with contemporary cruisers is up for debate but for those with little choice they will find it a formidable ship.,,,,
-fp_missile_bomber,SHIP,A flexible bomber that uses missiles from the carrier as ammunition. Its attack runs are shorter range than other specialized bombers.,,,,
+fp_missile_bomber,SHIP,A flexible bomber that uses missiles from the carrier as ammunition. Missiles taken from the carrier are spent. If no ammunition is available a small bomb is used instead.,,,,
 ,,,,,,
 ,,,,,,
 fp_rangereducer,SHIP_SYSTEM,"Disrupts the targeting and sensors of targeted ship. As the marketing blurb says: ""If they can't see you they can't hurt you""",,,,
