@@ -1,121 +1,317 @@
 package fuzzypack.data.weapons;
 
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.combat.CombatEngineAPI;
-import com.fs.starfarer.api.combat.CombatEntityAPI;
-import com.fs.starfarer.api.combat.DamagingProjectileAPI;
-import com.fs.starfarer.api.combat.OnHitEffectPlugin;
-import com.fs.starfarer.api.combat.ShipAPI;
-import com.fs.starfarer.api.combat.WeaponAPI;
-import com.fs.starfarer.api.combat.listeners.ApplyDamageResultAPI;
+import com.fs.starfarer.api.combat.*;
 import com.fs.starfarer.api.combat.listeners.AdvanceableListener;
+import com.fs.starfarer.api.combat.listeners.ApplyDamageResultAPI;
+import com.fs.starfarer.api.graphics.SpriteAPI;
 import com.fs.starfarer.api.util.IntervalUtil;
-import org.magiclib.util.MagicRender;
-import java.awt.Color;
+import fuzzypack.data.weapons.tools.RopeChain;
 import org.lazywizard.lazylib.MathUtils;
 import org.lazywizard.lazylib.VectorUtils;
 import org.lwjgl.util.vector.Vector2f;
+import org.magiclib.util.MagicRender;
+import java.awt.Color;
 
+public class tether implements OnHitEffectPlugin, OnFireEffectPlugin {
 
+    private static final float LINK_SPACING = 5f;
+    private static final float LINK_THICKNESS = 8f;
+    private static final int MIN_LINKS = 6;
+    private static final int MAX_LINKS = 100;
+    private static final int SOLVER_ITERS = 8;
+    private static final float DAMPING = 0.95f;
+    private static final float MOMENT_SPIN = 100f;
+    private static final float STIFFNESS = 900f;
+    private static final float DURATION = 20f;
+    private static final float BREAK_FORCE = 40000; // 0 = never breaks
+    private static final float SNAP_TIME = 2f;
+    private static final String SPRITE_CAT = "projectiles";
+    private static final String LINK_SPRITE = "taser_chain";
 
-public class tether implements OnHitEffectPlugin {
+    //Taser effect
+    private static final float CHARGE_TIME = 3f;
+    private static final float PULSE_TIME = 0.25f;
+    private static final float ZAPS_PER_SEC = 3f;
+    private static final float SHOCK_EMP = 300f;
+    private static final float SHOCK_DAMAGE = 50f;
 
-    private final float minDist = 700f;
-    private final IntervalUtil interval = new IntervalUtil(15f,15f);
-    private final IntervalUtil visualInterval = new IntervalUtil(0.3f,0.5f);
+    @Override
+    public void onFire(DamagingProjectileAPI projectile, WeaponAPI weapon, CombatEngineAPI engine) {
+        if (weapon.getShip() == null || projectile == null) return;
+        weapon.getShip().addListener(new flightListener(projectile, weapon));
+    }
+
+    class flightListener implements AdvanceableListener {
+        final DamagingProjectileAPI proj;
+        final WeaponAPI weap;
+        final ShipAPI host;
+        boolean done;
+        boolean retracting;
+        final Vector2f tip = new Vector2f();
+
+        flightListener(DamagingProjectileAPI proj, WeaponAPI weap) {
+            this.proj = proj;
+            this.weap = weap;
+            this.host = weap.getShip();
+        }
+
+        @Override
+        public void advance(float amount) {
+            if (done || host == null || !host.isAlive()) {
+                if (host != null) host.removeListener(this);
+                return;
+            }
+
+            CombatEngineAPI engine = Global.getCombatEngine();
+            Vector2f start = weap.getFirePoint(0);
+
+            if (!retracting) {
+                if (proj == null || proj.didDamage()) {
+                    done = true;
+                    host.removeListener(this);
+                    return;
+                }
+                tip.set(proj.getLocation());
+                float dist = MathUtils.getDistance(start, tip);
+                if (dist < 1f) return;
+
+                if (dist >= weap.getRange()) {
+                    engine.removeEntity(proj);
+                    weap.setAmmo(1);
+                    retracting = true;
+                }
+            }
+
+            if (retracting) {
+                if (RopeChain.reelToward(start, tip, weap.getProjectileSpeed(), amount)) {
+                    done = true;
+                    host.removeListener(this);
+                    return;
+                }
+            }
+
+            RopeChain.renderStraight(start, tip, LINK_SPACING, MIN_LINKS, MAX_LINKS,
+                    SPRITE_CAT, LINK_SPRITE, LINK_THICKNESS, amount);
+
+            float linkAngle = VectorUtils.getAngle(start, tip) - 90f;
+            MagicRender.battlespace(
+                    Global.getSettings().getSprite("projectiles", "tether_missile"),
+                    tip,
+                    new Vector2f(),
+                    new Vector2f(12f, 20f),
+                    new Vector2f(),
+                    linkAngle,
+                    0f,
+                    Color.WHITE,
+                    false,
+                    0f,
+                    amount,
+                    0f
+            );
+        }
+    }
 
     @Override
     public void onHit(DamagingProjectileAPI projectile, CombatEntityAPI target,
                       Vector2f point, boolean shieldHit, ApplyDamageResultAPI damageResult, CombatEngineAPI engine) {
-        if (target instanceof ShipAPI && !shieldHit && MathUtils.getDistance(projectile.getWeapon().getLocation(), target.getLocation()) < minDist) {
-            projectile.getWeapon().getShip().addListener(new listener(projectile, (ShipAPI) target, point));
-        }
-    } //onHit
-    
-    
-    
-    class listener implements AdvanceableListener {
-        
-        ShipAPI target;
-        ShipAPI host;
-        WeaponAPI weap;
-        DamagingProjectileAPI proj;
-        
-        float impactDist;
-        float projOffset;
-        float impactOffset;
+        if (!(target instanceof ShipAPI) || shieldHit) return;
+        if (projectile.getWeapon() == null || projectile.getWeapon().getShip() == null) return;
+        float maxDist = projectile.getWeapon().getRange();
+        float hitDist = MathUtils.getDistance(projectile.getWeapon().getFirePoint(0), point);
+        if (hitDist >= maxDist || hitDist < 10f) return;
 
-        
-        
-        public listener(DamagingProjectileAPI proj, ShipAPI target, Vector2f point) {
+        projectile.getWeapon().getShip().addListener(
+                new attachedListener(projectile, (ShipAPI) target, point, hitDist));
+    }
+
+    class attachedListener implements AdvanceableListener {
+        final ShipAPI target;
+        final ShipAPI host;
+        final WeaponAPI weap;
+        final IntervalUtil life = new IntervalUtil(DURATION, DURATION);
+        final float impactDist;
+        final float impactOffset;
+        final float hookFacingOffset;
+        final RopeChain chain;
+        float forceCounter = 0f;
+        boolean primed = false;
+        float charge = 0f;
+        float pulse = -1f;
+        final IntervalUtil zap = new IntervalUtil(1f / ZAPS_PER_SEC, 1f / ZAPS_PER_SEC);
+
+        attachedListener(DamagingProjectileAPI proj, ShipAPI target, Vector2f point, float hitDist) {
             this.target = target;
             this.host = proj.getWeapon().getShip();
             this.weap = proj.getWeapon();
-            this.proj = proj;
-
             this.impactDist = MathUtils.getDistance(point, target.getLocation());
-            this.projOffset = VectorUtils.getAngle(point, target.getLocation()) - proj.getFacing();
             this.impactOffset = VectorUtils.getAngle(target.getLocation(), point) - target.getFacing();
+            this.hookFacingOffset = proj.getFacing() - target.getFacing();
+            this.chain = new RopeChain(
+                    weap.getFirePoint(0), point,
+                    LINK_SPACING, MIN_LINKS, MAX_LINKS,
+                    SOLVER_ITERS, DAMPING, SPRITE_CAT, LINK_SPRITE, LINK_THICKNESS);
         }
-        
-        
+
         @Override
         public void advance(float amount) {
-            if (interval.intervalElapsed()) return;
-            interval.advance(amount);
-            
-            //physics
-            float dist = MathUtils.getDistance(host.getLocation(), target.getLocation());
-            if (dist >= minDist) {
-
-
-                float dx = target.getLocation().x - host.getLocation().x;
-                float dy = target.getLocation().y - host.getLocation().y;
-                
-                float force = (dist - minDist) * 500f; // times stiffness
-                
-                float totMass = host.getMass() + target.getMass();
-                
-                float hostRatio = target.getMass() / totMass;
-                float targetRatio = host.getMass() / totMass;
-                
-                float forceX = force * (dx / dist);
-                float forceY = force * (dy / dist);
-                
-                host.getVelocity().set(host.getVelocity().x + ((forceX * hostRatio) / host.getMass()), 
-                        host.getVelocity().y + ((forceY * hostRatio) / host.getMass()));
-                target.getVelocity().set(target.getVelocity().x - ((forceX * targetRatio) / target.getMass()), 
-                        target.getVelocity().y - ((forceY * targetRatio) / target.getMass()));
+            if (host == null || target == null || !host.isAlive() || !target.isAlive()) {
+                weap.setAmmo(1);
+                if (host != null) host.removeListener(this);
+                return;
             }
-            
-            
-            //Visuals
-
-            Vector2f projVector = MathUtils.getPointOnCircumference(target.getLocation(), 
-                    impactDist, target.getFacing() + impactOffset);
-
-            if (visualInterval.intervalElapsed()) {
-                Global.getCombatEngine().spawnEmpArcVisual(weap.getFirePoint(0), host, projVector, target, 6f, Color.red, Color.black);
+            life.advance(amount);
+            if (life.intervalElapsed()) {
+                chainRemoved(chain);
+                weap.setAmmo(1);
+                host.removeListener(this);
+                return;
             }
-            visualInterval.advance(amount);
+            Vector2f start = weap.getFirePoint(0);
+            Vector2f end = MathUtils.getPointOnCircumference(
+                    target.getLocation(), impactDist, target.getFacing() + impactOffset);
+            // Magic
+            chain.pinEnds(start, end);
+            chain.simulate();
+            chain.applyPull(host, target, start, end, STIFFNESS, MOMENT_SPIN, amount);
 
+            // Global.getCombatEngine().addFloatingText(weap.getLocation(),
+            //        "FORCE: "+ chain.getTension(start,end,STIFFNESS),50f,Color.GREEN, weap.getShip(),0f,0f);
+            if (BREAK_FORCE > 0f && chain.getTension(start, end, STIFFNESS) >= BREAK_FORCE) {
+                forceCounter += amount;
+                // SNAP
+                if (forceCounter > SNAP_TIME) {
+                    chainRemoved(chain);
+                    weap.setAmmo(1);
+                    host.removeListener(this);
+                    return;
+                }
+            } else if(chain.getTension(start, end, STIFFNESS) < BREAK_FORCE) {
+                forceCounter = 0;
+            }
+
+            // For taser stuff
+            if (!primed) {
+                charge += amount;
+                if (charge >= CHARGE_TIME) primed = true;
+            } else if (pulse < 0f) {
+                zap.advance(amount);
+                if (zap.intervalElapsed()) pulse = 0f;
+            } else {
+                pulse += amount / PULSE_TIME;
+                drawPulse(chain, pulse, amount);
+                if (pulse >= 1f) {
+                    applyShock(end);
+                    pulse = -1f;
+                }
+            }
+            // Dots on each 'corner' for debugging
+            //Global.getCombatEngine().addFloatingText(chain.pos[0], "0", 16f, Color.YELLOW, host, 0f, 0f);
+            //Global.getCombatEngine().addFloatingText(chain.pos[chain.links - 1], "N", 16f, Color.YELLOW, target, 0f, 0f);
+            /*for (Vector2f p : chain.pos) {
+                SpriteAPI dot = Global.getSettings().getSprite("markers", "circle");
+                MagicRender.battlespace(
+                        dot,
+                        p,
+                        target.getVelocity(),
+                        new Vector2f(12f, 20f),
+                        new Vector2f(),
+                        0f,
+                        0f,
+                        new Color(255, 255, 255, 255),
+                        false,
+                        0f,
+                        amount,
+                        0f
+                );
+            } */
+            // Render actual chain, only visual
+            chain.render(amount);
+            // To render the missile stuck in the target
             MagicRender.battlespace(
-                Global.getSettings().getSprite("projectiles", "tether_missile"),
-                projVector,
-                new Vector2f(),
-                new Vector2f(10 ,21),
-                new Vector2f(0,0),
-                VectorUtils.getAngle(projVector, target.getLocation()) - 90f, //VectorUtils.getAngle(projVector, target.getLocation())
-                0f,
-                new Color(255,255,255,240),
-                false,
-                0.01f,
-                0.02f,
-                0.01f);
+                    Global.getSettings().getSprite("projectiles", "tether_missile"),
+                    end,
+                    target.getVelocity(),
+                    new Vector2f(12f, 20f),
+                    new Vector2f(),
+                    target.getFacing() + hookFacingOffset - 90,
+                    0f,
+                    new Color(255, 255, 255, 255),
+                    false,
+                    0f,
+                    amount,
+                    0f
+            );
+        }
 
+        private void chainRemoved(RopeChain chain) {
+            Global.getSoundPlayer().playSound("hit_heavy_energy", 1f, 0.8f, weap.getLocation(), host.getVelocity());
+            weap.setRefireDelay(weap.getRefireDelay());
+            for (Vector2f p : chain.pos) {
+                Global.getCombatEngine().spawnExplosion(p, target.getVelocity(),
+                        new Color(80, 160, 255, 180), LINK_SPACING*4f, 0.2f);
+            }
+        }
+
+        private void drawPulse(RopeChain chain, float t, float amount) {
+            float f = Math.max(0f, Math.min(0.999f, t)) * (chain.links - 1);
+            int i = (int) f;
+            float local = f - i;
+            Vector2f a = chain.pos[i];
+            Vector2f b = chain.pos[Math.min(i + 1, chain.links - 1)];
+            Vector2f p = new Vector2f(a.x + (b.x - a.x) * local, a.y + (b.y - a.y) * local);
+
+            Color fringe = new Color(100, 180, 255, 50);
+            Color core = new Color(220, 240, 255, 180);
+
+            /*SpriteAPI spr = Global.getSettings().getSprite(SPRITE_CAT, LINK_SPRITE);
+            spr.setAngle(0f);
+            MagicRender.battlespace(spr, p, new Vector2f(),
+                    new Vector2f(14f, 14f), new Vector2f(),
+                    0f, 0f, core, true, 0f, amount, 0f);*/
+
+            int step = 2;
+            for (int n = 0; n < i; n += step) {
+                int m = Math.min(n + step, i);
+                EmpArcEntityAPI arc = Global.getCombatEngine().spawnEmpArcVisual(
+                        chain.pos[n], null, chain.pos[m], null,
+                        4f, fringe, core);
+                arc.setSingleFlickerMode();
+                arc.setRenderGlowAtStart(false);
+                arc.setRenderGlowAtEnd(false);
+            }
+        }
+
+        private void applyShock(Vector2f hit) {
+            CombatEngineAPI engine = Global.getCombatEngine();
+            engine.applyDamage(
+                    target, hit,
+                    weap.getDamage().getDamage(), DamageType.ENERGY,
+                    SHOCK_EMP,
+                    true, false, host);
+            for (int i = 0; i < 3; i++) {
+                engine.spawnEmpArcPierceShields(
+                        host, hit, target,
+                        target, DamageType.ENERGY,
+                        0f, weap.getDerivedStats().getEmpPerShot(),
+                        1000f, null, 12f,
+                        new Color(100, 180, 255),
+                        Color.WHITE);
+                /*Vector2f dest = MathUtils.getRandomPointInCircle(target.getLocation(),
+                        target.getCollisionRadius() * 0.8f);
+                EmpArcEntityAPI arc = engine.spawnEmpArcVisual(
+                        hit, target, dest, target,
+                        10f,
+                        new Color(100, 180, 255, 160),
+                        Color.WHITE);
+                arc.setSingleFlickerMode();*/
+            }
+            // visuals
+            engine.addHitParticle(hit, target.getVelocity(), 80f, 1f, 0.15f, Color.WHITE);
+            engine.addSmoothParticle(hit, target.getVelocity(), 120f, 0.8f, 0.25f,
+                    new Color(150, 210, 255, 200));
+            engine.spawnExplosion(hit, target.getVelocity(),
+                    new Color(80, 160, 255, 180), 40f, 0.2f);
         }
     }
-    
-
-
 }

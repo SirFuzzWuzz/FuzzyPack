@@ -6,7 +6,7 @@
 	"sprite":"graphics/missiles/magmine.png",
 	"glowSprite":"graphics/missiles/magmine_glow.png",
 	"glowColor":[255,50,50,255],
-	"size":[70,70],	
+	"size":[80,80],	
 	"center":[35,35],	
 	"collisionRadius":15,
 	"collisionClass":"MISSILE_NO_FF",

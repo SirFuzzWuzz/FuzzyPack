@@ -13,7 +13,7 @@
 			"artyshell3": "graphics/missiles/artyshell3.png",
 			"artyshell4": "graphics/missiles/artyshell4.png",
 
-			"chainsegment": "graphics/missiles/chainsegment.png",
+			"taser_chain": "graphics/weapons/taser/taser_chain.png",
 			"tether_missile": "graphics/missiles/missile_tether.png",
 			"missile_battery": "graphics/missiles/missile_battery.png",
 
