@@ -4,6 +4,7 @@
 			"artillery_crosshair": "graphics/crosshair.png",
 			"circle": "graphics/missiles/novacannon_indicator.png",
 			"sindria_emblem": "graphics/diktat_emblem.png",
+			"filled_circle": "graphics/fx/circle.png",
 		},
 		"projectiles":{
 			"artillery_shell": "graphics/missiles/artilleryshell.png",
@@ -15,6 +16,9 @@
 
 			"taser_chain": "graphics/weapons/taser/taser_chain.png",
 			"tether_missile": "graphics/missiles/missile_tether.png",
+			"harpoon_chain":"graphics/weapons/harpoon/harpoon_chain.png",
+			"fp_harpoon_missile":"graphics/missiles/fp_missile_harpoon.png",
+			"fp_harpoon_missile_attached":"graphics/missiles/fp_missile_harpoon_attached.png",
 			"missile_battery": "graphics/missiles/missile_battery.png",
 
 		},

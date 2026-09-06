@@ -6,7 +6,7 @@
 	"onHitEffect":"fuzzypack.data.weapons.tether",
 	"sprite":"graphics/missiles/missile_tether.png",
 	"size":[14,22],	
-	"center":[5,10.5],
+	"center":[7,11],
 	"collisionRadius":5,
 	"collisionClass":"MISSILE_FF",
 	"explosionColor":[220,155,155,255],  # purely visual, will get a white additively blended core on top of this color
@@ -22,8 +22,8 @@
 					 "particleCount":20,
 					 "particleColor":[50,180,200,255]},
 	"slowToMaxSpeed":true,
-	"armingTime":0.1,
-	"noEngineGlowTime":1.5,
+	"armingTime":0,
+	"noEngineGlowTime":0,
 	"engineSpec":{"turnAcc":300,
 				  "turnRate":10,
 				  "acc":600,
@@ -48,6 +48,6 @@
 						"type":"GLOW" # GLOW or SMOKE; additive or regular blend mode
 					},
 				    "width":10.0,
-				    "length":20.0,
+				    "length":5.0,
 				    "angle":180.0}]
 }

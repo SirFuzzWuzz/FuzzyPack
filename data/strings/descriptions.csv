@@ -28,7 +28,8 @@ fp_flashbeam_builtin,WEAPON,An integrated Flashbeam with higher output than its 
 fp_twinthumper,WEAPON,Two Thumpers welded together in a questionable manner. They still work.,,,,
 fp_zapgun,WEAPON,"An unstable emp emitter that delivers extremely high damage, sometimes.",,,,
 fp_magmine,WEAPON,Releases a slow moving mine that begins accelerating towards enemy vessels that stray close to it. The mine has a long arming time making it unsuitable for close range engagements.,,,,
-fp_tether,WEAPON,A multi-purpose tether useful for keeping enemies close or pull friends out of danger.,,,,
+fp_tether,WEAPON,Fires a wire that when connected to an enemy can fry enemy systems through constant EMP bursts if the connection is upheld.,,,,
+fp_harpoon,WEAPON,Deploys a harpoon connected to a chain that will pull targets closer for an easier kill. Even if it does not pierce shields it delivers a reasonable kinetic punch. The chain can handle any amount of tension but is broken if any segment takes enough damage.,,,,
 fp_exacannon,WEAPON,"""Attention, loyal citizens of Sindria! Today our Supreme Executors ingenuity has brought us strength!""
 [Epic music as the Teracannon emerges]
 ""Witness the Teracannon, a symbol of his might that will unleash fury on all who oppose him.""

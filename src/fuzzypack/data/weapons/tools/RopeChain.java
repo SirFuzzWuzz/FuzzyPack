@@ -12,17 +12,18 @@ import java.awt.Color;
 
 public class RopeChain {
 
-    public final int links;
-    public final float linkLen;
-    public final float restLength;
-    public final Vector2f[] pos;
-    public final Vector2f[] prev;
+    public int links;
+    public float linkLen;
+    public float restLength;
+    public Vector2f[] pos;
+    public Vector2f[] prev;
 
     private final String spriteCat;
     private final String spriteKey;
     private final float thickness;
     private final int solverIters;
     private final float damping;
+
 
     public RopeChain(Vector2f start, Vector2f end, float spacing, int minLinks, int maxLinks,
                      int solverIters, float damping, String spriteCat, String spriteKey, float thickness) {
@@ -122,6 +123,7 @@ public class RopeChain {
         ship.setAngularVelocity(ship.getAngularVelocity() + torque / inertia);
     }
 
+    // Visual, use setRestLength to actually pull stuff
     public static boolean reelToward(Vector2f start, Vector2f tip, float speed, float amount) {
         float dist = MathUtils.getDistance(start, tip);
         if (dist <= 15f) return true; // finished
@@ -130,6 +132,86 @@ public class RopeChain {
         tip.x += dir.x * step;
         tip.y += dir.y * step;
         return false;
+    }
+
+    public void setRestLength(float length) {
+        restLength = Math.max(length, 1f);
+        linkLen = restLength / Math.max(links - 1, 1);
+    }
+
+    public void fitLinks(Vector2f start, Vector2f end, float spacing, int minLinks, int maxLinks) {
+        float dist = Math.max(MathUtils.getDistance(start, end), 1f);
+        int n = (int) Math.max(minLinks, Math.min(maxLinks, Math.round(dist / spacing) + 1));
+        if (n < 2) n = 2;
+        if (pos == null || links < 2) {
+            // first-time layout
+            pos = new Vector2f[n];
+            prev = new Vector2f[n];
+            for (int i = 0; i < n; i++) {
+                float t = i / (float) (n - 1);
+                pos[i] = new Vector2f(start.x + (end.x - start.x) * t, start.y + (end.y - start.y) * t);
+                prev[i] = new Vector2f(pos[i]);
+            }
+            links = n;
+            linkLen = dist / (n - 1);
+            return;
+        }
+        if (n == links) {
+            pos[0].set(start);
+            prev[0].set(start);
+            pos[links - 1].set(end);
+            prev[links - 1].set(end);
+            return;
+        }
+
+        Vector2f[] newPos = new Vector2f[n];
+        Vector2f[] newPrev = new Vector2f[n];
+        newPos[0] = new Vector2f(start);
+        newPrev[0] = new Vector2f(start);
+        newPos[n - 1] = new Vector2f(end);
+        newPrev[n - 1] = new Vector2f(end);
+
+        if (n > links) {
+            int add = n - links;
+            Vector2f a = start;
+            Vector2f b = pos[1];
+            for (int k = 1; k <= add; k++) {
+                float t = k / (float) (add + 1);
+                Vector2f p = new Vector2f(a.x + (b.x - a.x) * t, a.y + (b.y - a.y) * t);
+                newPos[k] = p;
+                newPrev[k] = new Vector2f(p);
+            }
+            for (int i = 1; i < links - 1; i++) {
+                newPos[i + add] = pos[i];
+                newPrev[i + add] = prev[i];
+            }
+        } else {
+            int remove = links - n;
+            int src = 1 + remove; // drop nodes nearest the gun
+            for (int i = 1; i < n - 1; i++) {
+                newPos[i] = pos[src];
+                newPrev[i] = prev[src];
+                src++;
+            }
+        }
+
+        pos = newPos;
+        prev = newPrev;
+        links = n;
+        linkLen = dist / Math.max(n - 1, 1);
+    }
+
+    private Vector2f sample(float t) {
+        float x = t * (links - 1);
+        int i = Math.min((int) x, links - 2);
+        float f = x - i;
+        Vector2f a = pos[i];
+        Vector2f b = pos[i + 1];
+        return new Vector2f(a.x + (b.x - a.x) * f, a.y + (b.y - a.y) * f);
+    }
+
+    public void setMaxLength(float length) {
+        restLength = Math.max(length, 1f);
     }
 
     public float getTension(Vector2f start, Vector2f end, float stiffness) {

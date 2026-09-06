@@ -4,7 +4,6 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.*;
 import com.fs.starfarer.api.combat.listeners.AdvanceableListener;
 import com.fs.starfarer.api.combat.listeners.ApplyDamageResultAPI;
-import com.fs.starfarer.api.graphics.SpriteAPI;
 import com.fs.starfarer.api.util.IntervalUtil;
 import fuzzypack.data.weapons.tools.RopeChain;
 import org.lazywizard.lazylib.MathUtils;
@@ -18,23 +17,23 @@ public class tether implements OnHitEffectPlugin, OnFireEffectPlugin {
     private static final float LINK_SPACING = 5f;
     private static final float LINK_THICKNESS = 8f;
     private static final int MIN_LINKS = 6;
-    private static final int MAX_LINKS = 100;
+    private static final int MAX_LINKS = 80;
     private static final int SOLVER_ITERS = 8;
     private static final float DAMPING = 0.95f;
     private static final float MOMENT_SPIN = 100f;
     private static final float STIFFNESS = 900f;
-    private static final float DURATION = 20f;
-    private static final float BREAK_FORCE = 40000; // 0 = never breaks
-    private static final float SNAP_TIME = 2f;
+    private static final float DURATION = 15f;
+    private static final float BREAK_FORCE = 30000; // 0 = never breaks
+    private static final float SNAP_TIME = 1f; // sec need at max tension to snap chain
     private static final String SPRITE_CAT = "projectiles";
     private static final String LINK_SPRITE = "taser_chain";
+    private static final String HOOK_SPRITE = "tether_missile";
 
     //Taser effect
     private static final float CHARGE_TIME = 3f;
     private static final float PULSE_TIME = 0.25f;
     private static final float ZAPS_PER_SEC = 3f;
-    private static final float SHOCK_EMP = 300f;
-    private static final float SHOCK_DAMAGE = 50f;
+
 
     @Override
     public void onFire(DamagingProjectileAPI projectile, WeaponAPI weapon, CombatEngineAPI engine) {
@@ -138,7 +137,7 @@ public class tether implements OnHitEffectPlugin, OnFireEffectPlugin {
         boolean primed = false;
         float charge = 0f;
         float pulse = -1f;
-        final IntervalUtil zap = new IntervalUtil(1f / ZAPS_PER_SEC, 1f / ZAPS_PER_SEC);
+        final IntervalUtil zap_interval = new IntervalUtil(1f / ZAPS_PER_SEC, 1f / ZAPS_PER_SEC);
 
         attachedListener(DamagingProjectileAPI proj, ShipAPI target, Vector2f point, float hitDist) {
             this.target = target;
@@ -151,42 +150,50 @@ public class tether implements OnHitEffectPlugin, OnFireEffectPlugin {
                     weap.getFirePoint(0), point,
                     LINK_SPACING, MIN_LINKS, MAX_LINKS,
                     SOLVER_ITERS, DAMPING, SPRITE_CAT, LINK_SPRITE, LINK_THICKNESS);
+            chain.setMaxLength(weap.getRange());
         }
 
         @Override
         public void advance(float amount) {
-            if (host == null || target == null || !host.isAlive() || !target.isAlive()) {
-                weap.setAmmo(1);
+            if (host == null || target == null || !host.isAlive() || !target.isAlive() || weap.isDisabled()) {
                 if (host != null) host.removeListener(this);
                 return;
             }
+            weap.setRemainingCooldownTo(weap.getRefireDelay());
             life.advance(amount);
             if (life.intervalElapsed()) {
                 chainRemoved(chain);
-                weap.setAmmo(1);
                 host.removeListener(this);
                 return;
             }
+            // Block firing while it's attached
+            weap.setRemainingCooldownTo(weap.getRefireDelay());
+
             Vector2f start = weap.getFirePoint(0);
             Vector2f end = MathUtils.getPointOnCircumference(
                     target.getLocation(), impactDist, target.getFacing() + impactOffset);
+
+            // Pull from rear of hook instead of the hitpoint, good if long hook
+            float hookFacing = target.getFacing() + hookFacingOffset;
+            Vector2f chainEnd = MathUtils.getPointOnCircumference(end, 10f, hookFacing + 180f);
+
             // Magic
-            chain.pinEnds(start, end);
+            chain.fitLinks(start, chainEnd, LINK_SPACING, MIN_LINKS, MAX_LINKS);
+            chain.pinEnds(start, chainEnd);
             chain.simulate();
-            chain.applyPull(host, target, start, end, STIFFNESS, MOMENT_SPIN, amount);
+            chain.applyPull(host, target, start, chainEnd, STIFFNESS, MOMENT_SPIN, amount);
 
             // Global.getCombatEngine().addFloatingText(weap.getLocation(),
             //        "FORCE: "+ chain.getTension(start,end,STIFFNESS),50f,Color.GREEN, weap.getShip(),0f,0f);
-            if (BREAK_FORCE > 0f && chain.getTension(start, end, STIFFNESS) >= BREAK_FORCE) {
+            if (BREAK_FORCE > 0f && chain.getTension(start, chainEnd, STIFFNESS) >= BREAK_FORCE) {
                 forceCounter += amount;
                 // SNAP
                 if (forceCounter > SNAP_TIME) {
                     chainRemoved(chain);
-                    weap.setAmmo(1);
                     host.removeListener(this);
                     return;
                 }
-            } else if(chain.getTension(start, end, STIFFNESS) < BREAK_FORCE) {
+            } else if(chain.getTension(start, chainEnd, STIFFNESS) < BREAK_FORCE) {
                 forceCounter = 0;
             }
 
@@ -195,20 +202,21 @@ public class tether implements OnHitEffectPlugin, OnFireEffectPlugin {
                 charge += amount;
                 if (charge >= CHARGE_TIME) primed = true;
             } else if (pulse < 0f) {
-                zap.advance(amount);
-                if (zap.intervalElapsed()) pulse = 0f;
+                zap_interval.advance(amount);
+                if (zap_interval.intervalElapsed()) pulse = 0f;
             } else {
                 pulse += amount / PULSE_TIME;
                 drawPulse(chain, pulse, amount);
+                Global.getSoundPlayer().playSound("tachyon_lance_emp_impact", 1f, 0.6f, start, target.getVelocity());
                 if (pulse >= 1f) {
                     applyShock(end);
                     pulse = -1f;
                 }
             }
-            // Dots on each 'corner' for debugging
+            // Circles of debugging
             //Global.getCombatEngine().addFloatingText(chain.pos[0], "0", 16f, Color.YELLOW, host, 0f, 0f);
             //Global.getCombatEngine().addFloatingText(chain.pos[chain.links - 1], "N", 16f, Color.YELLOW, target, 0f, 0f);
-            /*for (Vector2f p : chain.pos) {
+            /* for (Vector2f p : chain.pos) {
                 SpriteAPI dot = Global.getSettings().getSprite("markers", "circle");
                 MagicRender.battlespace(
                         dot,
@@ -225,11 +233,12 @@ public class tether implements OnHitEffectPlugin, OnFireEffectPlugin {
                         0f
                 );
             } */
+
             // Render actual chain, only visual
             chain.render(amount);
             // To render the missile stuck in the target
             MagicRender.battlespace(
-                    Global.getSettings().getSprite("projectiles", "tether_missile"),
+                    Global.getSettings().getSprite("projectiles", HOOK_SPRITE),
                     end,
                     target.getVelocity(),
                     new Vector2f(12f, 20f),
@@ -260,26 +269,8 @@ public class tether implements OnHitEffectPlugin, OnFireEffectPlugin {
             Vector2f a = chain.pos[i];
             Vector2f b = chain.pos[Math.min(i + 1, chain.links - 1)];
             Vector2f p = new Vector2f(a.x + (b.x - a.x) * local, a.y + (b.y - a.y) * local);
-
-            Color fringe = new Color(100, 180, 255, 50);
-            Color core = new Color(220, 240, 255, 180);
-
-            /*SpriteAPI spr = Global.getSettings().getSprite(SPRITE_CAT, LINK_SPRITE);
-            spr.setAngle(0f);
-            MagicRender.battlespace(spr, p, new Vector2f(),
-                    new Vector2f(14f, 14f), new Vector2f(),
-                    0f, 0f, core, true, 0f, amount, 0f);*/
-
-            int step = 2;
-            for (int n = 0; n < i; n += step) {
-                int m = Math.min(n + step, i);
-                EmpArcEntityAPI arc = Global.getCombatEngine().spawnEmpArcVisual(
-                        chain.pos[n], null, chain.pos[m], null,
-                        4f, fringe, core);
-                arc.setSingleFlickerMode();
-                arc.setRenderGlowAtStart(false);
-                arc.setRenderGlowAtEnd(false);
-            }
+            Global.getCombatEngine().addHitParticle(p, new Vector2f(),
+                    LINK_THICKNESS + 6f, 2f, 0.1f, new Color(150, 210, 255, 200));
         }
 
         private void applyShock(Vector2f hit) {
@@ -287,7 +278,7 @@ public class tether implements OnHitEffectPlugin, OnFireEffectPlugin {
             engine.applyDamage(
                     target, hit,
                     weap.getDamage().getDamage(), DamageType.ENERGY,
-                    SHOCK_EMP,
+                    weap.getDerivedStats().getEmpPerShot(),
                     true, false, host);
             for (int i = 0; i < 3; i++) {
                 engine.spawnEmpArcPierceShields(
@@ -310,8 +301,7 @@ public class tether implements OnHitEffectPlugin, OnFireEffectPlugin {
             engine.addHitParticle(hit, target.getVelocity(), 80f, 1f, 0.15f, Color.WHITE);
             engine.addSmoothParticle(hit, target.getVelocity(), 120f, 0.8f, 0.25f,
                     new Color(150, 210, 255, 200));
-            engine.spawnExplosion(hit, target.getVelocity(),
-                    new Color(80, 160, 255, 180), 40f, 0.2f);
+            Global.getSoundPlayer().playSound("tachyon_lance_emp_impact", 0.9f, 1f, hit, target.getVelocity());
         }
     }
 }

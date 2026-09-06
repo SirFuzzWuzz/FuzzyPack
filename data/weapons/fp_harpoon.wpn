@@ -1,0 +1,42 @@
+{
+  "id": "fp_harpoon",
+  "specClass": "projectile",
+  "projectileSpecId": "fp_harpoon_shot",
+  "type": "BALLISTIC",
+  "size": "LARGE",
+  "turretSprite": "graphics/weapons/harpoon/harpoon_t.png",
+  "hardpointSprite": "graphics/weapons/harpoon/harpoon_h.png",
+   "renderHints": [
+    RENDER_LOADED_MISSILES
+  ],
+  "turretOffsets": [
+    19,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    0,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "MUZZLE_FLASH",
+  "muzzleFlashSpec": {
+    "length": 34,
+    "spread": 10,
+    "particleSizeMin": 18,
+    "particleSizeRange": 24,
+    "particleDuration": 0.12,
+    "particleCount": 12,
+    "particleColor": [
+      255,
+      185,
+      215,
+      215
+    ]
+  },
+}
