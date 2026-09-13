@@ -3,7 +3,7 @@
 	"specClass":"missile",
 	"missileType":"ROCKET",
 	#"missileType":"MISSILE_TWO_STAGE_SECOND_UNGUIDED",
-	"onHitEffect":"fuzzypack.data.weapons.onHit.smokebomb",
+	"onHitEffect":"fuzzypack.data.weapons.tools.smokebomb",
 	"sprite":"graphics/missiles/missile_smoke.png",
 	"size":[10,21],	
 	"center":[5,10.5],

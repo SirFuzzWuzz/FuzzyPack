@@ -4,13 +4,13 @@
 	"missileType":"MISSILE",
 	"sprite":"graphics/missiles/missile_vlrm.png",
 	"onFireEffect":"fuzzypack.data.weapons.mlrs",
-	"size":[14,23],	
-	"center":[7,11],
-	"collisionRadius":20,
+	"size":[8,16],	
+	"center":[4,8],
+	"collisionRadius":6,
 	"collisionClass":"MISSILE_FF",
 	#"onHitEffect":"data.scripts.onhit.weapons.redstone_onhit",
 	"explosionColor":[225,100,100,255],  # purely visual, will get a white additively blended core on top of this color
-	"explosionRadius":60, # purely visual
+	"explosionRadius":45, # purely visual
 	"explosionSpec":{"duration":0.1f, # not visual
 					 "radius":50,
 					 "coreRadius":25, # full damage within core radius
@@ -47,11 +47,11 @@
 						"contrailSpawnDistMult":0f, # how far away from engine it starts
 						"contrailColor":[100,125,100,50],
 						"glowSizeMult":1,
-						"glowAlternateColor":[255,10,10,220],
+						"glowAlternateColor":[255,10,10,160],
 						"type":"GLOW" # GLOW or SMOKE; additive or regular blend mode
 					},
-				    "width":10.0,
-				    "length":80.0,
+				    "width":4.0,
+				    "length":20.0,
 				    "angle":180.0}]
 }
 			

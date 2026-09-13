@@ -3,44 +3,62 @@
   "specClass": "projectile",
   "projectileSpecId": "fp_mlrs_missile",
   "type": "MISSILE",
-  "size": "LARGE",
+  "size": "MEDIUM",
   "everyFrameEffect": "fuzzypack.data.weapons.mlrs",
   "displayArcRadius": 1000,
-  "turretSprite": "graphics/weapons/big_gun.png",
-  "hardpointSprite": "graphics/weapons/big_gun.png",
+  "turretSprite": "graphics/weapons/MLRS_t.png",
+  "hardpointSprite": "graphics/weapons/MLRS_h.png",
   "renderHints": [
-    RENDER_LOADED_MISSILES
+    #RENDER_LOADED_MISSILES
   ],
   "turretOffsets": [
-    32,
-    1
+    15.5,
+    9,
+    15.5,
+    3,
+    15.5,
+    -3,
+    15.5,
+    -9
   ],
   "turretAngleOffsets": [
+    0,
+    0,
+    0,
     0
   ],
   "hardpointOffsets": [
-    49.5,
-    1
+    17,
+    9,
+    17,
+    3,
+    17,
+    -3,
+    17,
+    -9
   ],
   "hardpointAngleOffsets": [
+    0,
+    0,
+    0,
     0
   ],
-  "barrelMode": "LINKED",
+  "barrelMode": "ALTERNATING",
   "animationType": "SMOKE",
   "autocharge": true,
   "smokeSpec": {
-    "particleSizeMin": 10,
-    "particleSizeRange": 12,
-    "cloudParticleCount": 10,
-    "cloudDuration": 2.5,
-    "cloudRadius": 10,
+    "particleSizeMin": 3,
+    "particleSizeRange": 8,
+    "cloudParticleCount": 5,
+    "cloudDuration": 1,
+    "cloudRadius": 4,
     "blowbackParticleCount": 8,
     "blowbackDuration": 2,
-    "blowbackLength": 18,
-    "blowbackSpread": 10,
+    "blowbackLength": 8,
+    "blowbackSpread": 6,
     "particleColor": [
       80,
-      200,
+      80,
       60,
       120
     ]

@@ -209,7 +209,7 @@ public class harpoon implements OnHitEffectPlugin, OnFireEffectPlugin {
             for (ChainNode m : nodes) {
                 Vector2f p = m.missile.getLocation();
                 Global.getCombatEngine().addHitParticle(p, new Vector2f(),
-                        LINK_THICKNESS + 6f, 2f, amount, new Color(255,180,100,25));
+                        LINK_THICKNESS + 6f, 2f, amount, new Color(255,100,100,25));
                 /* SpriteAPI dot = Global.getSettings().getSprite("markers", "filled_circle");
                 MagicRender.battlespace(
                         dot,

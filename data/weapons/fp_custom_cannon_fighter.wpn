@@ -1,0 +1,49 @@
+{
+  "id": "fp_custom_cannon_fighter",
+  "specClass": "projectile",
+  "projectileSpecId": "twpx2_shot",
+  "type": "BALLISTIC",
+  "size": "SMALL",
+  "turretSprite": "graphics/weapons/twp_2x/fp_twp2x_t.png",
+  "turretGunSprite": "graphics/weapons/twp_2x/fp_twp2x_t_barrel.png",
+  "hardpointSprite": "graphics/weapons/custom fighter/custom_cannon.png",
+  "hardpointGunSprite": "graphics/weapons/custom fighter/custom_cannon_recoil.png",
+  "visualRecoil": 3,
+  "renderHints": [
+    "RENDER_BARREL_BELOW"
+  ],
+  "turretOffsets": [
+    13.5,
+    2.5,
+    13.5,
+    -2.5
+  ],
+  "turretAngleOffsets": [
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    13.5,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "LINKED",
+  "animationType": "MUZZLE_FLASH",
+  "muzzleFlashSpec": {
+    "length": 20,
+    "spread": 15,
+    "particleSizeMin": 12,
+    "particleSizeRange": 15,
+    "particleDuration": 0.16,
+    "particleCount": 14,
+    "particleColor": [
+      250,
+      150,
+      50,
+      255
+    ]
+  },
+  "fireSoundTwo": "twp2x_fire"
+}

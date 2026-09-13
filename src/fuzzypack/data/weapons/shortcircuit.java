@@ -1,97 +1,142 @@
 package fuzzypack.data.weapons;
 
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.combat.BaseCombatLayeredRenderingPlugin;
-import com.fs.starfarer.api.combat.CombatEngineAPI;
-import com.fs.starfarer.api.combat.CombatEntityAPI;
-import com.fs.starfarer.api.combat.DamagingProjectileAPI;
-
-
-import com.fs.starfarer.api.combat.OnHitEffectPlugin;
-
-import com.fs.starfarer.api.combat.ShipAPI;
-import com.fs.starfarer.api.combat.ShipCommand;
-
-
+import com.fs.starfarer.api.combat.*;
+import com.fs.starfarer.api.combat.listeners.AdvanceableListener;
 import com.fs.starfarer.api.combat.listeners.ApplyDamageResultAPI;
+import com.fs.starfarer.api.graphics.SpriteAPI;
 import com.fs.starfarer.api.util.IntervalUtil;
+import org.lazywizard.lazylib.MathUtils;
+import org.lazywizard.lazylib.VectorUtils;
+import org.lwjgl.util.vector.Vector2f;
+import org.magiclib.util.MagicRender;
+
 import java.awt.Color;
 
-import org.lwjgl.util.vector.Vector2f;
-//I'm the best
+public class shortcircuit implements OnHitEffectPlugin {
 
-public class shortcircuit extends BaseCombatLayeredRenderingPlugin implements OnHitEffectPlugin {
+    private static final float DURATION = 7f;
+    private static final float VARIANCE = 1f;
+    private static final String STAT_ID = "shield_short";
 
-        
-        public shortcircuit() {
-	}
-        
-        private final float duration = 7f;
-        private final float variance = 1f;
+    @Override
+    public void onHit(DamagingProjectileAPI projectile, CombatEntityAPI target,
+                      Vector2f point, boolean shieldHit, ApplyDamageResultAPI damageResult,
+                      CombatEngineAPI engine) {
+        if (!shieldHit || !(target instanceof ShipAPI)) return;
+        ShipAPI ship = (ShipAPI) target;
+        if (ship.getShield() == null) return;
 
-        
-        public void onHit(DamagingProjectileAPI projectile, CombatEntityAPI target,
-					  Vector2f point, boolean shieldHit, ApplyDamageResultAPI damageResult, CombatEngineAPI engine) {
-            if (projectile.isFading()) return;
-            
-            if (shieldHit && target instanceof ShipAPI) {
-                ShipAPI targetShip = (ShipAPI) target;
-                /*if (!targetShip.getChildModulesCopy().isEmpty()) return;*/
-                
-                targetShip.getFluxTracker().showOverloadFloatyIfNeeded("Shield Locked!", Color.white, 4f, true);
-                
-                shortcircuit pg = new shortcircuit(targetShip, duration);
-                CombatEntityAPI e = engine.addLayeredRenderingPlugin(pg);
-                //engine.addPlugin((EveryFrameCombatPlugin) pg);
-            }
-	}
-        
-        
-        protected ShipAPI target;
-        protected IntervalUtil interval;
-        protected boolean hasTarget = false;
-        
-        public shortcircuit(ShipAPI ship, float duration) {
-            this.target = ship;
-            this.interval = new IntervalUtil(duration - variance,duration + variance);
-            
-            this.hasTarget = true;
-            target.getShield().toggleOn();
-            
-            
-            if (target.getShield().getFluxPerPointOfDamage() < 1f) {
-                target.getMutableStats().getShieldAbsorptionMult().modifyFlat("shield_short", 1000f);
-                target.getMutableStats().getShieldAbsorptionMult().modifyMult("shield_short", 0.001f);
-            }
-
+        for (lockListener existing : ship.getListeners(lockListener.class)) {
+            existing.refresh();
+            return;
         }
-        
-        public void advance(float amount) { //, CombatEngineAPI engine, WeaponAPI weapon public void advance(float amount, CombatEngineAPI engine, WeaponAPI weapon)
-            if (Global.getCombatEngine().isPaused()) return;
-            
-            if (hasTarget) {
-                interval.advance(amount);
-                
-                this.target.blockCommandForOneFrame(ShipCommand.TOGGLE_SHIELD_OR_PHASE_CLOAK);
-		        this.target.blockCommandForOneFrame(ShipCommand.VENT_FLUX);
-                
-                if (interval.intervalElapsed()) {
-                    this.hasTarget = false;
-                    this.target.getMutableStats().getShieldAbsorptionMult().unmodify("shield_short");
-                    this.target.getFluxTracker().showOverloadFloatyIfNeeded("Shield OK!", Color.white, 4f, true);
-                }
-            } 
-        } 
-        
-        public void init(CombatEntityAPI entity) {
-		super.init(entity);
-	}
-        
-        public boolean isExpired() {
-		return !target.isAlive() || 
-                        !Global.getCombatEngine().isEntityInPlay(target) || !hasTarget;
-	}
-        
-        
+        ship.addListener(new lockListener(ship, point));
+    }
 
+    static class lockListener implements AdvanceableListener {
+        final ShipAPI target;
+        final IntervalUtil interval = new IntervalUtil(DURATION - VARIANCE, DURATION + VARIANCE);
+        boolean applied;
+        final float impactDist;
+        final float impactOffset;
+
+        lockListener(ShipAPI target, Vector2f point) {
+            this.target = target;
+            this.impactDist = MathUtils.getDistance(point, target.getLocation());
+            ShieldAPI sh = target.getShield();
+            this.impactOffset = VectorUtils.getAngle(sh.getLocation(), point) - sh.getFacing();
+            applyLock();
+            target.getFluxTracker().showOverloadFloatyIfNeeded("Shield Locked!", Color.WHITE, 4f, true);
+        }
+
+        void refresh() {
+            interval.setInterval(DURATION - VARIANCE, DURATION + VARIANCE);
+            interval.setElapsed(0f);
+            applyLock();
+            target.getFluxTracker().showOverloadFloatyIfNeeded("Shield Locked!", Color.RED, 5f, true);
+        }
+
+        private void applyLock() {
+            if (target.getShield() == null) return;
+            target.getShield().toggleOn();
+            if (!applied && target.getShield().getFluxPerPointOfDamage() < 1f) {
+                target.getMutableStats().getShieldAbsorptionMult().modifyMult(STAT_ID, 0.001f);
+                applied = true;
+            }
+        }
+
+        private void clearLock() {
+            target.getMutableStats().getShieldAbsorptionMult().unmodify(STAT_ID);
+            applied = false;
+            target.getFluxTracker().showOverloadFloatyIfNeeded("Shield OK!", Color.BLUE, 5f, true);
+            target.removeListener(this);
+        }
+
+        @Override
+        public void advance(float amount) {
+            if (Global.getCombatEngine().isPaused()) return;
+            if (target == null || !target.isAlive() || !Global.getCombatEngine().isEntityInPlay(target)
+                    || target.getShield() == null) {
+                if (target != null) {
+                    target.getMutableStats().getShieldAbsorptionMult().unmodify(STAT_ID);
+                    target.removeListener(this);
+                }
+                return;
+            }
+
+            target.getShield().toggleOn();
+            target.blockCommandForOneFrame(ShipCommand.TOGGLE_SHIELD_OR_PHASE_CLOAK);
+            target.blockCommandForOneFrame(ShipCommand.VENT_FLUX);
+
+            ShieldAPI shield = target.getShield();
+            Vector2f pin = MathUtils.getPointOnCircumference(
+                    shield.getLocation(),
+                    shield.getRadius(),
+                    shield.getFacing() + impactOffset);
+
+            float pinAngle = shield.getFacing() + impactOffset;
+
+            Color c = shield.getInnerColor();
+            if (c == null) c = Color.CYAN;
+
+            SpriteAPI sprote = Global.getSettings().getSprite("projectiles", "shortcircuit_missile");
+            sprote.setAngle(0f);
+            MagicRender.battlespace(
+                    sprote, pin, target.getVelocity(),
+                    new Vector2f(10, 21f), new Vector2f(),
+                    target.getShield().getFacing() + impactOffset - 90,
+                    0f, Color.WHITE, false, 0f, amount, 0f);
+
+            // Visuals
+            if (Math.random() < 0.4f) {
+                Vector2f spark = MathUtils.getRandomPointInCircle(pin, 16f);
+                Global.getCombatEngine().addHitParticle(
+                        spark, target.getVelocity(),
+                        20f + (float) Math.random() * 10f,
+                        1f, 0.12f, c);
+            }
+            if (Math.random() < 0.06f) {
+                float jitter = (float) (Math.random() * 40f - 20f);
+                Vector2f rim = MathUtils.getPointOnCircumference(
+                        shield.getLocation(),
+                        shield.getRadius(),
+                        pinAngle + jitter);
+                EmpArcEntityAPI arc = Global.getCombatEngine().spawnEmpArcVisual(
+                        pin, target,
+                        rim, target,
+                        6f,
+                        c,
+                        Color.WHITE);
+                arc.setSingleFlickerMode();
+                arc.setRenderGlowAtStart(false);
+                //arc.setRenderGlowAtEnd(false);
+            }
+
+            interval.advance(amount);
+            if (interval.intervalElapsed()) {
+                clearLock();
+            }
+        }
+    }
 }

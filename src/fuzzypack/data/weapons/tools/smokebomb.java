@@ -1,4 +1,4 @@
-package fuzzypack.data.weapons.onHit;
+package fuzzypack.data.weapons.tools;
 
 import com.fs.starfarer.api.combat.*;
 import com.fs.starfarer.api.combat.listeners.AdvanceableListener;

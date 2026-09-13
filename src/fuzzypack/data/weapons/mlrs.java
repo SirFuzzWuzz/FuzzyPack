@@ -1,180 +1,92 @@
 package fuzzypack.data.weapons;
 
-
-import com.fs.starfarer.api.combat.BaseCombatLayeredRenderingPlugin;
-import com.fs.starfarer.api.combat.CombatEngineAPI;
-import com.fs.starfarer.api.combat.CombatEntityAPI;
-import com.fs.starfarer.api.combat.DamageType;
-
-import com.fs.starfarer.api.combat.DamagingProjectileAPI;
-import com.fs.starfarer.api.combat.EveryFrameWeaponEffectPlugin;
-import com.fs.starfarer.api.combat.GuidedMissileAI;
-import com.fs.starfarer.api.combat.MissileAPI;
-import com.fs.starfarer.api.combat.OnFireEffectPlugin;
-import com.fs.starfarer.api.combat.ShipAPI;
-
-
-
-import com.fs.starfarer.api.combat.WeaponAPI;
-import com.fs.starfarer.api.util.IntervalUtil;
+import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.combat.*;
+import com.fs.starfarer.api.loading.ProjectileWeaponSpecAPI;
 import com.fs.starfarer.api.util.Misc;
+import org.lazywizard.lazylib.MathUtils;
+import org.lwjgl.util.vector.Vector2f;
+import org.magiclib.util.MagicFakeBeam;
 
-import data.scripts.util.MagicFakeBeam;
-import data.scripts.util.MagicTargeting;
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Iterator;
-import org.lazywizard.lazylib.MathUtils;
-import org.lazywizard.lazylib.VectorUtils;
-import org.lwjgl.util.vector.Vector2f;
 
+public class mlrs implements EveryFrameWeaponEffectPlugin, OnFireEffectPlugin {
 
-public class mlrs extends BaseCombatLayeredRenderingPlugin implements OnFireEffectPlugin, EveryFrameWeaponEffectPlugin {
+    private static final float SWEEP_ANGLE = 45f;
 
-        
-        private final float sweepAngle = 30;
-        private final float chargeupDur = 1.5f; //check csv, curr = 3
-        
-        private float currAngle;
-        private float prevCharge = 0;
-        
-        private ArrayList<ShipAPI> targetList; // = new Arraylist<ShipAPI>();
-        
-        public mlrs() {}
-   
-        
-            @Override
-        public void onFire(DamagingProjectileAPI projectile, WeaponAPI weapon, CombatEngineAPI engine) {
-            engine.removeEntity(projectile);
-            prevCharge = 0;
-            
-            targetList = detector(weapon.getFirePoint(0), weapon.getCurrAngle(), weapon, engine);
-            
-            if (!targetList.isEmpty()) {
-                for (ShipAPI trgt: targetList) {
-
-                        MissileAPI missile = (MissileAPI) engine.spawnProjectile(weapon.getShip(), weapon, "fp_mlrs", weapon.getLocation(), weapon.getCurrAngle(), weapon.getShip().getVelocity());
-                        GuidedMissileAI mAi = (GuidedMissileAI) missile.getAI();
-                        mAi.setTarget(trgt);
-
-                }
-            }
-                
-            //To render the marked targets
-            mlrs pg = new mlrs(targetList, engine);
-            CombatEntityAPI e = engine.addLayeredRenderingPlugin(pg);
-            
-        }
+    private float prevCharge = 0f;
+    private final ArrayList<ShipAPI> queue = new ArrayList<>();
 
     @Override
     public void advance(float amount, CombatEngineAPI engine, WeaponAPI weapon) {
-        
-        if (weapon.getChargeLevel() > prevCharge) {
-            
-            float angleSpeed = (sweepAngle/chargeupDur)/60;
-            
-            
-            MagicFakeBeam.spawnFakeBeam(engine,
-                                        weapon.getLocation(),        //could reserve an offset                          
-                                        weapon.getRange(),                                  
-                                        currAngle,                                  
-                                        3,         //width                 
-                                        0.06f,         //full                         
-                                        0.3f,       //fading                           
-                                        0,          //impact size                        
-                                        Color.white, //core color                                 
-                                        Color.green,   //fringe color                               
-                                        0,              //damage                                
-                                        DamageType.ENERGY, //damage type                                 
-                                        0,                 //emp                         
-                                        weapon.getShip()); //source
-            currAngle += angleSpeed;
-            
-            //if (weapon.getChargeLevel() == 0.5f) {}
-            
-            
-            
-            /*if (weapon.getChargeLevel() == 1f && targetList != null) {
-            
-            for (ShipAPI trgt: targetList) {
-            
-            MissileAPI missile = (MissileAPI) engine.spawnProjectile(weapon.getShip(), weapon, "fp_mlrs", weapon.getLocation(), weapon.getCurrAngle(), weapon.getShip().getVelocity());
-            GuidedMissileAI mAi = (GuidedMissileAI) missile.getAI();
-            mAi.setTarget(trgt);
-            
-            }
-            }*/
-            
-        } else {
-            currAngle = weapon.getCurrAngle() - sweepAngle;
+        if (engine.isPaused() || weapon.getShip() == null) return;
+
+        float charge = weapon.getChargeLevel();
+        if (charge > prevCharge) {
+            float sweepAng = weapon.getCurrAngle() - SWEEP_ANGLE + charge * (SWEEP_ANGLE * 2f);
+            MagicFakeBeam.spawnFakeBeam(
+                    engine, weapon.getLocation(), weapon.getRange(), sweepAng,
+                    2f, amount, 0.1f, 0f,
+                    Color.WHITE, Color.GREEN,
+                    0f, DamageType.ENERGY, 0f, weapon.getShip());
         }
-        
-        prevCharge = weapon.getChargeLevel();
-        
+        prevCharge = charge;
     }
 
-    
-    private ArrayList<ShipAPI> detector(Vector2f from, float angle, WeaponAPI weapon, CombatEngineAPI engine) {
-        
-        ArrayList<ShipAPI> list = new ArrayList<ShipAPI>();
-        
-
-        Iterator iter = engine.getShipGrid().getCheckIterator(from, weapon.getRange() + 200, weapon.getRange() + 200);
-        //Vector2f point = MathUtils.getPoint(from, weapon.getRange(), angle);
-        //engine.addFloatingText(point, "X", 50, Color.red, weapon.getShip(), 5f, 1f);
-       
-        
-        while (iter.hasNext()) {
-            ShipAPI nextShip = (ShipAPI) iter.next();
-            
-            //engine.addFloatingText(weapon.getLocation(), "Angle: " + VectorUtils.getAngle(point, nextShip.getLocation()), 50, Color.yellow, weapon.getShip(), 5f, 1f);
-            Vector2f shipLoc = nextShip.getLocation();
-            
-            if (Misc.isInArc(angle, sweepAngle*2, from, shipLoc) && !nextShip.isAlly()) {
-                
-                list.add(nextShip);
-                
+    @Override
+    public void onFire(DamagingProjectileAPI projectile, WeaponAPI weapon, CombatEngineAPI engine) {
+        if (queue.isEmpty()) {
+            queue.addAll(detector(weapon));
+            if (queue.isEmpty()) {
+                weapon.setAmmo(weapon.getAmmo()+1);
             }
-            
         }
-        
+
+        if (queue.isEmpty()) {
+            engine.removeEntity(projectile);
+            weapon.stopFiring();
+            return;
+        }
+
+        ShipAPI trgt = queue.remove(0);
+        if (projectile instanceof MissileAPI) {
+            MissileAPI missile = (MissileAPI) projectile;
+            if (missile.getAI() instanceof GuidedMissileAI) {
+                ((GuidedMissileAI) missile.getAI()).setTarget(trgt);
+            }
+        }
+
+        if (queue.isEmpty()) {
+            weapon.stopFiring();
+        }
+    }
+
+    private ArrayList<ShipAPI> detector(WeaponAPI weapon) {
+        ArrayList<ShipAPI> list = new ArrayList<>();
+        int cap = SWEEP_ANGLE > 0 ? 99 : 99;
+        if (weapon.getSpec() instanceof ProjectileWeaponSpecAPI) {
+            cap = ((ProjectileWeaponSpecAPI) weapon.getSpec()).getBurstSize();
+        }
+
+        ShipAPI host = weapon.getShip();
+        Vector2f from = weapon.getFirePoint(0);
+        float facing = weapon.getCurrAngle();
+
+        Iterator<Object> iter = Global.getCombatEngine().getShipGrid()
+                .getCheckIterator(from, weapon.getRange() + 250f, weapon.getRange() + 250f);
+        while (iter.hasNext() && list.size() < cap) {
+            Object o = iter.next();
+            if (!(o instanceof ShipAPI)) continue;
+            ShipAPI other = (ShipAPI) o;
+            if (!other.isAlive() || other.isHulk()) continue;
+            if (other.getOwner() == host.getOwner()) continue;
+            if (MathUtils.getDistance(from, other.getLocation())
+                    > weapon.getRange() + other.getCollisionRadius()) continue;
+            if (!Misc.isInArc(facing, SWEEP_ANGLE * 2f, from, other.getLocation())) continue;
+            list.add(other);
+        }
         return list;
     }
-        
-
-    protected ArrayList<ShipAPI> list;
-    protected CombatEngineAPI engine;
-    protected boolean done = false;
-    protected IntervalUtil interval;
-    
-    private mlrs(ArrayList<ShipAPI> list, CombatEngineAPI engine) {
-        this.list = list;
-        this.engine = engine;
-        this.interval = new IntervalUtil(4,4);
-        
-    }
-    
-        @Override
-    public void advance(float amount) {
-        
-        for (ShipAPI ship: list) {
-            if (!ship.isAlive()) done = true;
-            engine.addFloatingText(ship.getLocation(), "X", 50, Color.red, ship, 0.06f, 0.06f);
-        }
-        
-        this.interval.advance(amount);
-        if (interval.intervalElapsed()) done = true;
-        
-    }
-    
-        @Override
-    public void init(CombatEntityAPI entity) {
-		super.init(entity);
-	}
-        
-        @Override
-    public boolean isExpired() {
-            return done;
-    }
-    
 }

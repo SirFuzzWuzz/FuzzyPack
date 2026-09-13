@@ -19,7 +19,13 @@
 			"harpoon_chain":"graphics/weapons/harpoon/harpoon_chain.png",
 			"fp_harpoon_missile":"graphics/missiles/fp_missile_harpoon.png",
 			"fp_harpoon_missile_attached":"graphics/missiles/fp_missile_harpoon_attached.png",
+			"grabber_missile_fighter":"graphics/missiles/grabber_missile.png",
 			"missile_battery": "graphics/missiles/missile_battery.png",
+			"shortcircuit_missile": "graphics/missiles/missile_shortcircuit.png",
+
+			"crew_missile": "graphics/missiles/crew_missile.png",
+			"fuel_missile": "graphics/missiles/fuel_missile.png",
+
 
 		},
 		"glow": {

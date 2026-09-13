@@ -1,0 +1,77 @@
+{
+  "hullName": "Custom Fighter (P)",
+  "hullId": "fp_pirate_pro_fighter",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/pirate_fighter.png",
+  "style": "LOW_TECH",
+  "height": 35,
+  "width": 38,
+  "center": [19, 15],
+  "collisionRadius": 20.5,
+  "shieldCenter": [4, -0],
+  "shieldRadius": 20,
+  "viewOffset": 0,
+  "builtInMods": [
+    "no_weapon_flux",
+    "fp_custom_fighter_wpn_randomizer"
+  ],
+  "builtInWeapons": {
+    "WS0001": "lightmg",
+    "WS0002": "lightmg"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 0,
+      "locations": [-6, 15]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": -0,
+      "locations": [-6, -15]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "HARDPOINT",
+      "arc": 5,
+      "angle": 0,
+      "locations": [9.5, -0]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-13, 5],
+      "length": 17,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "LOW_TECH"
+    },
+    {
+      "location": [-13, -5],
+      "length": 17,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 6,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    15, -6,
+    3, -8,
+    -9.5, -16.5,
+    -9.5, 16.5,
+    3, 8,
+    15, 6
+  ]
+}

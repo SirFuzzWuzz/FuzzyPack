@@ -1,0 +1,59 @@
+{
+  "hullName": "Salvage Disassembler",
+  "hullId": "fp_yoinker_fighter",
+  "hullSize": "FIGHTER",
+  "spriteName": "graphics/ships/grabber_fighter.png",
+  "style": "LOW_TECH",
+  "height": 33,
+  "width": 28,
+  "center": [14, 16.5],
+  "collisionRadius": 25,
+  "shieldCenter": [3.5, -0],
+  "shieldRadius": 24.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "no_weapon_flux"
+  ],
+  "builtInWeapons": {
+    "WS0001": "fp_grabber_fighter",
+    "WS0002": "lightmg"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HARDPOINT",
+      "arc": 40,
+      "angle": 0,
+      "locations": [11, -5]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "HIDDEN",
+      "arc": 5,
+      "angle": 0,
+      "locations": [5.5, 11]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-15.5, -0],
+      "length": 31,
+      "width": 14,
+      "angle": 180,
+      "contrailSize": 14,
+      "style": "LOW_TECH"
+    }
+  ],
+  "bounds": [
+    -14.5, -7.5,
+    -14.5, 7.5,
+    -4, 10,
+    10, 10,
+    10, -10,
+    -4, -10
+  ]
+}
