@@ -9,9 +9,10 @@ import org.lwjgl.util.vector.Vector2f;
 import org.magiclib.util.MagicRender;
 
 public class fp_tracker_onhit implements OnHitEffectPlugin {
-    private String key;
 
+    private String key;
     //private IntervalUtil interval = new IntervalUtil(0.5f,0.5f);
+
 
     public void onHit(DamagingProjectileAPI projectile, CombatEntityAPI target,
                       Vector2f point, boolean shieldHit, ApplyDamageResultAPI damageResult, CombatEngineAPI engine) {
@@ -26,7 +27,8 @@ public class fp_tracker_onhit implements OnHitEffectPlugin {
             Vector2f missileSpawnLoc = MathUtils.getPointOnCircumference(projectile.getWeapon().getLocation(), 8f, projectile.getWeapon().getCurrAngle() - 70);
 
             if ((int) target.getCustomData().get(key) >= 4){
-                GuidedMissileAI missileAI = (GuidedMissileAI) engine.spawnProjectile(projectile.getSource(), projectile.getWeapon(), "fp_tracker_missile", missileSpawnLoc,
+                GuidedMissileAI missileAI = (GuidedMissileAI) engine.spawnProjectile(projectile.getSource(),
+                        projectile.getWeapon(), "fp_tracker_missile", missileSpawnLoc,
                         projectile.getWeapon().getCurrAngle(), projectile.getSource().getVelocity()).getAI();
                 Global.getSoundPlayer().playSound("atropos_fire", 1.1f, 0.9f, missileSpawnLoc, projectile.getSource().getVelocity());
 
@@ -40,11 +42,9 @@ public class fp_tracker_onhit implements OnHitEffectPlugin {
                         new Color(220,160,50,240),
                         true,
                         0.01f, 0.1f, 0.07f);
-
                 missileAI.setTarget(target);
                 target.getCustomData().remove(key);
             }
         }
     }
-
 }

@@ -2,6 +2,7 @@
 	"graphics": {
 		"markers":{
 			"artillery_crosshair": "graphics/crosshair.png",
+			"radioactive_indicator": "graphics/fx/radioactive_indicator.png",
 			"circle": "graphics/missiles/novacannon_indicator.png",
 			"sindria_emblem": "graphics/diktat_emblem.png",
 			"filled_circle": "graphics/fx/circle.png",
@@ -20,12 +21,14 @@
 			"fp_harpoon_missile":"graphics/missiles/fp_missile_harpoon.png",
 			"fp_harpoon_missile_attached":"graphics/missiles/fp_missile_harpoon_attached.png",
 			"grabber_missile_fighter":"graphics/missiles/grabber_missile.png",
+			"grabber_chain":"graphics/weapons/harpoon/grabber_chain.png",
 			"missile_battery": "graphics/missiles/missile_battery.png",
 			"shortcircuit_missile": "graphics/missiles/missile_shortcircuit.png",
 
 			"crew_missile": "graphics/missiles/crew_missile.png",
 			"fuel_missile": "graphics/missiles/fuel_missile.png",
-
+			"vine_flower": "graphics/missiles/vine_flower.png",
+			"vine_link": "graphics/missiles/vine_link.png",
 
 		},
 		"glow": {
@@ -34,6 +37,10 @@
 			"missile_battery_glow": "graphics/missiles/missile_battery_glow.png",
 			"missile_flash": "graphics/torpedoray32.png",
 			"fire1": "graphics/fx/explosion2.png",
+		},
+		"fx": {
+			"fp_vine_zigzag": "graphics/fx/vine_trail.png",
+
 		},
 		
 	},

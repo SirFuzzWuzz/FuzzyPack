@@ -29,7 +29,7 @@ public class grabber implements OnFireEffectPlugin {
     private static final float REEL_SPEED = 400f;
 
     private static final String SPRITE_CAT = "projectiles";
-    private static final String LINK_SPRITE = "harpoon_chain";
+    private static final String LINK_SPRITE = "grabber_chain";
     private static final String HOOK_SPRITE = "grabber_missile_fighter";
     private static final String FUEL_SPRITE = "fuel_missile";
 

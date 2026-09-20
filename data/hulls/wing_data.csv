@@ -5,6 +5,6 @@ fp_phasenugget_wing,fp_phasenugget_base,"no_drop, no_sell, auto_fighter, high",0
 fp_boring_wing,fp_boringdrone_base,"support4, luddic_path, pirates, independent, drone, low, auto_fighter, rare_bp, merc",2,,5,20,V,2000,80,-100,1,FIGHTER,Heavy Mining Drone,25,6500,,,,,,,,,,,,,
 fp_reactive_bomber_wing,fp_reactive_bomber_base,"fighter3, low, merc, low_tech_bp",1,,2,12,BOX,3000,200,-50,3,FIGHTER,Fighter-Bomber,15,4200,,,,,,,,,,,,,
 fp_redstone_bomber_wing,fp_redstone_bomber_base,"bomber4, low, mid, merc",2,1,3,13,BOX,4000,1800,600,2,BOMBER,Bomber,17,6000,,,,,,,,,,,,,
-fp_missile_bomber_wing,fp_missile_bomber_base,"bomber0, low, mid, merc",2,2,2,6,V,6500,2200,400,1,BOMBER,Bomber,12,4000,,,,,,,,,,,,,
+fp_missile_bomber_wing,fp_missile_bomber_base,"bomber0, mid, merc, persean",2,2,2,4,V,6500,2200,400,1,BOMBER,Bomber,12,4000,,,,,,,,,,,,,
 fp_yoinker_fighter_wing,fp_yoinker_fighter_base,"support3, pirates, merc",2,,3,8,BOX,3000,300,200,2,FIGHTER,Disassembly,15,3000,,,,,,,,,,,,,
 fp_pirate_pro_fighter_wing,fp_pirate_pro_fighter_base,"fighter6, pirates",3,2,4,16,V,4000,400,0,4,FIGHTER,Fighter,20,4600,,,,,,,,,,,,,

@@ -104,8 +104,8 @@ public class shortcircuit implements OnHitEffectPlugin {
             sprote.setAngle(0f);
             MagicRender.battlespace(
                     sprote, pin, target.getVelocity(),
-                    new Vector2f(10, 21f), new Vector2f(),
-                    target.getShield().getFacing() + impactOffset - 90,
+                    new Vector2f(10, 23f), new Vector2f(),
+                    target.getShield().getFacing() + impactOffset + 90,
                     0f, Color.WHITE, false, 0f, amount, 0f);
 
             // Visuals

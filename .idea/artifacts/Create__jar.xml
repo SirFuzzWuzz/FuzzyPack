@@ -3,6 +3,7 @@
     <output-path>$PROJECT_DIR$/jars</output-path>
     <root id="archive" name="fuzzypack.jar">
       <element id="module-output" name="FuzzyPack" />
+      <element id="file-copy" path="$PROJECT_DIR$/../MagicLib-1.5.6/jars/MagicLib.jar" />
     </root>
   </artifact>
 </component>

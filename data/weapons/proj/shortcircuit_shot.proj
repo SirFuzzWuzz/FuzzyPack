@@ -5,8 +5,8 @@
 	#"missileType":"MISSILE_TWO_STAGE_SECOND_UNGUIDED",
 	"onHitEffect":"fuzzypack.data.weapons.shortcircuit",
 	"sprite":"graphics/missiles/missile_shortcircuit.png",
-	"size":[10,21],	
-	"center":[5,10.5],
+	"size":[10,23],	
+	"center":[5,11.5],
 	"collisionRadius":15,
 	"collisionClass":"MISSILE_NO_FF",
 	"explosionColor":[220,155,155,255],  # purely visual, will get a white additively blended core on top of this color

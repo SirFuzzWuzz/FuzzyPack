@@ -13,7 +13,8 @@
   "viewOffset": 0,
   "builtInMods": [
     "no_weapon_flux",
-    "fp_custom_fighter_wpn_randomizer"
+    "fp_custom_fighter_wpn_randomizer",
+    "fp_enginedirt"
   ],
   "builtInWeapons": {
     "WS0001": "lightmg",

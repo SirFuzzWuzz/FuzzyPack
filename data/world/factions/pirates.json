@@ -1,14 +1,15 @@
 {
 
 	"knownFighters":{
-		"fighters":["fp_boring_wing"],
+		"fighters":["fp_boring_wing","fp_pirate_pro_fighter_wing","fp_yoinker_fighter_wing"],
 	},
 
 
 	"knownWeapons":{
 		"weapons":[
 			"fp_dakkabox",
-			"fp_zapgun"
+			"fp_zapgun",
+			"fp_harpoon",
 		],
 	},
 
@@ -29,6 +30,14 @@
 			"fp_reactivearmour_kinetic",
 			"fp_unsaferoverride",
 			"fp_enginedirt",
+		],
+	},
+		"portraits":{
+		"standard_male":[
+			"graphics/portraits/beaver.png",
+		],
+		"standard_female":[
+			"graphics/portraits/beaver.png",
 		],
 	},
 

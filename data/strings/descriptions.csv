@@ -29,7 +29,7 @@ fp_twinthumper,WEAPON,Two Thumpers welded together in a questionable manner. The
 fp_zapgun,WEAPON,"An unstable emp emitter that delivers extremely high damage, sometimes.",,,,
 fp_magmine,WEAPON,Releases a slow moving mine that begins accelerating towards enemy vessels that stray close to it. The mine has a long arming time making it unsuitable for close range engagements.,,,,
 fp_tether,WEAPON,Fires a wire that when connected to an enemy can fry enemy systems through constant EMP bursts if the connection is upheld.,,,,
-fp_harpoon,WEAPON,Deploys a harpoon connected to a chain that will pull targets closer for an easier kill. Even if it does not pierce shields it delivers a reasonable kinetic punch. The chain can handle any amount of tension but is broken if any segment takes enough damage.,,,,
+fp_harpoon,WEAPON,Deploys a harpoon connected to a chain that pulls targets closer. Even if it does not pierce shields it delivers a reasonable kinetic punch. The chain can handle any amount of tension but is broken if any segment takes enough damage.,,,,
 fp_exacannon,WEAPON,"""Attention, loyal citizens of Sindria! Today our Supreme Executors ingenuity has brought us strength!""
 [Epic music as the Teracannon emerges]
 ""Witness the Teracannon, a symbol of his might that will unleash fury on all who oppose him.""
@@ -37,6 +37,7 @@ fp_exacannon,WEAPON,"""Attention, loyal citizens of Sindria! Today our Supreme E
 ""Rejoice for this new power shall cement the Supreme Executors empire in the stars. Stand behind him and prosper. Long live our Supreme Executor, long live Sindria!""""","- The Volturn times, independent media outlet",,,
 fp_twp2x,WEAPON,"A specialised point defense weapon firing thermal explosive charges to deal with heavy fighters. It fires at missiles as well like standard PD but doesn't have same raw damage output as those specialized against missiles unless multiple are used at once.
 It can also damage ship armour though the proximity detonation causes it to not always deal full damage.",,,,
+fp_twp1x,WEAPON,A specialised point defense weapon firing concussive charges at high velocity to deal with missiles further away than what regular PD can deal with.,,,,
 fp_tracker,WEAPON,Fires modified arbalest shells that allow old non auto-locking missiles to track the target once enough have hit. The kinetic and explosive combo makes it a versatile weapon.,,,,
 #fp_wyvernfire,WEAPON,A pair of dragonfire emitters attached to a weapon mount with modified power output to not blow up resulting in a potent laser dual laser cannon.,,,,
 fp_wyvernfire,WEAPON,Fires a near instant burst laser at long range useful for picking off far away targets. The highly focused nature of it makes it potent against armour but recharge times are lengthy making it unsuitable for prolonged fire fights. The dual barrel design makes targeting more difficult reducing the range compared to its smaller counterpart but large mount integration increases rate of fire and flux efficiency.,,,,
@@ -94,7 +95,8 @@ fp_dictator_large,SHIP,"The Lamenter is an antiquated battleship brought back to
 The Knight variant fields even more firepower instead of fighter bays.",,,,
 fp_dauntless_new,SHIP,Using the same style of combat as its larger counterpart the Preacher uses its armoured prow to close the distance in order to deliver broadside firepower. Whether or not it can compete with contemporary cruisers is up for debate but for those with little choice they will find it a formidable ship.,,,,
 fp_missile_bomber,SHIP,A flexible bomber that uses missiles from the carrier as ammunition. Missiles taken from the carrier are spent. If no ammunition is available a small bomb is used instead.,,,,
-,,,,,,
+fp_pirate_pro_fighter,SHIP,A heavy fighter customised by its pilot to use a variety of weapons. Due to the pilots choosing the primary weapon it may vary every time the they leave the hangar.,,,,
+fp_yoinker_fighter,SHIP,"A modified ship breaker from a shipyard. It uses its utility claw to disassemble enemy ships and can take missiles, fuel or even small weapons given enough time. It also has a backup machine gun.",,,,
 ,,,,,,
 fp_rangereducer,SHIP_SYSTEM,"Disrupts the targeting and sensors of targeted ship. As the marketing blurb says: ""If they can't see you they can't hurt you""",,,,
 fp_speedburst,SHIP_SYSTEM,Provides a short burst of speed and maneuverability,,,,

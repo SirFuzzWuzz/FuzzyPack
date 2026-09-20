@@ -3,7 +3,7 @@
 	"specClass":"projectile",
 	"onHitEffect":"com.fs.starfarer.api.impl.combat.SabotOnHitEffect",
 	"spawnType":"BALLISTIC",
-	"collisionClass":"PROJECTILE_FIGHTER",
+	"collisionClass":"PROJECTILE_NO_FF",
 	"collisionClassByFighter":"PROJECTILE_FIGHTER",
 	#"glowColor":[235,255,215,90],
 	"glowColor":[175,200,255,90],
